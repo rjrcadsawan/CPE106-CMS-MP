@@ -14,6 +14,7 @@ namespace CPE106_MachineProblem
                 InventoryModule IM = new InventoryModule();
                 EmployeeModule EM = new EmployeeModule();
                 BookkeepingModule BM = new BookkeepingModule();
+                TaskModule TM = new TaskModule();
                 string text = "Console Management System\n";
                 text += "Modules: \n";
                 text += "[1] Inventory Module\n";
@@ -35,7 +36,7 @@ namespace CPE106_MachineProblem
                         EM.Operations();
                         break;
                     case 3:
-                        
+                        TM.Operations();
                         break;
                     case 4:
                         BM.Operations();

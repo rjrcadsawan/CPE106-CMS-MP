@@ -21,7 +21,6 @@ namespace CPE106_MachineProblem
                 text += "[2] Employee Module\n";
                 text += "[3] Tasks Module\n";
                 text += "[4] Bookkeeping Module\n";
-                text += "[5] Scripts Module\n";
                 text += "[0] Exit\n";
                 text += "Input: ";
                 Console.WriteLine(text);
@@ -41,17 +40,11 @@ namespace CPE106_MachineProblem
                     case 4:
                         BM.Operations();
                         break;
-                    case 5:
-                        text = "Scripts Module\n";
-                        text += "[1] Default Scripts\n";
-                        text += "[2] Custom Scripts\n";
-                        text += "[3] Manage App Integrations\n";
-                        text += "[4] Summary of Scripts";
-                        Console.WriteLine(text);
-                        break;
 
                     case 0:
                         Console.WriteLine("Program is Exiting");
+                        Console.ReadKey();
+                        Console.Clear();
                         done = true;
                         break;
 

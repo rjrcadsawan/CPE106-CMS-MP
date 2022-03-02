@@ -66,17 +66,17 @@ namespace CPE106_MachineProblem
             text = "Add an Employee\n";
             text = "Enter the Employee Details:\n";
             Console.WriteLine(text);
-            Console.WriteLine("First Name:");
+            Console.Write("First Name:");
             string fn = Console.ReadLine();
-            Console.WriteLine("Middle Name:");
+            Console.Write("Middle Name:");
             string mn = Console.ReadLine();
-            Console.WriteLine("Last Name:");
+            Console.Write("Last Name:");
             string ln = Console.ReadLine();
-            Console.WriteLine("Department:");
+            Console.Write("Department:");
             string dep = Console.ReadLine();
-            Console.WriteLine("Position:");
+            Console.Write("Position:");
             string pos = Console.ReadLine();
-            Console.WriteLine("Salary:");
+            Console.Write("Salary:");
             double pay = Convert.ToDouble(Console.ReadLine());
 
             Employee newEmployee = new Employee(fn, mn, ln, dep, pos, pay);

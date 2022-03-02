@@ -8,6 +8,7 @@ namespace CPE106_MachineProblem
         string text = "";
         List<Item> ItemList = new List<Item>();
         int choice = 99;
+        int width = 15;
         public void Operations()
         {
             while (choice != 0)
@@ -22,6 +23,7 @@ namespace CPE106_MachineProblem
                 text += "[0] Main Menu";
                 Console.WriteLine(text); 
                 choice = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
                 this.evaluate(choice);
             }
             
@@ -42,26 +44,28 @@ namespace CPE106_MachineProblem
                     break;
                 case 4:
                     this.printItemList();
+                    Console.WriteLine("Press Any Key to Continue. . .");
+                    Console.ReadKey();
                     break;
             }   
         }
 
         public void addItem()
         {
-            Console.WriteLine("Add an Item");
-            Console.WriteLine("Item Name: ");
+            Console.WriteLine("Add an Item\n");
+            Console.Write("Item Name: ");
             string Item_Name = Console.ReadLine();
-            Console.WriteLine("Item Description: ");
+            Console.Write("Item Description: ");
             string Item_Description = Console.ReadLine();
-            Console.WriteLine("Item Quantity: ");
+            Console.Write("Item Quantity: ");
             int Item_Quantity = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Unit Price: ");
-            Double Item_Unit_Price = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Unit Price (P): ");
+            double Item_Unit_Price = Convert.ToDouble(Console.ReadLine());
 
             Item newItem = new Item(Item_Name, Item_Description, Item_Quantity, Item_Unit_Price);
             ItemList.Add(newItem);
 
-
+            Console.WriteLine($"\nItem {Item_Name} was added to the ItemList");
             Console.WriteLine("Press Any Key to Continue. . .");
             Console.ReadKey();
 
@@ -78,42 +82,93 @@ namespace CPE106_MachineProblem
 
         }
 
+        private void printItemListHeader(int width)
+        {
+
+            string[] headers = {"Index", "Name", "Quantity", "Unit Price", "Item Price", "Description"};
+            foreach (String S in headers)
+            {
+                Console.Write(S.PadRight(width));
+            }
+            Console.Write("\n");
+        }
+
+        private void printSearchListHeader(int width)
+        {
+
+            string[] headers = { "Name", "Quantity", "Unit Price", "Item Price", "Description" };
+            foreach (String S in headers)
+            {
+                Console.Write(S.PadRight(width));
+            }
+            Console.Write("\n");
+        }
+
         public void printItemList()
         {
             int iterator = 0;
+
+            printItemListHeader(width);
+
             foreach(Item X in ItemList)
             {
-                Console.Write(iterator + "->");
-                X.printDetails();
-                iterator++;
+                Console.Write(Convert.ToString(iterator).PadRight(width));
+                Console.Write(X.name.PadRight(width));
+                Console.Write(Convert.ToString(X.pcs).PadRight(width));
+                Console.Write(Convert.ToString(X.u_p).PadRight(width));
+                Console.Write(Convert.ToString(X.i_p).PadRight(width));
+                Console.Write(X.desc);
                 Console.Write("\n");
+
+                iterator++;
             }
 
-            Console.WriteLine("Press Any Key to Continue. . .");
-            Console.ReadKey();
         }
 
         public void searchItem()
         {
-            Console.WriteLine("Specify the details of the item that you want to search");
-            Console.WriteLine("Item Name: ");
-            string Item_Name = Console.ReadLine();
-            Console.WriteLine("Item Description: ");
-            string Item_Description = Console.ReadLine();
-            Console.WriteLine("Item Quantity: ");
-            int Item_Quantity = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Unit Price: ");
-            Double Item_Unit_Price = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Search Function\n");
+            Console.WriteLine("Specify the details of the item that you want to search\n");
+            Console.Write("Item Name: ");
+            string searchItemName = Console.ReadLine();
+            Item searchItem = new Item();
+            List<Item> searchResults = new List<Item>();
+            int found = 0;
 
-            Item searchItem = new Item(Item_Name, Item_Description, Item_Quantity, Item_Unit_Price);
-            if (ItemList.Contains(searchItem))
+            foreach (Item I in ItemList)
             {
-                int index = ItemList.IndexOf(searchItem);
-                Console.WriteLine($"Item Foudn at {index} ");
+                if (I.similarTo(searchItemName))
+                {
+                    searchItem = I;
+                    searchResults.Add(searchItem);
+                    found += 1;
+                }
             }
 
+            if (found > 0)
+            {
+                Console.WriteLine($"\nThere are {found} item/s similar to {searchItemName}\n");
+                printSearchListHeader(width);
+                foreach (Item I in searchResults)
+                {
+                    
+                    Console.Write(I.name.PadRight(width));
+                    Console.Write(Convert.ToString(I.pcs).PadRight(width));
+                    Console.Write(Convert.ToString(I.u_p).PadRight(width));
+                    Console.Write(Convert.ToString(I.i_p).PadRight(width));
+                    Console.Write(I.desc);
+                    Console.Write("\n");
+                }
+            } 
+            else
+            {
+                Console.WriteLine($"{searchItemName} is not on the list");
+            }
 
-            Console.WriteLine("Press Any Key to Continue. . .");
+            
+
+
+            Console.WriteLine("\nPress Any Key to Continue. . .");
             Console.ReadKey();
         }
     }

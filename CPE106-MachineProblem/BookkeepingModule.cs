@@ -20,6 +20,7 @@ namespace CPE106_MachineProblem
                 text = "Bookkeeping Module\n";
                 text += "[1] Show Current workbook\n";
                 text += "[2] Add Transaction\n";
+                text += "[0] Main Menu";
                 Console.WriteLine(text);
                 choice = Convert.ToInt32(Console.ReadLine());
                 this.evaluate(choice);
@@ -32,17 +33,12 @@ namespace CPE106_MachineProblem
             switch (choice)
             {
                 case 1:
-                    this.addItem();
+                    this.showWorkbook();
                     break;
                 case 2:
-                    this.removeItem();
+                    this.addTransaction();
                     break;
-                case 3:
-                    this.searchItem();
-                    break;
-                case 4:
-                    this.printItemList();
-                    break;
+
             }   
         }
 

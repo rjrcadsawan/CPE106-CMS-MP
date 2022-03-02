@@ -10,6 +10,16 @@ namespace CPE106_MachineProblem
         Double unit_price;
         Double item_price;
 
+        public string name => Name;
+        public string desc => Description;
+        public int pcs => Quantity;
+        public double u_p => unit_price;
+        public double i_p => item_price;
+
+        public Item()
+        {
+
+        }
         public Item(string name, string description, int quantity, double unit_price)
         {
             this.Name = name;
@@ -19,15 +29,9 @@ namespace CPE106_MachineProblem
             this.item_price = unit_price * quantity;
         }
 
-        public void printDetails()
+        public bool similarTo(string name)
         {
-            Console.Write($"{this.Name} {this.Description} {this.Quantity}pcs {this.unit_price}/pc P{this.item_price}");
-        }
-
-        public bool similarTo()
-        {
-            bool result = false;
-            return result;
+            return (name == this.Name);
 
         }
     }

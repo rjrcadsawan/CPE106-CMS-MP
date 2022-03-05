@@ -12,20 +12,51 @@
                 <Grid Background="#FFE5E5E5">
                     <TabControl TabStripPlacement="Left">
                         <TabItem Header="Add Employee">
-                            <Grid Background="#FFE5E5E5"/>
+                            <Grid Background="#FFE5E5E5">
+                                <Label Content="First Name" HorizontalAlignment="Left" Margin="60,57,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="34,34,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+                                <Label Content="Middle Name" HorizontalAlignment="Left" Margin="203,57,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="184,34,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+                                <Label Content="Last Name" HorizontalAlignment="Left" Margin="357,57,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="330,34,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+                                <TextBox HorizontalAlignment="Left" Margin="477,34,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="21"/>
+                                <Label Content="Suffix" HorizontalAlignment="Left" Margin="482,57,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Sex" HorizontalAlignment="Left" Margin="564,57,0,0" VerticalAlignment="Top"/>
+                                <ComboBox HorizontalAlignment="Left" Margin="555,34,0,0" VerticalAlignment="Top" Width="46" >
+                                    <ComboBoxItem Content="M"/>
+                                    <ComboBoxItem Content="F"/>
+                                </ComboBox>
+                                <Label Content="Department" HorizontalAlignment="Left" Margin="57,133,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="34,107,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+                                <Label Content="Position" HorizontalAlignment="Left" Margin="218,133,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="184,107,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+                                <Label Content="Salary" HorizontalAlignment="Left" Margin="73,205,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="34,179,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+                                <Button Content="Add Employee" HorizontalAlignment="Left" Margin="528,343,0,0" VerticalAlignment="Top" Width="100"/>
+                                <Button Content="Reset Fields" HorizontalAlignment="Left" Margin="402,343,0,0" VerticalAlignment="Top" Width="100"/>
+
+                            </Grid>
                         </TabItem>
-                        <TabItem Header="Search Employee">
-                            <Grid Background="#FFE5E5E5"/>
-                        </TabItem>
-                        <TabItem Header="Delete Employee">
-                            <Grid Background="#FFE5E5E5"/>
-                        </TabItem>
-                        <TabItem Header="Generate Payslip">
-                            <Grid Background="#FFE5E5E5"/>
+                        <TabItem Header="Manage Employees">
+                            <Grid Background="#FFE5E5E5">
+                                <Label Content="Employee ID" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="101,14,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <Label Content="Search Results:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
+                                <Label Content="X Found" HorizontalAlignment="Left" Margin="167,36,0,0" VerticalAlignment="Top"/>
+                                <DataGrid Margin="10,67,10,56"/>
+                                <Button Content="Search Employee" HorizontalAlignment="Left" Margin="539,358,0,0" VerticalAlignment="Top" Width="120"/>
+                                <Button Content="Delete Employee" HorizontalAlignment="Left" Margin="398,358,0,0" VerticalAlignment="Top" Width="120"/>
+                                <Button Content="Generate Payslip" HorizontalAlignment="Left" Margin="248,358,0,0" VerticalAlignment="Top" Width="120"/>
+                            </Grid>
                         </TabItem>
                         <TabItem Header="Payroll Sheet">
-                            <Grid Background="#FFE5E5E5"/>
+                            <Grid Background="#FFE5E5E5">
+                                <DataGrid Margin="10,10,10,43"/>
+                                <Button Content="Refresh Details" HorizontalAlignment="Left" Margin="541,362,0,0" VerticalAlignment="Top" Width="120"/>
+                                <Button Content="Print Sheet" HorizontalAlignment="Left" Margin="401,362,0,0" VerticalAlignment="Top" Width="120"/>
+                            </Grid>
                         </TabItem>
+
                     </TabControl>
                 </Grid>
             </TabItem>

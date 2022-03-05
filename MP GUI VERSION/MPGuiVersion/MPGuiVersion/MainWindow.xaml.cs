@@ -30,6 +30,7 @@ namespace MPGuiVersion
             string msg = "Login Button was clicked\n";
             msg += $"Email Entered: {EmailBox.Text}\n";
             MessageBox.Show(msg);
+            Hide();
             MainMenu MM = new MainMenu();
             MM.Show();
 

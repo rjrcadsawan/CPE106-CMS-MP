@@ -29,9 +29,12 @@ namespace MPGuiVersion
         {
             string msg = "Login Button was clicked\n";
             msg += $"Email Entered: {EmailBox.Text}\n";
-            msg += $"Password Entered: {PasswordBox.Text}";
             MessageBox.Show(msg);
-            
+            MainMenu MM = new MainMenu();
+            MM.Show();
+
+
+
         }
 
         private void Signup_Click(object sender, RoutedEventArgs e)

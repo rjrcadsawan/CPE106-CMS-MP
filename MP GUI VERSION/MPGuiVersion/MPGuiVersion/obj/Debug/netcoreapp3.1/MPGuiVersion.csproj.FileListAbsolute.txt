@@ -18,3 +18,7 @@ C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\M
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion.dll
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion.pdb
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion.genruntimeconfig.cache
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MainMenu.g.cs
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\SignupForm.g.cs
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MainMenu.baml
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\SignupForm.baml

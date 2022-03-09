@@ -7,19 +7,20 @@
         mc:Ignorable="d"
         Title="SignupForm" Height="450" Width="800">
     <Grid>
-        <Button Content="Back To Main Menu" HorizontalAlignment="Left" Margin="616,388,0,0" VerticalAlignment="Top" Width="145"/>
-        <Button Content="Reset Fields" HorizontalAlignment="Left" Margin="452,388,0,0" VerticalAlignment="Top" Width="145"/>
-        <Button Content="Sign Up" HorizontalAlignment="Left" Margin="286,388,0,0" VerticalAlignment="Top" Width="145"/>
+        <Button Content="Back To Login" HorizontalAlignment="Left" Margin="616,388,0,0" VerticalAlignment="Top" Width="145" Click="BackToLogin_Click"/>
+        <Button Content="Reset Fields" HorizontalAlignment="Left" Margin="452,388,0,0" VerticalAlignment="Top" Width="145" Click="ResetFields_Click"/>
+        <Button Content="Sign Up" HorizontalAlignment="Left" Margin="286,388,0,0" VerticalAlignment="Top" Width="145" Click="SignUp_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="259,81,0,0" Text="First Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="358,81,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="FNBox" HorizontalAlignment="Left" Margin="358,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="259,111,0,0" Text="Middle Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="358,111,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="MNBox" HorizontalAlignment="Left" Margin="358,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="259,144,0,0" Text="Last Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="358,143,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="358,176,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="358,0,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <TextBox x:Name="LNBox" HorizontalAlignment="Left" Margin="358,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="EmailBox" HorizontalAlignment="Left" Margin="358,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="PassBox" HorizontalAlignment="Left" Margin="358,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="260,176,0,0" Text="Email Address" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="259,0,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Center"/>
+        
 
 
     </Grid>

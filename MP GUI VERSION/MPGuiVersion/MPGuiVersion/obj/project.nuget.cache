@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "ssG3WPnsM9MkaqWwGvLEFG5HGoY3qeSWJw5c/9J+SXqEbACurJeVPukbq+kshF6aPJtKN6lR66ab61XxEMBeEw==",
+  "dgSpecHash": "aT8J8hVwI5BMU+ElBlMoBHMGHAQbPmAdnMYCj8fv4Mhm5Gz+3LsQZIZl7+cUrZG5iOespkWpFNDYdYL1se1jEw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alaric\\source\\repos\\3rd Term 2Y\\CPE106 Machine Problem\\MP GUI VERSION\\MPGuiVersion\\MPGuiVersion\\MPGuiVersion.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Alaric\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Alaric\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Alaric\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\Alaric\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Alaric\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Alaric\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Alaric\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
+    "C:\\Users\\Alaric\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\Alaric\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

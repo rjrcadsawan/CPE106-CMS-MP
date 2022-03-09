@@ -22,3 +22,10 @@ C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\M
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\SignupForm.g.cs
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MainMenu.baml
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\SignupForm.baml
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion.csproj.CopyComplete

@@ -64,11 +64,29 @@
                 <Grid Background="#FFE5E5E5">
                     <TabControl TabStripPlacement="Left">
                         <TabItem Header="Add Transaction">
-                            <Grid Background="#FFE5E5E5"/>
+                            <Grid Background="#FFE5E5E5">
+                                <TextBox HorizontalAlignment="Left" Margin="189,31,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="287"/>
+                                <TextBox HorizontalAlignment="Left" Margin="189,74,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="287"/>
+                                <Label Content="Name" HorizontalAlignment="Left" Margin="57,27,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Description" HorizontalAlignment="Left" Margin="57,70,0,0" VerticalAlignment="Top"/>
+                                <RadioButton Content="Credit" HorizontalAlignment="Left" Margin="212,121,0,0" VerticalAlignment="Top"/>
+                                <RadioButton Content="Debit" HorizontalAlignment="Center" Margin="0,121,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Type of Transaction" HorizontalAlignment="Left" Margin="57,115,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Amount" HorizontalAlignment="Left" Margin="61,163,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="189,167,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="287"/>
+                                <Button Content="Add Transaction" HorizontalAlignment="Left" Margin="316,334,0,0" VerticalAlignment="Top" Width="160"/>
+                                <Button Content="Clear All Fields" HorizontalAlignment="Left" Margin="493,334,0,0" VerticalAlignment="Top" Width="160"/>
+                                <Label Content="Total Credit" HorizontalAlignment="Left" Margin="61,200,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Total Debit" HorizontalAlignment="Left" Margin="61,246,0,0" VerticalAlignment="Top"/>
+                                <Label Content="PHP VALUE HERE" HorizontalAlignment="Left" Margin="189,200,0,0" VerticalAlignment="Top"/>
+                                <Label Content="PHP VALUE HERE" HorizontalAlignment="Left" Margin="189,246,0,0" VerticalAlignment="Top"/>
+                            </Grid>
                         </TabItem>
                         <TabItem Header="All Transactions">
-                            <Grid Background="#FFE5E5E5"/>
+                            <DataGrid Margin="23,12,21,18" />
                         </TabItem>
+
+
                     </TabControl>
                 </Grid>
             </TabItem>
@@ -76,16 +94,65 @@
                 <Grid Background="#FFE5E5E5">
                     <TabControl TabStripPlacement="Left">
                         <TabItem Header="Add Item">
-                            <Grid Background="#FFE5E5E5"/>
+                            <Grid Background="#FFE5E5E5">
+                                <TextBox HorizontalAlignment="Left" Margin="175,20,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="175,59,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="175,98,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="175,138,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="304"/>
+                                <Label Content="Item Name" HorizontalAlignment="Left" Margin="95,16,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Quantity" HorizontalAlignment="Left" Margin="95,55,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Unit Price" HorizontalAlignment="Left" Margin="95,94,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Description" HorizontalAlignment="Left" Margin="95,134,0,0" VerticalAlignment="Top"/>
+                                <Button Content="Add Item" HorizontalAlignment="Left" Margin="313,303,0,0" VerticalAlignment="Top" Width="150"/>
+                                <Button Content="Reset Fields" HorizontalAlignment="Left" Margin="145,303,0,0" VerticalAlignment="Top" Width="150"/>
+                            </Grid>
                         </TabItem>
                         <TabItem Header="Delete Item">
-                            <Grid Background="#FFE5E5E5"/>
+                            <Grid Background="#FFE5E5E5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="127*"/>
+                                    <ColumnDefinition Width="212*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="Item Name" HorizontalAlignment="Left" Margin="45,26,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,30,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <DataGrid Margin="45,57,26,127" Grid.ColumnSpan="2"/>
+                                <Label Content="Quantity" HorizontalAlignment="Left" Margin="52,288,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Unit Price" HorizontalAlignment="Left" Margin="52,319,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,292,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,327,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <Button Content="Search Item" HorizontalAlignment="Left" Margin="5,28,0,0" VerticalAlignment="Top" Width="150" Grid.Column="1"/>
+                                <Button Content="Reset Fields" HorizontalAlignment="Left" Margin="10,326,0,0" VerticalAlignment="Top" Width="150" Grid.Column="1"/>
+                                <Button Content="Delete Item" HorizontalAlignment="Left" Margin="191,326,0,0" VerticalAlignment="Top" Width="150" Grid.Column="1"/>
+                            </Grid>
                         </TabItem>
-                        <TabItem Header="Search Item">
-                            <Grid Background="#FFE5E5E5"/>
+                        <TabItem Header="Modify Item">
+                            <Grid Background="#FFE5E5E5">
+                                <Label Content="Item Name" HorizontalAlignment="Left" Margin="45,35,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,39,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <DataGrid Margin="45,125,26,59"/>
+                                <Label Content="Quantity" HorizontalAlignment="Left" Margin="52,61,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Unit Price" HorizontalAlignment="Left" Margin="45,87,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,64,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,91,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <Button Content="Search Item" HorizontalAlignment="Left" Margin="161,360,0,0" VerticalAlignment="Top" Width="150"/>
+                                <Button Content="Reset Fields" HorizontalAlignment="Left" Margin="334,360,0,0" VerticalAlignment="Top" Width="150"/>
+                                <Button Content="Modify Item" HorizontalAlignment="Left" Margin="502,360,0,0" VerticalAlignment="Top" Width="150"/>
+                                <Label Content="Existing Item Data" HorizontalAlignment="Left" Margin="130,8,0,0" VerticalAlignment="Top"/>
+
+                                <Label Content="New Item Data" HorizontalAlignment="Left" Margin="502,8,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Item Name" HorizontalAlignment="Left" Margin="413,35,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="487,39,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <Label Content="Quantity" HorizontalAlignment="Left" Margin="420,60,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Unit Price" HorizontalAlignment="Left" Margin="413,87,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="487,64,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="487,91,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <Button Content="-- Copy Fields -->" HorizontalAlignment="Center" Margin="0,64,0,0" VerticalAlignment="Top"/>
+                            </Grid>
                         </TabItem>
                         <TabItem Header="Summary of Items">
-                            <Grid Background="#FFE5E5E5"/>
+                            <Grid Background="#FFE5E5E5">
+                                <DataGrid Margin="10,20,10,10"/>
+                            </Grid>
                         </TabItem>
                     </TabControl>
                 </Grid>
@@ -94,31 +161,115 @@
                 <Grid Background="#FFE5E5E5">
                     <TabControl TabStripPlacement="Left">
                         <TabItem Header="Add Task">
-                            <Grid Background="#FFE5E5E5"/>
+                            <Grid Background="#FFE5E5E5">
+                                <Label Content="Task Name" HorizontalAlignment="Left" Margin="53,30,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Due Date" HorizontalAlignment="Left" Margin="53,61,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Budget" HorizontalAlignment="Left" Margin="53,92,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Employees Needed" HorizontalAlignment="Left" Margin="53,123,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Description" HorizontalAlignment="Left" Margin="53,154,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Materials Needed" HorizontalAlignment="Left" Margin="53,232,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="175,34,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="175,65,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="175,96,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="175,127,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="175,158,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="70"/>
+                                <TextBox HorizontalAlignment="Left" Margin="175,236,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="100"/>
+                                <Button Content="Reset Fields" HorizontalAlignment="Left" Margin="325,360,0,0" VerticalAlignment="Top" Width="150"/>
+                                <Button Content="Add Task" HorizontalAlignment="Left" Margin="496,360,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.613,0.645" Width="150"/>
+
+                            </Grid>
                         </TabItem>
                         <TabItem Header="Remove Task">
-                            <Grid Background="#FFE5E5E5"/>
+                            <Grid Background="#FFE5E5E5">
+                                <Label Content="Task Name" HorizontalAlignment="Left" Margin="45,26,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,30,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <DataGrid Margin="45,57,26,127"/>
+                                <Label Content="Budget" HorizontalAlignment="Left" Margin="52,288,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Due Date" HorizontalAlignment="Left" Margin="52,319,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,292,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,327,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <Button Content="Search Task" HorizontalAlignment="Left" Margin="259,28,0,0" VerticalAlignment="Top" Width="150"/>
+                                <Button Content="Reset Fields" HorizontalAlignment="Center" Margin="0,326,0,0" VerticalAlignment="Top" Width="150"/>
+                                <Button Content="Delete Task" HorizontalAlignment="Left" Margin="445,326,0,0" VerticalAlignment="Top" Width="150"/>
+                                <Button Content="Remove Duplicates" HorizontalAlignment="Left" Margin="445,292,0,0" VerticalAlignment="Top" Width="150"/>
+                            </Grid>
                         </TabItem>
-                        <TabItem Header="Search Task">
-                            <Grid Background="#FFE5E5E5"/>
+                        <TabItem Header="Modify Task">
+                            <Grid Background="#FFE5E5E5">
+                                <Label Content="Task Name" HorizontalAlignment="Left" Margin="45,35,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,39,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <DataGrid Margin="45,228,26,80"/>
+                                <Label Content="Budget" HorizontalAlignment="Left" Margin="52,61,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Due Date" HorizontalAlignment="Left" Margin="45,87,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,64,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,91,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <Button Content="Search Item" HorizontalAlignment="Left" Margin="161,360,0,0" VerticalAlignment="Top" Width="150"/>
+                                <Button Content="Reset Fields" HorizontalAlignment="Left" Margin="334,360,0,0" VerticalAlignment="Top" Width="150"/>
+                                <Button Content="Modify Item" HorizontalAlignment="Left" Margin="502,360,0,0" VerticalAlignment="Top" Width="150"/>
+                                <Label Content="Existing Task Data" HorizontalAlignment="Left" Margin="130,8,0,0" VerticalAlignment="Top"/>
+
+                                <Label Content="New Task Data" HorizontalAlignment="Left" Margin="502,8,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Task Name" HorizontalAlignment="Left" Margin="413,35,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="487,39,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <Label Content="Budget" HorizontalAlignment="Left" Margin="420,60,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Due Date" HorizontalAlignment="Left" Margin="413,87,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="487,64,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="487,91,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <Button Content="-- Copy Fields -->" HorizontalAlignment="Left" Margin="270,64,0,0" VerticalAlignment="Top" Width="120"/>
+                                <Label Content="Materials" HorizontalAlignment="Left" Margin="42,113,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,117,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="96"/>
+                                <Label Content="Materials" HorizontalAlignment="Left" Margin="410,113,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="487,117,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="96"/>
+                                <Button Content="Toggle Status" HorizontalAlignment="Left" Margin="270,0,0,0" VerticalAlignment="Center" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="270,167,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                            </Grid>
                         </TabItem>
                         <TabItem Header="Assign Task">
-                            <Grid Background="#FFE5E5E5"/>
+                            <Grid Background="#FFE5E5E5">
+                                <Label Content="Task Name" HorizontalAlignment="Left" Margin="29,20,0,0" VerticalAlignment="Top"/>
+                                <DataGrid Margin="10,51,10,270"/>
+                                <TextBox HorizontalAlignment="Left" Margin="101,24,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <Label Content="Due Date" HorizontalAlignment="Left" Margin="259,20,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="324,24,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <Button Content="Search Task" HorizontalAlignment="Left" Margin="520,24,0,0" VerticalAlignment="Top" Width="150"/>
+                                <DataGrid Margin="10,200,10,121"/>
+                                <Label Content="Employee ID" HorizontalAlignment="Left" Margin="29,169,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="111,173,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <Button Content="Assign Employee to Task" HorizontalAlignment="Left" Margin="520,301,0,0" VerticalAlignment="Top" Width="150"/>
+                                <Button Content="Search Employee" HorizontalAlignment="Left" Margin="520,173,0,0" VerticalAlignment="Top" Width="150"/>
+                                <Button Content="Deallocate Employee" HorizontalAlignment="Left" Margin="350,301,0,0" VerticalAlignment="Top" Width="150"/>
+                            </Grid>
                         </TabItem>
                         <TabItem Header="Task History">
-                            <Grid Background="#FFE5E5E5"/>
-                        </TabItem>
-                        <TabItem Header="Update Task">
-                            <Grid Background="#FFE5E5E5"/>
+                            <Grid Background="#FFE5E5E5">
+                                <DataGrid Margin="10,10,10,10"/>
+                            </Grid>
                         </TabItem>
                         <TabItem Header="Summary of Tasks">
-                            <Grid Background="#FFE5E5E5"/>
+                            <Grid Background="#FFE5E5E5">
+                                <DataGrid Margin="10,10,10,10"/>
+                            </Grid>
                         </TabItem>
                     </TabControl>
                 </Grid>
             </TabItem>
-            <TabItem Header="Security">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="Permissions">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid Margin="10,10,10,197"/>
+                    <Label Content="Email address" HorizontalAlignment="Left" Margin="10,214,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Margin="97,219,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Button Content="Reset Fields" HorizontalAlignment="Left" Margin="634,217,0,0" VerticalAlignment="Top" Width="150"/>
+                    <Button Content="Grab Details" HorizontalAlignment="Left" Margin="465,217,0,0" VerticalAlignment="Top" Width="150"/>
+                    <Label Content="Permissions" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top"/>
+
+                    <Button Content="Update Info" HorizontalAlignment="Left" Margin="297,217,0,0" VerticalAlignment="Top" Width="150"/>
+                    <CheckBox Content="Employee Module" HorizontalAlignment="Left" Margin="10,271,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Bookkeeping Module" HorizontalAlignment="Left" Margin="10,291,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Inventory Module" HorizontalAlignment="Left" Margin="11,311,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Task Module" HorizontalAlignment="Left" Margin="10,331,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Permissions" HorizontalAlignment="Left" Margin="11,351,0,0" VerticalAlignment="Top"/>
+
+                </Grid>
             </TabItem>
         </TabControl>
 

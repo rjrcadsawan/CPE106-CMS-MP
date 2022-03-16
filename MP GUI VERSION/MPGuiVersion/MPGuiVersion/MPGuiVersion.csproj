@@ -5,8 +5,15 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="photo_2021-10-09_23-36-43.jpg" />
+  </ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Resource Include="photo_2021-10-09_23-36-43.jpg" />
 	</ItemGroup>
 
 </Project>

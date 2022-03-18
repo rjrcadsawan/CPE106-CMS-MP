@@ -32,8 +32,12 @@
                                 <TextBox HorizontalAlignment="Left" Margin="184,107,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
                                 <Label Content="Salary" HorizontalAlignment="Left" Margin="73,205,0,0" VerticalAlignment="Top"/>
                                 <TextBox HorizontalAlignment="Left" Margin="34,179,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
-                                <Button Content="Add Employee" HorizontalAlignment="Left" Margin="528,343,0,0" VerticalAlignment="Top" Width="100"/>
-                                <Button Content="Reset Fields" HorizontalAlignment="Left" Margin="402,343,0,0" VerticalAlignment="Top" Width="100"/>
+                                <Button Content="Add Employee" HorizontalAlignment="Left" Margin="528,343,0,0" VerticalAlignment="Top" Width="120"/>
+                                <Button Content="Reset Fields" HorizontalAlignment="Left" Margin="372,343,0,0" VerticalAlignment="Top" Width="120"/>
+                                <Label Content="Email Address" HorizontalAlignment="Left" Margin="348,133,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Margin="330,107,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+                                <Button Content="Add Employee Profile" HorizontalAlignment="Left" Margin="218,343,0,0" VerticalAlignment="Top" Width="120"/>
+                                <Button Content="Add Health Record" HorizontalAlignment="Left" Margin="73,343,0,0" VerticalAlignment="Top" Width="120"/>
 
                             </Grid>
                         </TabItem>
@@ -47,6 +51,7 @@
                                 <Button Content="Search Employee" HorizontalAlignment="Left" Margin="539,358,0,0" VerticalAlignment="Top" Width="120"/>
                                 <Button Content="Delete Employee" HorizontalAlignment="Left" Margin="398,358,0,0" VerticalAlignment="Top" Width="120"/>
                                 <Button Content="Generate Payslip" HorizontalAlignment="Left" Margin="248,358,0,0" VerticalAlignment="Top" Width="120"/>
+                                <Button Content="Manage Emails" HorizontalAlignment="Left" Margin="94,358,0,0" VerticalAlignment="Top" Width="120" Click="Open_Email_Manager"/>
                             </Grid>
                         </TabItem>
                         <TabItem Header="Payroll Sheet">

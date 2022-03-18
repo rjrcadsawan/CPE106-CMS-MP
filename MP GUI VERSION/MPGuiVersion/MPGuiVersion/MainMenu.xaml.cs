@@ -27,5 +27,10 @@ namespace MPGuiVersion
 
         }
 
+        private void Open_Email_Manager(object sender, RoutedEventArgs e)
+        {
+            EmailWindow EM = new EmailWindow();
+            EM.Show();
+        }
     }
 }

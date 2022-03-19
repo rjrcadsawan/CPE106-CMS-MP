@@ -14,12 +14,12 @@
                         <TabItem Header="Add Employee">
                             <Grid Background="#FFE5E5E5">
                                 <Label Content="First Name" HorizontalAlignment="Left" Margin="60,57,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="34,34,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+                                <TextBox HorizontalAlignment="Left" Margin="34,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
                                 <Label Content="Middle Name" HorizontalAlignment="Left" Margin="203,57,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="184,34,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+                                <TextBox HorizontalAlignment="Left" Margin="184,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
                                 <Label Content="Last Name" HorizontalAlignment="Left" Margin="357,57,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="330,34,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
-                                <TextBox HorizontalAlignment="Left" Margin="477,34,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="21"/>
+                                <TextBox HorizontalAlignment="Left" Margin="330,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+                                <TextBox HorizontalAlignment="Left" Margin="477,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="21"/>
                                 <Label Content="Suffix" HorizontalAlignment="Left" Margin="482,57,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Sex" HorizontalAlignment="Left" Margin="564,57,0,0" VerticalAlignment="Top"/>
                                 <ComboBox HorizontalAlignment="Left" Margin="555,34,0,0" VerticalAlignment="Top" Width="46" >
@@ -27,24 +27,24 @@
                                     <ComboBoxItem Content="F"/>
                                 </ComboBox>
                                 <Label Content="Department" HorizontalAlignment="Left" Margin="57,133,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="34,107,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+                                <TextBox HorizontalAlignment="Left" Margin="34,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
                                 <Label Content="Position" HorizontalAlignment="Left" Margin="218,133,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="184,107,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+                                <TextBox HorizontalAlignment="Left" Margin="184,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
                                 <Label Content="Salary" HorizontalAlignment="Left" Margin="73,205,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="34,179,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+                                <TextBox HorizontalAlignment="Left" Margin="34,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
                                 <Button Content="Add Employee" HorizontalAlignment="Left" Margin="528,343,0,0" VerticalAlignment="Top" Width="120"/>
                                 <Button Content="Reset Fields" HorizontalAlignment="Left" Margin="372,343,0,0" VerticalAlignment="Top" Width="120"/>
                                 <Label Content="Email Address" HorizontalAlignment="Left" Margin="348,133,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="330,107,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
-                                <Button Content="Add Employee Profile" HorizontalAlignment="Left" Margin="218,343,0,0" VerticalAlignment="Top" Width="120"/>
-                                <Button Content="Add Health Record" HorizontalAlignment="Left" Margin="73,343,0,0" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="330,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+                                <Button Content="Add Employee Profile" HorizontalAlignment="Left" Margin="218,343,0,0" VerticalAlignment="Top" Width="120" Click="Add_Employee_Profile"/>
+                                <Button Content="Add Health Record" HorizontalAlignment="Left" Margin="73,343,0,0" VerticalAlignment="Top" Width="120" Click="Add_Health_Record"/>
 
                             </Grid>
                         </TabItem>
                         <TabItem Header="Manage Employees">
                             <Grid Background="#FFE5E5E5">
                                 <Label Content="Employee ID" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="101,14,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="101,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                                 <Label Content="Search Results:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
                                 <Label Content="X Found" HorizontalAlignment="Left" Margin="167,36,0,0" VerticalAlignment="Top"/>
                                 <DataGrid Margin="10,67,10,56"/>
@@ -70,15 +70,15 @@
                     <TabControl TabStripPlacement="Left">
                         <TabItem Header="Add Transaction">
                             <Grid Background="#FFE5E5E5">
-                                <TextBox HorizontalAlignment="Left" Margin="189,31,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="287"/>
-                                <TextBox HorizontalAlignment="Left" Margin="189,74,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="287"/>
+                                <TextBox HorizontalAlignment="Left" Margin="189,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287"/>
+                                <TextBox HorizontalAlignment="Left" Margin="189,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287"/>
                                 <Label Content="Name" HorizontalAlignment="Left" Margin="57,27,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Description" HorizontalAlignment="Left" Margin="57,70,0,0" VerticalAlignment="Top"/>
                                 <RadioButton Content="Credit" HorizontalAlignment="Left" Margin="212,121,0,0" VerticalAlignment="Top"/>
                                 <RadioButton Content="Debit" HorizontalAlignment="Center" Margin="0,121,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Type of Transaction" HorizontalAlignment="Left" Margin="57,115,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Amount" HorizontalAlignment="Left" Margin="61,163,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="189,167,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="287"/>
+                                <TextBox HorizontalAlignment="Left" Margin="189,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287"/>
                                 <Button Content="Add Transaction" HorizontalAlignment="Left" Margin="316,334,0,0" VerticalAlignment="Top" Width="160"/>
                                 <Button Content="Clear All Fields" HorizontalAlignment="Left" Margin="493,334,0,0" VerticalAlignment="Top" Width="160"/>
                                 <Label Content="Total Credit" HorizontalAlignment="Left" Margin="61,200,0,0" VerticalAlignment="Top"/>
@@ -100,10 +100,10 @@
                     <TabControl TabStripPlacement="Left">
                         <TabItem Header="Add Item">
                             <Grid Background="#FFE5E5E5">
-                                <TextBox HorizontalAlignment="Left" Margin="175,20,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                                <TextBox HorizontalAlignment="Left" Margin="175,59,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                                <TextBox HorizontalAlignment="Left" Margin="175,98,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                                <TextBox HorizontalAlignment="Left" Margin="175,138,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="304"/>
+                                <TextBox HorizontalAlignment="Left" Margin="175,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="175,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="175,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="175,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304"/>
                                 <Label Content="Item Name" HorizontalAlignment="Left" Margin="95,16,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Quantity" HorizontalAlignment="Left" Margin="95,55,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Unit Price" HorizontalAlignment="Left" Margin="95,94,0,0" VerticalAlignment="Top"/>
@@ -119,12 +119,12 @@
                                     <ColumnDefinition Width="212*"/>
                                 </Grid.ColumnDefinitions>
                                 <Label Content="Item Name" HorizontalAlignment="Left" Margin="45,26,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="119,30,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                                 <DataGrid Margin="45,57,26,127" Grid.ColumnSpan="2"/>
                                 <Label Content="Quantity" HorizontalAlignment="Left" Margin="52,288,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Unit Price" HorizontalAlignment="Left" Margin="52,319,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="119,292,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                                <TextBox HorizontalAlignment="Left" Margin="119,327,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,292,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,327,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                                 <Button Content="Search Item" HorizontalAlignment="Left" Margin="5,28,0,0" VerticalAlignment="Top" Width="150" Grid.Column="1"/>
                                 <Button Content="Reset Fields" HorizontalAlignment="Left" Margin="10,326,0,0" VerticalAlignment="Top" Width="150" Grid.Column="1"/>
                                 <Button Content="Delete Item" HorizontalAlignment="Left" Margin="191,326,0,0" VerticalAlignment="Top" Width="150" Grid.Column="1"/>
@@ -133,12 +133,12 @@
                         <TabItem Header="Modify Item">
                             <Grid Background="#FFE5E5E5">
                                 <Label Content="Item Name" HorizontalAlignment="Left" Margin="45,35,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="119,39,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                                 <DataGrid Margin="45,125,26,59"/>
                                 <Label Content="Quantity" HorizontalAlignment="Left" Margin="52,61,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Unit Price" HorizontalAlignment="Left" Margin="45,87,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="119,64,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                                <TextBox HorizontalAlignment="Left" Margin="119,91,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                                 <Button Content="Search Item" HorizontalAlignment="Left" Margin="161,360,0,0" VerticalAlignment="Top" Width="150"/>
                                 <Button Content="Reset Fields" HorizontalAlignment="Left" Margin="334,360,0,0" VerticalAlignment="Top" Width="150"/>
                                 <Button Content="Modify Item" HorizontalAlignment="Left" Margin="502,360,0,0" VerticalAlignment="Top" Width="150"/>
@@ -146,11 +146,11 @@
 
                                 <Label Content="New Item Data" HorizontalAlignment="Left" Margin="502,8,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Item Name" HorizontalAlignment="Left" Margin="413,35,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="487,39,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="487,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                                 <Label Content="Quantity" HorizontalAlignment="Left" Margin="420,60,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Unit Price" HorizontalAlignment="Left" Margin="413,87,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="487,64,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                                <TextBox HorizontalAlignment="Left" Margin="487,91,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="487,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="487,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                                 <Button Content="-- Copy Fields -->" HorizontalAlignment="Center" Margin="0,64,0,0" VerticalAlignment="Top"/>
                             </Grid>
                         </TabItem>
@@ -173,12 +173,12 @@
                                 <Label Content="Employees Needed" HorizontalAlignment="Left" Margin="53,123,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Description" HorizontalAlignment="Left" Margin="53,154,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Materials Needed" HorizontalAlignment="Left" Margin="53,232,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="175,34,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                                <TextBox HorizontalAlignment="Left" Margin="175,65,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                                <TextBox HorizontalAlignment="Left" Margin="175,96,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                                <TextBox HorizontalAlignment="Left" Margin="175,127,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                                <TextBox HorizontalAlignment="Left" Margin="175,158,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="70"/>
-                                <TextBox HorizontalAlignment="Left" Margin="175,236,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="100"/>
+                                <TextBox HorizontalAlignment="Left" Margin="175,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="175,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="175,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="175,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="175,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="70"/>
+                                <TextBox HorizontalAlignment="Left" Margin="175,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="100"/>
                                 <Button Content="Reset Fields" HorizontalAlignment="Left" Margin="325,360,0,0" VerticalAlignment="Top" Width="150"/>
                                 <Button Content="Add Task" HorizontalAlignment="Left" Margin="496,360,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.613,0.645" Width="150"/>
 
@@ -187,12 +187,12 @@
                         <TabItem Header="Remove Task">
                             <Grid Background="#FFE5E5E5">
                                 <Label Content="Task Name" HorizontalAlignment="Left" Margin="45,26,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="119,30,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                                 <DataGrid Margin="45,57,26,127"/>
                                 <Label Content="Budget" HorizontalAlignment="Left" Margin="52,288,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Due Date" HorizontalAlignment="Left" Margin="52,319,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="119,292,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                                <TextBox HorizontalAlignment="Left" Margin="119,327,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                                 <Button Content="Search Task" HorizontalAlignment="Left" Margin="259,28,0,0" VerticalAlignment="Top" Width="150"/>
                                 <Button Content="Reset Fields" HorizontalAlignment="Center" Margin="0,326,0,0" VerticalAlignment="Top" Width="150"/>
                                 <Button Content="Delete Task" HorizontalAlignment="Left" Margin="445,326,0,0" VerticalAlignment="Top" Width="150"/>
@@ -202,12 +202,12 @@
                         <TabItem Header="Modify Task">
                             <Grid Background="#FFE5E5E5">
                                 <Label Content="Task Name" HorizontalAlignment="Left" Margin="45,35,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="119,39,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                                 <DataGrid Margin="45,228,26,80"/>
                                 <Label Content="Budget" HorizontalAlignment="Left" Margin="52,61,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Due Date" HorizontalAlignment="Left" Margin="45,87,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="119,64,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                                <TextBox HorizontalAlignment="Left" Margin="119,91,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                                 <Button Content="Search Item" HorizontalAlignment="Left" Margin="161,360,0,0" VerticalAlignment="Top" Width="150"/>
                                 <Button Content="Reset Fields" HorizontalAlignment="Left" Margin="334,360,0,0" VerticalAlignment="Top" Width="150"/>
                                 <Button Content="Modify Item" HorizontalAlignment="Left" Margin="502,360,0,0" VerticalAlignment="Top" Width="150"/>
@@ -215,31 +215,31 @@
 
                                 <Label Content="New Task Data" HorizontalAlignment="Left" Margin="502,8,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Task Name" HorizontalAlignment="Left" Margin="413,35,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="487,39,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="487,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                                 <Label Content="Budget" HorizontalAlignment="Left" Margin="420,60,0,0" VerticalAlignment="Top"/>
                                 <Label Content="Due Date" HorizontalAlignment="Left" Margin="413,87,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="487,64,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                                <TextBox HorizontalAlignment="Left" Margin="487,91,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="487,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="487,91,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                                 <Button Content="-- Copy Fields -->" HorizontalAlignment="Left" Margin="270,64,0,0" VerticalAlignment="Top" Width="120"/>
                                 <Label Content="Materials" HorizontalAlignment="Left" Margin="42,113,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="119,117,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="96"/>
+                                <TextBox HorizontalAlignment="Left" Margin="119,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="96"/>
                                 <Label Content="Materials" HorizontalAlignment="Left" Margin="410,113,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="487,117,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="96"/>
+                                <TextBox HorizontalAlignment="Left" Margin="487,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="96"/>
                                 <Button Content="Toggle Status" HorizontalAlignment="Left" Margin="270,0,0,0" VerticalAlignment="Center" Width="120"/>
-                                <TextBox HorizontalAlignment="Left" Margin="270,167,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="270,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                             </Grid>
                         </TabItem>
                         <TabItem Header="Assign Task">
                             <Grid Background="#FFE5E5E5">
                                 <Label Content="Task Name" HorizontalAlignment="Left" Margin="29,20,0,0" VerticalAlignment="Top"/>
                                 <DataGrid Margin="10,51,10,270"/>
-                                <TextBox HorizontalAlignment="Left" Margin="101,24,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="101,24,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                                 <Label Content="Due Date" HorizontalAlignment="Left" Margin="259,20,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="324,24,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="324,24,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                                 <Button Content="Search Task" HorizontalAlignment="Left" Margin="520,24,0,0" VerticalAlignment="Top" Width="150"/>
                                 <DataGrid Margin="10,200,10,121"/>
                                 <Label Content="Employee ID" HorizontalAlignment="Left" Margin="29,169,0,0" VerticalAlignment="Top"/>
-                                <TextBox HorizontalAlignment="Left" Margin="111,173,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                                <TextBox HorizontalAlignment="Left" Margin="111,173,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                                 <Button Content="Assign Employee to Task" HorizontalAlignment="Left" Margin="520,301,0,0" VerticalAlignment="Top" Width="150"/>
                                 <Button Content="Search Employee" HorizontalAlignment="Left" Margin="520,173,0,0" VerticalAlignment="Top" Width="150"/>
                                 <Button Content="Deallocate Employee" HorizontalAlignment="Left" Margin="350,301,0,0" VerticalAlignment="Top" Width="150"/>
@@ -262,7 +262,7 @@
                 <Grid Background="#FFE5E5E5">
                     <DataGrid Margin="10,10,10,197"/>
                     <Label Content="Email address" HorizontalAlignment="Left" Margin="10,214,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Margin="97,219,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox HorizontalAlignment="Left" Margin="97,219,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <Button Content="Reset Fields" HorizontalAlignment="Left" Margin="634,217,0,0" VerticalAlignment="Top" Width="150"/>
                     <Button Content="Grab Details" HorizontalAlignment="Left" Margin="465,217,0,0" VerticalAlignment="Top" Width="150"/>
                     <Label Content="Permissions" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top"/>

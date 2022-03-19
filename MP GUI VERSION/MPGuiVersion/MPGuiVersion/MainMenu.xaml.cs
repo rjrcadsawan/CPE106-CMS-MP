@@ -32,5 +32,18 @@ namespace MPGuiVersion
             EmailWindow EM = new EmailWindow();
             EM.Show();
         }
+
+        private void Add_Employee_Profile (object sender, RoutedEventArgs e)
+        {
+            EmployeeProfileWindow EPW = new EmployeeProfileWindow();
+            EPW.Show();
+             
+        }
+
+        private void Add_Health_Record(object sender, RoutedEventArgs e)
+        {
+            MedicalRecordWindow MRW = new MedicalRecordWindow();
+            MRW.Show();
+        }
     }
 }

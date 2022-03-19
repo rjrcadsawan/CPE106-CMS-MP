@@ -23,7 +23,7 @@ namespace MPGuiVersion
         string connection_string;
         SqlConnection sql_conn;
         SqlCommand sql_comm;
-
+        bool connected = false;
         public SignupForm()
         {
             InitializeComponent();
@@ -37,6 +37,7 @@ namespace MPGuiVersion
                 this.connection_string = "Data Source=ASUS-ACE;Initial Catalog=CMSData;Integrated Security=True";
                 this.sql_conn = new SqlConnection(connection_string);
                 this.sql_conn.Open();
+                connected = true;
             }
             catch (Exception ex)
             {
@@ -58,6 +59,14 @@ namespace MPGuiVersion
             string last_name = LNBox.Text;
             string email_address = EmailBox.Text;
             string password_text = PassBox.Text;
+
+            if (!connected)
+            {
+                MessageBox.Show("Cannot Connect to SQL Server");
+                this.Close();
+                return;
+            }
+
             string search_comm = $"INSERT INTO [LogInDetails] VALUES ('{first_name}', '{middle_name}', '{last_name}', '{email_address}', '{password_text}')";
 
 

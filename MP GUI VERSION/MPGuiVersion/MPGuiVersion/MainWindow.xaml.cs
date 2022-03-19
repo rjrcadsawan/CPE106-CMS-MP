@@ -25,7 +25,7 @@ namespace MPGuiVersion
         string connection_string;
         SqlConnection sql_conn;
         SqlCommand sql_comm;
-        
+        bool connected = false;
 
         public MainWindow()
         {
@@ -43,10 +43,13 @@ namespace MPGuiVersion
                 this.sql_conn = new SqlConnection(connection_string);
                 this.sql_conn.Open();
                 MessageBox.Show("Connection with the CMSData was succesfully established");
+                connected = true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"An Exception has occurred: \n{ex}");
+                MessageBox.Show("Ignoring SQL Connections for current execution");
+
             }
             
         }
@@ -114,9 +117,21 @@ namespace MPGuiVersion
 
             } catch (Exception ex)
             {
-                MessageBox.Show($"Exception: {ex}");
+                if (!connected)
+                {
+                    MessageBox.Show($"No connection to SQL Server, for previewing purposes only");
+                    Hide();
+
+                    this.sql_conn.Close();
+                    MainMenu MM = new MainMenu();
+                    // Blocking Main Loop of MM
+
+                    MM.Show();
+                    Close();
+                }
             }
            
+
             
 
             

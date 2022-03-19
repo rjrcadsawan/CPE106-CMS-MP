@@ -1,0 +1,89 @@
+﻿<Window x:Class="MPGuiVersion.MedicalRecordWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MPGuiVersion"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="666" Width="800">
+    <Grid>
+        <Grid>
+            <Grid>
+                <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0"
+                   Text="Medical Record" TextWrapping="Wrap" VerticalAlignment="Top"
+                    FontWeight="SemiBold" FontSize="20"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,42,0,0" 
+                   Text="First Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,63,0,0" 
+                   Text="Last Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Margin="80,42,0,0" 
+                 Text="" TextWrapping="Wrap" VerticalAlignment="Top" 
+                 Width="120"/>
+                <TextBox HorizontalAlignment="Left" Margin="80,65,0,0" 
+                 Text="" TextWrapping="Wrap" VerticalAlignment="Top" 
+                 Width="120"/>
+
+                <TextBlock FontWeight="SemiBold" Margin="-28,79,354,495"><Run Text="&#xA;            Check the conditions that apply to you or"/><LineBreak/><Run Text="            to any members of your immediate relatives:&#xA;        "/></TextBlock>
+                <StackPanel Margin="10,134,575,362">
+                    <CheckBox>Asthma</CheckBox>
+                    <CheckBox>Cancer</CheckBox>
+                    <CheckBox>Cardiac disease</CheckBox>
+                    <CheckBox>Diabetes</CheckBox>
+                    <CheckBox>Hypertension</CheckBox>
+                    <CheckBox>Psychiatric disorder</CheckBox>
+                    <CheckBox>Epilepsy</CheckBox>
+                </StackPanel>
+
+                <StackPanel Margin="10,293,370,214">
+                    <CheckBox>Chest pain</CheckBox>
+                    <CheckBox>Respiratory</CheckBox>
+                    <CheckBox>Cardiac disease</CheckBox>
+                    <CheckBox>Cardiovascular</CheckBox>
+                    <CheckBox>Hematological</CheckBox>
+                    <CheckBox>Lymphatic</CheckBox>
+                    <CheckBox>Weight gain</CheckBox>
+                    <CheckBox>Weight loss</CheckBox>
+                </StackPanel>
+                <TextBlock FontWeight="SemiBold" Margin="-28,232,354,345"><Run Text="&#xA;            Check the symptoms that you experienced in the "/><LineBreak/><Run Text="            passed seven (7) weeks:&#xA;        "/></TextBlock>
+                <TextBlock FontWeight="SemiBold" Margin="-28,407,354,170" Text="&#xA;            Are you currently taking any medication?&#xA;        "/>
+                <RadioButton Content="Yes" Width="179" RenderTransformOrigin="0.504,0.582" Margin="10,444,611,170"/>
+                <RadioButton Content="No" Width="179" RenderTransformOrigin="0.504,0.582" Margin="10,468,611,122"/>
+                <TextBlock FontWeight="SemiBold" Margin="-28,480,354,97" Text="&#xA;            Do you have any medication allergies?&#xA;        "/>
+                <Grid>
+                    <RadioButton Content="Yes" Margin="10,521,658,78"/>
+                    <RadioButton Content="No" Margin="10,547,641,60"/>
+                    <RadioButton Content="Not Sure" Margin="10,572,515,41"/>
+                </Grid>
+                <Grid>
+                    <TextBlock FontWeight="SemiBold" Margin="295,22,252,562" Text="&#xA;            What is your gender?&#xA;        "/>
+                    <RadioButton Content="Male" Margin="333,67,303,525"/>
+                    <RadioButton Content="Female" Margin="333,93,316,509"/>
+                </Grid>
+
+                <Grid>
+                    <TextBlock FontWeight="SemiBold" Margin="313,117,163,467" Text="&#xA;      Do you or do you have history of using tobacco?&#xA;        "/>
+                    <RadioButton Content="Yes" Margin="334,160,306,447"/>
+                    <RadioButton Content="No" Margin="334,184,335,423"/>
+                </Grid>
+
+                <Grid>
+                    <TextBlock FontWeight="SemiBold" Margin="313,203,144,381" Text="&#xA;      Do you use or do you have history of using illegal drugs?&#xA;        "/>
+                    <RadioButton Content="Yes" Margin="331,251,354,364"/>
+                    <RadioButton Content="No" Margin="331,276,378,339"/>
+                </Grid>
+                <Grid>
+                    <TextBlock FontWeight="SemiBold" Margin="313,292,144,292" Text="&#xA;      How often do you consume alcohol?&#xA;        "/>
+                    <RadioButton Content=" Daily" Margin="330,334,356,278"/>
+                    <RadioButton Content=" Weekly" Margin="330,358,358,245"/>
+                    <RadioButton Content=" Occasionally" Margin="430,334,264,277"/>
+                    <RadioButton Content=" Never" Margin="430,358,249,245"/>
+                    <RadioButton Content=" Montly" Margin="551,334,134,277"/>
+                    <Button Content="Submit" HorizontalAlignment="Left" Margin="684,573,0,0" VerticalAlignment="Top" Height="23" Width="49" RenderTransformOrigin="1.273,-0.221"/>
+                </Grid>
+
+            </Grid>
+
+
+        </Grid>
+    </Grid>
+</Window>

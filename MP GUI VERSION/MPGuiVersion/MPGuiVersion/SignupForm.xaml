@@ -5,22 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MPGuiVersion"
         mc:Ignorable="d"
-        Title="SignupForm" Height="450" Width="800">
+        Title="SignupForm" Height="600" Width="416">
     <Grid>
-        <Button Content="Back To Login" HorizontalAlignment="Left" Margin="616,388,0,0" VerticalAlignment="Top" Width="145" Click="BackToLogin_Click"/>
-        <Button Content="Reset Fields" HorizontalAlignment="Left" Margin="452,388,0,0" VerticalAlignment="Top" Width="145" Click="ResetFields_Click"/>
-        <Button Content="Sign Up" HorizontalAlignment="Left" Margin="286,388,0,0" VerticalAlignment="Top" Width="145" Click="SignUp_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="259,81,0,0" Text="First Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox x:Name="FNBox" HorizontalAlignment="Left" Margin="358,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="259,111,0,0" Text="Middle Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox x:Name="MNBox" HorizontalAlignment="Left" Margin="358,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="259,144,0,0" Text="Last Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox x:Name="LNBox" HorizontalAlignment="Left" Margin="358,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="EmailBox" HorizontalAlignment="Left" Margin="358,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="PassBox" HorizontalAlignment="Left" Margin="358,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="260,176,0,0" Text="Email Address" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="259,0,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Center"/>
-        
+        <Button Content="Sign Up" HorizontalAlignment="Center" Margin="0,520,0,0" VerticalAlignment="Top" Width="200" Click="SignUp_Click" Height="40" Foreground="White" Background="Black" FontFamily="Bahnschrift Light">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20
+                            "/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock HorizontalAlignment="Center" Margin="0,200,0,0" Text="First Name" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Bahnschrift Light"/>
+        <TextBox x:Name="FNBox" HorizontalAlignment="Center" Margin="0,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,250,0,0" Text="Middle Name" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Bahnschrift Light"/>
+        <TextBox x:Name="MNBox" HorizontalAlignment="Center" Margin="0,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,300,0,0" Text="Last Name" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Bahnschrift Light"/>
+        <TextBox x:Name="LNBox" HorizontalAlignment="Center" Margin="0,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="EmailBox" HorizontalAlignment="Center" Margin="0,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+
+        <TextBlock HorizontalAlignment="Center" Margin="0,350,0,0" Text="Email Address" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Bahnschrift Light"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,400,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Bahnschrift Light"/>
+        <Image HorizontalAlignment="Center" Height="71"  VerticalAlignment="Top" Width="71" Source="/CMS Icon.png"/>
+        <Label Content="Member Signup" HorizontalAlignment="Center" Margin="0,86,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="36" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,450,0,0" Text="Confirm Password" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Bahnschrift Light"/>
+        <PasswordBox x:Name="ConfirmPassBox" HorizontalAlignment="Center" Margin="0,430,0,0" VerticalAlignment="Top" Width="200"/>
+        <PasswordBox x:Name="PassBox" HorizontalAlignment="Center" Margin="0,380,0,0" VerticalAlignment="Top" Width="200"/>
+        <Button Content="Log In" HorizontalAlignment="Left" Margin="333,520,0,0" VerticalAlignment="Top" Height="40" Width="40" Background="White" BorderBrush="Black" FontFamily="Bahnschrift Light" Click="Back_to_login">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Reset" HorizontalAlignment="Left" Margin="43,520,0,0" VerticalAlignment="Top" Height="40" Width="40" Background="White" BorderBrush="Black" FontFamily="Bahnschrift Light" Click="Reset_fields">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
 
 
     </Grid>

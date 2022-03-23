@@ -36,69 +36,62 @@ namespace MPGuiVersion
 
         private void InitializeConnections()
         {
-
+            // Try - Except Block, just in case SQL Connection Fails
             try
             {
+                // Connection String based on Server Connector by Visual Studio
                 this.connection_string = "Data Source=ASUS-ACE;Initial Catalog=CMSData;Integrated Security=True";
+
+                // Creates new Connection Object based on connection string
                 this.sql_conn = new SqlConnection(connection_string);
+
+                // Opens the Connection
                 this.sql_conn.Open();
-                MessageBox.Show("Connection with the CMSData was succesfully established");
-                connected = true;
+
+                //MessageBox.Show("Connection with the CMSData was succesfully established");
+                this.connected = true; // Used for testing purposes
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An Exception has occurred: \n{ex}");
-                MessageBox.Show("Ignoring SQL Connections for current execution");
-
+                // Connection Failed
+                MessageBox.Show($"An Exception has occurred: \n{ex.Message}");
             }
             
         }
+        
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             InitializeConnections();
-            string msg = "Login Button was clicked\n";
+
+            // SQL Command Setup
             string email_text = EmailBox.Text;
             string pass_text = PassBox.Password;
-            //string search_comm = "SELECT * FROM LogInDetails WHERE EmailAddress = '@email'";
             string search_comm = $"SELECT * FROM LogInDetails WHERE EmailAddress = '{email_text}'";
 
-            msg += $"Email Entered: {EmailBox.Text}\n";
-            msg += $"Password Entered: {PassBox.Password}";
-            MessageBox.Show(msg);
+            // Email Finding Setup
+            bool email_found = false;
+
+            //string msg = "Login Button was clicked\n";
+            //msg += $"Email Entered: {EmailBox.Text}\n";
+            //msg += $"Password Entered: {PassBox.Password}";
+            //MessageBox.Show(msg);
 
             //SQL Command and data retrieval
-
-
             try
             {
                 sql_comm = new SqlCommand(search_comm, this.sql_conn);
-                //sql_comm.Parameters.AddWithValue("@email", email_text);
                 SqlDataReader sql_read = sql_comm.ExecuteReader();
-                bool email_found = false;
-
-
+                
+                // Would only execute upon reading
                 while (sql_read.Read())
                 {
-
                     email_found = true;
                     if (sql_read["PasswordText"].ToString() == pass_text)
                     {
 
-                        MessageBox.Show($"Entered Correct password, proceeding to main menu\n{sql_read["PasswordText"].ToString()} == {pass_text}");
-                        Hide();
-                        
-                        this.sql_conn.Close();
-                        MainMenu MM = new MainMenu();
-                        // Blocking Main Loop of MM
-                        
-                        MM.Show();
-                        Close();
-                        break;
-                        
-                        
-                        // Exits the program (since window was just hidden, this one closes it)
-                        
-
+                        //MessageBox.Show($"Entered Correct password, proceeding to main menu\n{sql_read["PasswordText"].ToString()} == {pass_text}");
+                        this.showMainMenu();
+                        break; // Stops loop
 
                     }
                     else
@@ -111,8 +104,7 @@ namespace MPGuiVersion
                 if (!email_found) {
                     MessageBox.Show("Email Not Found");
                 }
-
-                
+           
 
 
             } catch (Exception ex)
@@ -120,31 +112,29 @@ namespace MPGuiVersion
                 if (!connected)
                 {
                     MessageBox.Show($"No connection to SQL Server, for previewing purposes only");
-                    Hide();
+                    this.showMainMenu();
 
-                    this.sql_conn.Close();
-                    MainMenu MM = new MainMenu();
-                    // Blocking Main Loop of MM
-
-                    MM.Show();
-                    Close();
+                } else
+                {
+                    MessageBox.Show($"An Exception has occured: {ex.Message}");
                 }
             }
-           
-
-            
-
-            
-
-
-
         }
 
         private void Signup_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Signup Button was clicked");
+            //MessageBox.Show("Signup Button was clicked");
             SignupForm SF = new SignupForm();
             SF.Show();
+        }
+
+        private void showMainMenu()
+        {
+            this.Hide(); // Hide This login window
+            this.sql_conn.Close(); // Closes SQL Connection
+            MainMenu MM = new MainMenu();
+            MM.Show(); // Shows Main Menu
+            this.Close(); // Closes Upon Close of Main Menu
         }
 
     }

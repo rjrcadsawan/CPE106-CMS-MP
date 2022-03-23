@@ -5,15 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MPGuiVersion"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <TextBlock HorizontalAlignment="Center" Text="Company Management System" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,122,0,0"/>
-        <Button x:Name="LoginBtn" Content="Login" HorizontalAlignment="Left" Margin="254,284,0,0" VerticalAlignment="Top" Click="Login_Click" Width="120"/>
-        <Button x:Name="SignupBtn" Content="Signup" HorizontalAlignment="Left" Margin="423,284,0,0" VerticalAlignment="Top" Click="Signup_Click" Width="120"/>
-        <TextBox x:Name="EmailBox" HorizontalAlignment="Center" Margin="0,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,180,0,0" Text="Email Address" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,235,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <PasswordBox x:Name="PassBox" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Width="166"/>
+        Title="MainWindow" Height="600" Width="328">
+    <Grid Background="White">
+        <!-- Labels -->
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="154,34,0,0" FontFamily="Bahnschrift Light" FontSize="14" Height="52" Width="90" RenderTransformOrigin="0.581,1.369"><Run Text="Company"/><LineBreak/><Run Text="Management "/><LineBreak/><Run Text="System"/></TextBlock>
+        <TextBlock HorizontalAlignment="Center" Margin="0,235,0,0" Text="Email Address" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Bahnschrift Light"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,292,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Bahnschrift Light"/>
+
+        <!-- Fields -->
+        <TextBox x:Name="EmailBox" HorizontalAlignment="Center" Margin="0,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+
+        <PasswordBox x:Name="PassBox" HorizontalAlignment="Center" Margin="0,269,0,0" VerticalAlignment="Top" Width="200"/>
+
+        <!-- Buttons -->
+        <Button x:Name="LoginBtn" Content="Login" HorizontalAlignment="Center" Margin="0,335,0,0" VerticalAlignment="Top" Click="Login_Click" Width="200
+                " FontFamily="Bahnschrift Light" Background="Black" Foreground="White" Height="40">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20
+                            "/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="SignupBtn" Content="Create an Account" HorizontalAlignment="Center" Margin="0,483,0,0" VerticalAlignment="Top" Click="Signup_Click" Width="200" Background="White" Foreground="Black" Height="40" BorderBrush="Black">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20
+                            "/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="48" Margin="106,36,0,0" VerticalAlignment="Top" Width="50" Source="/CMS Icon.png" />
+
+        <TextBox HorizontalAlignment="Center" Margin="0,121,0,0" Text="Member Login" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" FontFamily="Bahnschrift" FontWeight="Bold" FontSize="36" TextAlignment="Center" BorderBrush="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="47,462,0,0" Text="No Account Yet? Click on the button below" TextWrapping="Wrap" VerticalAlignment="Top" Width="243" FontFamily="Bahnschrift Light" TextAlignment="Center"/>
+
 
 
     </Grid>

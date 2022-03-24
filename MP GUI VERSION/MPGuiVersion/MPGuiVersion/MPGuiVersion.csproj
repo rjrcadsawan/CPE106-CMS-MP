@@ -21,13 +21,16 @@
 		<PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Resource Include="BookkeepingICON.png" />
-	  <Resource Include="CMS Icon.png" />
-	  <Resource Include="EmployeeICON.png" />
-	  <Resource Include="InventoryICON.png" />
-	  <Resource Include="PermissionICON.png" />
-	  <Resource Include="SettingsICON.png" />
-	  <Resource Include="TaskICON.png" />
+	  <Resource Include="Icons\BookkeepingICON.png" />
+	  <Resource Include="Icons\CMS Icon.png" />
+	  <Resource Include="Icons\EmployeeICON.png" />
+	  <Resource Include="Icons\InventoryICON.png" />
+	  <Resource Include="Icons\PermissionICON.png" />
+	  <Resource Include="Icons\SettingsICON.png" />
+	  <Resource Include="Icons\TaskICON.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Module Classes\" />
 	</ItemGroup>
 
 </Project>

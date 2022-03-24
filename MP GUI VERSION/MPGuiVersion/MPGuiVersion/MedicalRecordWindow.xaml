@@ -25,13 +25,13 @@
 
                 <TextBlock FontWeight="SemiBold" Margin="-28,79,354,495"><Run Text="&#xA;            Check the conditions that apply to you or"/><LineBreak/><Run Text="            to any members of your immediate relatives:&#xA;        "/></TextBlock>
                 <StackPanel Margin="10,134,575,362">
-                    <CheckBox>Asthma</CheckBox>
-                    <CheckBox>Cancer</CheckBox>
-                    <CheckBox>Cardiac disease</CheckBox>
-                    <CheckBox>Diabetes</CheckBox>
-                    <CheckBox>Hypertension</CheckBox>
-                    <CheckBox>Psychiatric disorder</CheckBox>
-                    <CheckBox>Epilepsy</CheckBox>
+                    <CheckBox x:Name="Asthma">Asthma</CheckBox>
+                    <CheckBox x:Name="Cancer">Cancer</CheckBox>
+                    <CheckBox x:Name="Cardiac">Cardiac disease</CheckBox>
+                    <CheckBox x:Name="Diabetes">Diabetes</CheckBox>
+                    <CheckBox x:Name="Hypertension">Hypertension</CheckBox>
+                    <CheckBox x:Name="Psychiatric">Psychiatric disorder</CheckBox>
+                    <CheckBox x:Name="Epilepsy">Epilepsy</CheckBox>
                 </StackPanel>
 
                 <StackPanel Margin="10,293,370,214">

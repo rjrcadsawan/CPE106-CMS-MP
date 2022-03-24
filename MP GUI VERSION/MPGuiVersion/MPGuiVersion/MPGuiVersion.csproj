@@ -8,14 +8,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="BookkeepingICON.png" />
     <None Remove="CMS Icon.png" />
+    <None Remove="EmployeeICON.png" />
+    <None Remove="InventoryICON.png" />
+    <None Remove="PermissionICON.png" />
     <None Remove="photo_2021-10-09_23-36-43.jpg" />
+    <None Remove="SettingsICON.png" />
+    <None Remove="TaskICON.png" />
   </ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
 	</ItemGroup>
 	<ItemGroup>
+	  <Resource Include="BookkeepingICON.png" />
 	  <Resource Include="CMS Icon.png" />
+	  <Resource Include="EmployeeICON.png" />
+	  <Resource Include="InventoryICON.png" />
+	  <Resource Include="PermissionICON.png" />
+	  <Resource Include="SettingsICON.png" />
+	  <Resource Include="TaskICON.png" />
 	</ItemGroup>
 
 </Project>

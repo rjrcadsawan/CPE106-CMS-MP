@@ -5,59 +5,89 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MPGuiVersion"
         mc:Ignorable="d"
-        Title="MainMenuv2" Height="600" Width="1000">
+        Title="MainMenuv2" Height="800" Width="1000">
     <Grid>
-        <GroupBox x:Name="CMSIcons" Margin="0,0,800,0" BorderBrush="{x:Null}" Foreground="{x:Null}" UIElement.PreviewMouseDown="GroupBox_PreviewMouseDown" Background="#FF7B79C3">
+        <GroupBox x:Name="CMSIcons" Margin="0,0,930,0" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="#FF7B79C3">
             <Grid>
-                <Image Source="/CMS Icon.png" Margin="1,50,1,450" />
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
 
-                <Button x:Name="InventoryModuleBtn" Content="Inventory Module" HorizontalAlignment="Center" Width="180" Margin="0,143,0,394" Height="40" FontFamily="Bahnschrift Light">
+                <Image HorizontalAlignment="Center" Source="/CMS Icon.png"  Grid.Row="1" Width="40" />
+
+                <Button x:Name="InventoryModuleBtn" HorizontalAlignment="Center" Width="40" Grid.Row="2" Height="40" FontFamily="Bahnschrift Light" Foreground="{x:Null}" BorderBrush="{x:Null}">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="20
                             "/>
                         </Style>
                     </Button.Resources>
+                    <Button.Background>
+                        <ImageBrush ImageSource="/InventoryICON.png"/>
+                    </Button.Background>
                 </Button>
-                <Button x:Name="EmployeeModuleBtn" Content="Employee Module"  HorizontalAlignment="Center" Width="180" Margin="0,205,0,332" Height="40" FontFamily="Bahnschrift Light">
+                <Button x:Name="EmployeeModuleBtn" HorizontalAlignment="Center" Width="40" Grid.Row="3" Height="40" FontFamily="Bahnschrift Light" BorderBrush="{x:Null}" Foreground="{x:Null}">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="20
                             "/>
                         </Style>
                     </Button.Resources>
+                    <Button.Background>
+                        <ImageBrush ImageSource="/EmployeeICON.png"/>
+                    </Button.Background>
                 </Button>
-                <Button x:Name="BookkeepingModuleBtn" Content="Bookkeeping Module"  HorizontalAlignment="Center" Width="180" Margin="0,269,0,268" Height="40" FontFamily="Bahnschrift Light">
+                <Button x:Name="BookkeepingModuleBtn" HorizontalAlignment="Center" Width="40" Grid.Row="4" Height="40" FontFamily="Bahnschrift Light" BorderBrush="{x:Null}" Foreground="{x:Null}">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="20
                             "/>
                         </Style>
                     </Button.Resources>
+                    <Button.Background>
+                        <ImageBrush ImageSource="/BookkeepingICON.png"/>
+                    </Button.Background>
                 </Button>
-                <Button x:Name="TaskModuleBtn" Content="Task Module"  HorizontalAlignment="Center" Width="180" Margin="0,330,0,207" Height="40" FontFamily="Bahnschrift Light">
+                <Button x:Name="TaskModuleBtn" HorizontalAlignment="Center" Width="40" Grid.Row="5" Height="40" FontFamily="Bahnschrift Light" BorderBrush="{x:Null}" Foreground="{x:Null}">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="20
                             "/>
                         </Style>
                     </Button.Resources>
+                    <Button.Background>
+                        <ImageBrush ImageSource="/TaskICON.png"/>
+                    </Button.Background>
                 </Button>
-                <Button x:Name="PermissionsBtn" Content="Permissions"  HorizontalAlignment="Center" Width="180" Margin="0,393,0,144" Height="40" FontFamily="Bahnschrift Light">
+                <Button x:Name="PermissionsBtn" HorizontalAlignment="Center" Width="40" Grid.Row="6" Height="40" FontFamily="Bahnschrift Light">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="20
                             "/>
                         </Style>
                     </Button.Resources>
+                    <Button.Background>
+                        <ImageBrush ImageSource="/PermissionICON.png"/>
+                    </Button.Background>
                 </Button>
-                <Button x:Name="SettingsBtn" Content="Settings"  HorizontalAlignment="Center" Width="180" Margin="0,460,0,77" Height="40">
+                <Button x:Name="SettingsBtn" HorizontalAlignment="Center" Width="40" Grid.Row="7" Height="40" BorderBrush="{x:Null}" Foreground="{x:Null}">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="20
                             "/>
                         </Style>
                     </Button.Resources>
+                    <Button.Background>
+                        <ImageBrush ImageSource="/SettingsICON.png"/>
+                    </Button.Background>
                 </Button>
             </Grid>
         </GroupBox>

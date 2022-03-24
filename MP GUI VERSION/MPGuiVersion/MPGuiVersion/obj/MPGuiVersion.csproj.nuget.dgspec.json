@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alaric\\source\\repos\\3rd Term 2Y\\CPE106 Machine Problem\\MP GUI VERSION\\MPGuiVersion\\MPGuiVersion\\MPGuiVersion.csproj": {}
+    "C:\\Users\\Rence\\Documents\\GitHub\\CPE106-CMS-MP\\MP GUI VERSION\\MPGuiVersion\\MPGuiVersion\\MPGuiVersion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alaric\\source\\repos\\3rd Term 2Y\\CPE106 Machine Problem\\MP GUI VERSION\\MPGuiVersion\\MPGuiVersion\\MPGuiVersion.csproj": {
+    "C:\\Users\\Rence\\Documents\\GitHub\\CPE106-CMS-MP\\MP GUI VERSION\\MPGuiVersion\\MPGuiVersion\\MPGuiVersion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alaric\\source\\repos\\3rd Term 2Y\\CPE106 Machine Problem\\MP GUI VERSION\\MPGuiVersion\\MPGuiVersion\\MPGuiVersion.csproj",
+        "projectUniqueName": "C:\\Users\\Rence\\Documents\\GitHub\\CPE106-CMS-MP\\MP GUI VERSION\\MPGuiVersion\\MPGuiVersion\\MPGuiVersion.csproj",
         "projectName": "MPGuiVersion",
-        "projectPath": "C:\\Users\\Alaric\\source\\repos\\3rd Term 2Y\\CPE106 Machine Problem\\MP GUI VERSION\\MPGuiVersion\\MPGuiVersion\\MPGuiVersion.csproj",
-        "packagesPath": "C:\\Users\\Alaric\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alaric\\source\\repos\\3rd Term 2Y\\CPE106 Machine Problem\\MP GUI VERSION\\MPGuiVersion\\MPGuiVersion\\obj\\",
+        "projectPath": "C:\\Users\\Rence\\Documents\\GitHub\\CPE106-CMS-MP\\MP GUI VERSION\\MPGuiVersion\\MPGuiVersion\\MPGuiVersion.csproj",
+        "packagesPath": "C:\\Users\\Rence\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rence\\Documents\\GitHub\\CPE106-CMS-MP\\MP GUI VERSION\\MPGuiVersion\\MPGuiVersion\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Alaric\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rence\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +67,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

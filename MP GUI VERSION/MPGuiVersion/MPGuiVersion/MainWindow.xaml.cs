@@ -132,7 +132,8 @@ namespace MPGuiVersion
         {
             this.Hide(); // Hide This login window
             this.sql_conn.Close(); // Closes SQL Connection
-            MainMenu MM = new MainMenu();
+            // MainMenu MM = new MainMenu(); // Old Main Menu
+            MainMenuv2 MM = new MainMenuv2();
             MM.Show(); // Shows Main Menu
             this.Close(); // Closes Upon Close of Main Menu
         }

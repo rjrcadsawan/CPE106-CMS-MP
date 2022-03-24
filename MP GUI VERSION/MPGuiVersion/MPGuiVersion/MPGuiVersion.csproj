@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <None Remove="CMS Icon.png" />
-    <None Remove="Matte Background.jpg" />
     <None Remove="photo_2021-10-09_23-36-43.jpg" />
   </ItemGroup>
 	<ItemGroup>
@@ -17,7 +16,6 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <Resource Include="CMS Icon.png" />
-	  <Resource Include="Matte Background.jpg" />
 	</ItemGroup>
 
 </Project>

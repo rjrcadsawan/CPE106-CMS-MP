@@ -1,9 +1,3 @@
 is_global = true
-build_property.ApplicationManifest = 
-build_property.StartupObject = 
-build_property.ApplicationDefaultFont = 
-build_property.ApplicationHighDpiMode = 
-build_property.ApplicationUseCompatibleTextRendering = 
-build_property.ApplicationVisualStyles = 
 build_property.RootNamespace = MPGuiVersion
-build_property.ProjectDir = C:\Users\Rence\Documents\GitHub\CPE106-CMS-MP\MP GUI VERSION\MPGuiVersion\MPGuiVersion\
+build_property.ProjectDir = C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\

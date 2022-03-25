@@ -37,29 +37,57 @@ namespace MPGuiVersion
 
         }
 
-        static void getData()
+        static void getData(bool connected, string table, string column, string new_data, out SqlDataReader results)
         {
-
+            results = null; // temporary
         }
 
-        static void removeData()
+        static void removeData(bool connected, string table, string column, string new_data, out string exception)
         {
+            try
+            {
+                exception = "";
+            } catch (Exception ex) {
+                exception = ex.Message;
 
+            }
+                
         }
 
-        static void updateData()
+        static void updateData(bool connected, string table, string column, string new_data, out string exception)
         {
-
+            try
+            {
+                exception = "";
+            }
+            catch (Exception ex)
+            {
+                exception = ex.Message;
+            }
         }
 
         static void tableInspection(string[] tables)
         {
+            try
+            {
 
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
-        static void checkIfTableExists()
+        static void checkIfTableExists(string table)
         {
+            try
+            {
 
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }

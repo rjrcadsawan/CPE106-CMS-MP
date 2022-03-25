@@ -36,5 +36,30 @@ namespace MPGuiVersion
             }
 
         }
+
+        static void getData()
+        {
+
+        }
+
+        static void removeData()
+        {
+
+        }
+
+        static void updateData()
+        {
+
+        }
+
+        static void tableInspection(string[] tables)
+        {
+
+        }
+
+        static void checkIfTableExists()
+        {
+
+        }
     }
 }

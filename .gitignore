@@ -2,4 +2,7 @@ MP GUI VERSION/MPGuiVersion/.vs/
 MP GUI VERSION/MPGuiVersion/MPGuiVersion/obj/
 *.cache
 *.suo
-
+MP GUI VERSION/MPGuiVersion/.vs/MPGuiVersion/v16/.suo
+MP GUI VERSION/MPGuiVersion/.vs/MPGuiVersion/DesignTimeBuild/.dtbcache.v2
+MP GUI VERSION/MPGuiVersion/.vs/*
+MP GUI VERSION/MPGuiVersion/MPGuiVersion/obj/*

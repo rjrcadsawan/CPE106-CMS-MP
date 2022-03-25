@@ -46,7 +46,7 @@ namespace MPGuiVersion
             MRW.Show();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Reset_Click(object sender, RoutedEventArgs e)
         {
             firstName.Text = "";
             middleName.Text = "";

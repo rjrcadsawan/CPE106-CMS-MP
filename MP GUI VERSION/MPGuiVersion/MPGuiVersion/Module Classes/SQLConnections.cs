@@ -37,12 +37,22 @@ namespace MPGuiVersion
 
         }
 
-        static void getData(bool connected, string table, string column, string new_data, out SqlDataReader results)
+        static void getData(bool connected, string table, string column, string new_data, string condition, string value, out SqlDataReader results, SqlConnection sql_conn)
         {
-            results = null; // temporary
+            string sql_string_command = $"SELECT {column} FROM {table} WHERE {condition} = '{value}'";
+            SqlCommand sql_command = new SqlCommand(sql_string_command, sql_conn);
+
+            results = sql_command.ExecuteReader();
+
+            if (connected)
+            {
+                results = null;
+                return;
+            }
+
         }
 
-        static void removeData(bool connected, string table, string column, string new_data, out string exception)
+        static void removeData(bool connected, string table, string column, string new_data, out string exception, SqlConnection sql_conn)
         {
             try
             {
@@ -54,7 +64,20 @@ namespace MPGuiVersion
                 
         }
 
-        static void updateData(bool connected, string table, string column, string new_data, out string exception)
+        static void insertData(bool connected, string table, string column, string new_data, out string exception, SqlConnection sql_conn)
+        {
+            try
+            {
+                string search_comm = $"INSERT INTO {table} VALUES ({new_data})";
+                exception = "";
+            }
+            catch (Exception ex)
+            {
+                exception = ex.Message;
+
+            }
+        }
+        static void updateData(bool connected, string table, string column, string new_data, out string exception, SqlConnection sql_conn)
         {
             try
             {
@@ -66,7 +89,7 @@ namespace MPGuiVersion
             }
         }
 
-        static void tableInspection(string[] tables)
+        static void tableInspection(string[] tables, SqlConnection sql_conn)
         {
             try
             {
@@ -78,7 +101,7 @@ namespace MPGuiVersion
             }
         }
 
-        static void checkIfTableExists(string table)
+        static void checkIfTableExists(string table, SqlConnection sql_conn)
         {
             try
             {

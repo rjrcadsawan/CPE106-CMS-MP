@@ -21,7 +21,7 @@
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
 
-                <Image HorizontalAlignment="Center" Source="/CMS Icon.png"  Grid.Row="1" Width="40" />
+                <Image HorizontalAlignment="Center" Source="/Icons/CMS Icon.png"  Grid.Row="1" Width="40" />
 
                 <Button x:Name="InventoryModuleBtn" HorizontalAlignment="Center" Width="40" Grid.Row="2" Height="40" FontFamily="Bahnschrift Light" Foreground="{x:Null}" BorderBrush="{x:Null}">
                     <Button.Resources>
@@ -31,7 +31,7 @@
                         </Style>
                     </Button.Resources>
                     <Button.Background>
-                        <ImageBrush ImageSource="/InventoryICON.png"/>
+                        <ImageBrush ImageSource="/Icons//InventoryICON.png"/>
                     </Button.Background>
                 </Button>
                 <Button x:Name="EmployeeModuleBtn" HorizontalAlignment="Center" Width="40" Grid.Row="3" Height="40" FontFamily="Bahnschrift Light" BorderBrush="{x:Null}" Foreground="{x:Null}">
@@ -42,7 +42,7 @@
                         </Style>
                     </Button.Resources>
                     <Button.Background>
-                        <ImageBrush ImageSource="/EmployeeICON.png"/>
+                        <ImageBrush ImageSource="/Icons//EmployeeICON.png"/>
                     </Button.Background>
                 </Button>
                 <Button x:Name="BookkeepingModuleBtn" HorizontalAlignment="Center" Width="40" Grid.Row="4" Height="40" FontFamily="Bahnschrift Light" BorderBrush="{x:Null}" Foreground="{x:Null}">
@@ -53,7 +53,7 @@
                         </Style>
                     </Button.Resources>
                     <Button.Background>
-                        <ImageBrush ImageSource="/BookkeepingICON.png"/>
+                        <ImageBrush ImageSource="/Icons//BookkeepingICON.png"/>
                     </Button.Background>
                 </Button>
                 <Button x:Name="TaskModuleBtn" HorizontalAlignment="Center" Width="40" Grid.Row="5" Height="40" FontFamily="Bahnschrift Light" BorderBrush="{x:Null}" Foreground="{x:Null}">
@@ -64,7 +64,7 @@
                         </Style>
                     </Button.Resources>
                     <Button.Background>
-                        <ImageBrush ImageSource="/TaskICON.png"/>
+                        <ImageBrush ImageSource="/Icons//TaskICON.png"/>
                     </Button.Background>
                 </Button>
                 <Button x:Name="PermissionsBtn" HorizontalAlignment="Center" Width="40" Grid.Row="6" Height="40" FontFamily="Bahnschrift Light">
@@ -75,7 +75,7 @@
                         </Style>
                     </Button.Resources>
                     <Button.Background>
-                        <ImageBrush ImageSource="/PermissionICON.png"/>
+                        <ImageBrush ImageSource="/Icons//PermissionICON.png"/>
                     </Button.Background>
                 </Button>
                 <Button x:Name="SettingsBtn" HorizontalAlignment="Center" Width="40" Grid.Row="7" Height="40" BorderBrush="{x:Null}" Foreground="{x:Null}">
@@ -86,7 +86,7 @@
                         </Style>
                     </Button.Resources>
                     <Button.Background>
-                        <ImageBrush ImageSource="/SettingsICON.png"/>
+                        <ImageBrush ImageSource="/Icons//SettingsICON.png"/>
                     </Button.Background>
                 </Button>
             </Grid>

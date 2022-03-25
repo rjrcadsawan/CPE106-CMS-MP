@@ -45,5 +45,18 @@ namespace MPGuiVersion
             MedicalRecordWindow MRW = new MedicalRecordWindow();
             MRW.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            firstName.Text = "";
+            middleName.Text = "";
+            lastName.Text = "";
+            suffix.Text = "";
+            sex.Items.Clear();
+            department.Text = "";
+            position.Text = "";
+            emailAddress.Text = "";
+            salary.Text = "";
+        }
     }
 }

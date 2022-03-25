@@ -1,5 +1,5 @@
 obj/
 .vs/
-MP GUI VERSION/MPGuiVersion/.vs/
 *.cache
-MP GUI VERSION/MPGuiVersion/MPGuiVersion/obj/Debug/
+*.suo
+

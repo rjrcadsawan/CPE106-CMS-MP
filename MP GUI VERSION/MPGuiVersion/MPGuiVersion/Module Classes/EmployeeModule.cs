@@ -21,15 +21,7 @@ namespace MPGuiVersion
         static void resetFields()
         {
             //clears the textbox
-            firstName.Text = "";
-            middleName.Text = "";
-            lastName.Text = "";
-            suffix.Text = "";
-            sexCombo.Items.Clear();
-            department.Text = "";
-            position.Text = "";
-            emailAddress.Text = "";
-            salary.Text = "";
+
         }
 
         static void addEmployee()

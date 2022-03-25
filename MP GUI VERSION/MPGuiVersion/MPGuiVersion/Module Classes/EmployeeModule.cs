@@ -24,18 +24,18 @@ namespace MPGuiVersion
 
         }
 
-        static void addEmployee()
+        static void addEmployee(string firstName, string middleName, string lastName, string suffix, string sex, string department, string position, string emailAddress, double salary)
         {
             Employee A = new Employee();
-            A.firstName = firstName.Text;
-            A.middleName = middleName.Text;
-            A.lastName = lastName.Text;
-            A.suffix = suffix.Text;
-            A.sex = sexCombo.SelectedItem.ToString();
-            A.department = department.Text;
-            A.position = position.Text;
-            A.emailAddress = emailAddress.Text;
-            A.salary = salary.Text;
+            A.FirstName = firstName;
+            A.MiddleName = middleName;
+            A.LastName = lastName;
+            A.Suffix = suffix;
+            A.Sex = sex;
+            A.Department = department;
+            A.Position = position;
+            A.EmailAddress = emailAddress;
+            A.Salary = salary;
         }
 
         static void manageEmails()
@@ -46,7 +46,7 @@ namespace MPGuiVersion
 
         static void generatePayslip()
         {
-            Employee A = new Employee;
+            Employee A = new Employee();
             double basicPay, overtimePay, grossPay;
             overtimePay = 1500;
             double sssContrib = 0.13;
@@ -60,6 +60,7 @@ namespace MPGuiVersion
 
         static void deleteEmployee()
         {
+            /*
             using (SqlConnection con = new SqlConnection(Global.connectionString))
             {
                 con.Open();
@@ -69,6 +70,7 @@ namespace MPGuiVersion
                 }
                 con.Close();
             }
+            */
             //eedit pa
         }
 
@@ -79,14 +81,14 @@ namespace MPGuiVersion
 
         static void printSheet()
         {
-            IsReadOnly = "True";
+            //IsReadOnly = "True";
 
         }
 
         static void refreshDetails()
         {
-            payrollSheet.Rows.Clear();
-            payrollSheet.Refresh();
+            //payrollSheet.Rows.Clear();
+            //payrollSheet.Refresh();
         }
 
     }

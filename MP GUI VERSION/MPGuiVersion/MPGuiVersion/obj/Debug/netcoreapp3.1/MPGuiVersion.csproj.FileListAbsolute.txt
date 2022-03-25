@@ -1,17 +1,5 @@
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\bin\Debug\netcoreapp3.1\MPGuiVersion.exe
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\bin\Debug\netcoreapp3.1\MPGuiVersion.deps.json
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\bin\Debug\netcoreapp3.1\MPGuiVersion.runtimeconfig.json
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\bin\Debug\netcoreapp3.1\MPGuiVersion.runtimeconfig.dev.json
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\bin\Debug\netcoreapp3.1\MPGuiVersion.dll
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\bin\Debug\netcoreapp3.1\MPGuiVersion.pdb
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion.csproj.AssemblyReference.cache
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\EmailWindow.baml
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\Backup Main Menu.g.cs
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\EmailWindow.g.cs
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\EmployeeProfileWindow.g.cs
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MainMenu.g.cs
@@ -22,18 +10,3 @@ C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\M
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion_MarkupCompile.cache
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion_MarkupCompile.lref
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\EmployeeProfileWindow.baml
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MainMenu.baml
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MainMenuv2.baml
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MainWindow.baml
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MedicalRecordWindow.baml
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\SignupForm.baml
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion.g.resources
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion.AssemblyInfoInputs.cache
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion.AssemblyInfo.cs
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion.csproj.CoreCompileInputs.cache
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion.csproj.CopyComplete
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion.dll
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion.pdb
-C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion.genruntimeconfig.cache

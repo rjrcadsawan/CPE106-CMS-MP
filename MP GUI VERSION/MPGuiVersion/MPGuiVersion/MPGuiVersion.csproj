@@ -29,8 +29,5 @@
 	  <Resource Include="Icons\SettingsICON.png" />
 	  <Resource Include="Icons\TaskICON.png" />
 	</ItemGroup>
-	<ItemGroup>
-	  <Folder Include="Module Classes\" />
-	</ItemGroup>
 
 </Project>

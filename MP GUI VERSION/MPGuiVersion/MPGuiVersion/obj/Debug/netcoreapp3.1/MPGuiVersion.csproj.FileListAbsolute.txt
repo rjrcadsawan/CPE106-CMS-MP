@@ -37,3 +37,25 @@ C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\M
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion.dll
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion.pdb
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion.genruntimeconfig.cache
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\AddEmployeeControl.g.cs
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\AddItemsControl.g.cs
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\AddTaskControl.g.cs
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\AddTransactionControl.g.cs
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\ItemSummaryControl.g.cs
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\ManageEmployeesControl.g.cs
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\ManageItemsControl.g.cs
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\ManageTaskControl.g.cs
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\PayrollSheetControl.g.cs
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\TaskSummaryControl.g.cs
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\TransactionSummaryControl.g.cs
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\AddEmployeeControl.baml
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\AddItemsControl.baml
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\AddTaskControl.baml
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\AddTransactionControl.baml
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\ItemSummaryControl.baml
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\ManageEmployeesControl.baml
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\ManageItemsControl.baml
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\ManageTaskControl.baml
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\PayrollSheetControl.baml
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\TaskSummaryControl.baml
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\User Controls\TransactionSummaryControl.baml

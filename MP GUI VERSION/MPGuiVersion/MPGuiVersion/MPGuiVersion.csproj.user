@@ -16,6 +16,39 @@
     <Compile Update="SignupForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="User Controls\AddEmployeeControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="User Controls\AddItemsControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="User Controls\AddTaskControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="User Controls\AddTransactionControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="User Controls\ItemSummaryControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="User Controls\ManageEmployeesControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="User Controls\ManageItemsControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="User Controls\ManageTaskControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="User Controls\PayrollSheetControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="User Controls\TaskSummaryControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="User Controls\TransactionSummaryControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainMenu.xaml">
@@ -28,6 +61,39 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SignupForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User Controls\AddEmployeeControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User Controls\AddItemsControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User Controls\AddTaskControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User Controls\AddTransactionControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User Controls\ItemSummaryControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User Controls\ManageEmployeesControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User Controls\ManageItemsControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User Controls\ManageTaskControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User Controls\PayrollSheetControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User Controls\TaskSummaryControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User Controls\TransactionSummaryControl.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

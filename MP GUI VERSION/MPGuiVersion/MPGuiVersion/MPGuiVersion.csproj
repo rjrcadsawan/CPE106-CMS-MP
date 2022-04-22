@@ -9,9 +9,7 @@
 
   <ItemGroup>
     <None Remove="BookkeepingICON.png" />
-    <None Remove="CMS Icon.png" />
     <None Remove="EmployeeICON.png" />
-    <None Remove="InventoryICON.png" />
     <None Remove="PermissionICON.png" />
     <None Remove="photo_2021-10-09_23-36-43.jpg" />
     <None Remove="SettingsICON.png" />

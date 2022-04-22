@@ -25,7 +25,7 @@
 
         <TextBlock HorizontalAlignment="Center" Margin="0,384,0,0" Text="Email Address" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Bahnschrift Light"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,434,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Bahnschrift Light"/>
-        <Image HorizontalAlignment="Center" Height="71"  VerticalAlignment="Top" Width="72" Source="/CMS Icon.png" Margin="0,34,0,0"/>
+        <Image HorizontalAlignment="Center" Height="71"  VerticalAlignment="Top" Width="72" Source="/Icons/CMS Icon.png" Margin="0,34,0,0"/>
         <Label Content="Member Signup" HorizontalAlignment="Center" Margin="0,120,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="36" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,484,0,0" Text="Confirm Password" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Bahnschrift Light"/>
         <PasswordBox x:Name="ConfirmPassBox" HorizontalAlignment="Center" Margin="0,464,0,0" VerticalAlignment="Top" Width="200"/>

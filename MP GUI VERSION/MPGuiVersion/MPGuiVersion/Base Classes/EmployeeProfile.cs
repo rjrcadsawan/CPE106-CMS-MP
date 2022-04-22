@@ -115,6 +115,7 @@ namespace MPGuiVersion
         public string maritalStatus;
         public string Nationality;
     }
+
     struct Name
     {
         public string firstName;

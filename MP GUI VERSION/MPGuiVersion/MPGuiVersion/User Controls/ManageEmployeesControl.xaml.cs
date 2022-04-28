@@ -45,12 +45,29 @@ namespace MPGuiVersion.User_Controls
 
         }
 
+        private void DeleteEmployeeBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void GeneratePayslipBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void SearchEmployeeBtn_Click(object sender, RoutedEventArgs e)
         {
             int EID = Convert.ToInt32(EID_TextBox.Text);
             foreach (DataRowView row in EmployeeList.ItemsSource)
             {
-               
+                var str = row["employeeID"].ToString();
+                MessageBox.Show(str);
+                bool check = (EID == Convert.ToInt32(str));
+                if (check)
+                {
+                    EmployeeList.SelectedItem = row;
+                    break;
+                }
             }
         }
     }

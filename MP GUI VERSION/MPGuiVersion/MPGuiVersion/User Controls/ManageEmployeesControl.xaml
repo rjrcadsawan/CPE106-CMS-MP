@@ -10,7 +10,7 @@
     <Grid Background="White">
         <Label Content="Employee ID" HorizontalAlignment="Left" Margin="10,141,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="EID_TextBox" HorizontalAlignment="Left" Margin="113,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
-        <DataGrid x:Name="EmployeeList" Margin="10,183,10,56" AutoGenerateColumns="False" SelectionChanged="EmployeeList_SelectionChanged" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False">
+        <DataGrid x:Name="EmployeeList" Margin="10,183,10,56" AutoGenerateColumns="False"  CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Width="20" Binding="{Binding employeeID}"/>
                 <DataGridTextColumn Header="First Name" Width="100" Binding="{Binding firstName}"/>
@@ -28,6 +28,6 @@
         <Button x:Name="SearchEmployeeBtn" Content="Search Employee" HorizontalAlignment="Left" Margin="378,148,0,0" VerticalAlignment="Top" Width="120" Click="SearchEmployeeBtn_Click"/>
         <Button x:Name="DeleteEmployeeBtn" Content="Delete Employee" HorizontalAlignment="Left" Margin="670,760,0,0" VerticalAlignment="Top" Width="120" Click="DeleteEmployeeBtn_Click"/>
         <Button x:Name="GeneratePayslipBtn" Content="Generate Payslip" HorizontalAlignment="Left" Margin="494,760,0,0" VerticalAlignment="Top" Width="120" Click="GeneratePayslipBtn_Click"/>
-        <Button x:Name="ManageEmailsBtn" Content="Manage Emails" HorizontalAlignment="Left" Margin="301,760,0,0" VerticalAlignment="Top" Width="120" Click="ManageEmailsBtn_Click"/>
+        <Button x:Name="ManageEmailsBtn" Content="Manage Emails" HorizontalAlignment="Left" Margin="330,760,0,0" VerticalAlignment="Top" Width="120" Click="ManageEmailsBtn_Click"/>
     </Grid>
 </UserControl>

@@ -43,6 +43,12 @@
     <Compile Update="User Controls\PayrollSheetControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="User Controls\PermissionsControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="User Controls\SettingsControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="User Controls\TaskSummaryControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -88,6 +94,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="User Controls\PayrollSheetControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User Controls\PermissionsControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="User Controls\SettingsControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="User Controls\TaskSummaryControl.xaml">

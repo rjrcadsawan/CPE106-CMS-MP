@@ -11,16 +11,49 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using System.Data;
+using System.Data.SqlClient;
+
+
 namespace MPGuiVersion.User_Controls
 {
     /// <summary>
     /// Interaction logic for ManageEmployees.xaml
     /// </summary>
-    public partial class ManageEmployees : UserControl
+    public partial class ManageEmployeesControl : UserControl
     {
-        public ManageEmployees()
+        SqlConnection conn;
+        public ManageEmployeesControl()
         {
             InitializeComponent();
+            getDataFromServer();
+        }
+
+        private void getDataFromServer()
+        {
+            bool connected;
+            string output;
+            DatabaseConnection.connectToSQL(out this.conn, out connected, out output);
+
+            DataView EmployeeData = DatabaseConnection.getEmployees(this.conn);
+            EmployeeList.ItemsSource = null;
+            EmployeeList.ItemsSource = EmployeeData;
+        }
+
+        private void ManageEmailsBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SearchEmployeeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            int EID = Convert.ToInt32(EID_TextBox.Text);
+            foreach (DataRowView row in EmployeeList.ItemsSource)
+            {
+               
+            }
         }
     }
+
+    
 }

@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
+using System.Data;
 using System.Data.SqlClient;
 
 namespace MPGuiVersion
 {
-    static class SQLConnections
+    public static class DatabaseConnection
     {
-        static void connectToSQL(out SqlConnection sql_conn, out bool connected, out string message)
+        public static void connectToSQL(out SqlConnection sql_conn, out bool connected, out string message)
         {
             // Try - Except Block, just in case SQL Connection Fails
             try
@@ -36,6 +37,18 @@ namespace MPGuiVersion
             }
 
         }
+
+        public static DataView getEmployees(SqlConnection conn)
+        {
+            SqlCommand SP_getemployees = new SqlCommand("getAllEmployees", conn);
+            SP_getemployees.CommandType = System.Data.CommandType.StoredProcedure;
+            SqlDataAdapter SDA = new SqlDataAdapter(SP_getemployees);
+            DataTable DT = new DataTable("Employees");
+            SDA.Fill(DT);
+            return DT.DefaultView;
+
+        }
+
 
         static void getData(bool connected, string table, string column, string new_data, string condition, string value, out SqlDataReader results, SqlConnection sql_conn)
         {

@@ -38,7 +38,7 @@
                             <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Foreground="Black" Content="EMPLOYEES"/>
                             <Image Source="Icons/EmployeeICON.png" Stretch="Uniform" Grid.Column="0"/>
                         </Grid>
-                        <Button x:Name="AddEmployees" Visibility="Collapsed" Content="Add Employees" Background="#FF4643C3" BorderBrush="{x:Null}">
+                        <Button x:Name="AddEmployees" Visibility="Collapsed" Content="Add Employees" Background="#FF4643C3" BorderBrush="{x:Null}" Click="AddEmployees_Click">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="7
@@ -46,7 +46,7 @@
                                 </Style>
                             </Button.Resources>
                         </Button>
-                        <Button x:Name="ManageEmployees" Visibility="Collapsed" Content="Manage Employees" Background="#FF4643C3" BorderBrush="{x:Null}">
+                        <Button x:Name="ManageEmployees" Visibility="Collapsed" Content="Manage Employees" Background="#FF4643C3" BorderBrush="{x:Null}" Click="ManageEmployees_Click">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="7
@@ -54,7 +54,7 @@
                                 </Style>
                             </Button.Resources>
                         </Button>
-                        <Button x:Name="PayrollSheet" Visibility="Collapsed" Content="Payroll Sheet" Background="#FF4643C3" BorderBrush="{x:Null}">
+                        <Button x:Name="PayrollSheet" Visibility="Collapsed" Content="Payroll Sheet" Background="#FF4643C3" BorderBrush="{x:Null}" Click="PayrollSheet_Click">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="7
@@ -84,7 +84,7 @@
                             <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Foreground="Black" Content="BOOKKEEPING"/>
                             <Image Source="Icons/BookkeepingICON.png" Stretch="Uniform" Grid.Column="0"/>
                         </Grid>
-                        <Button x:Name="AddTransaction" Visibility="Collapsed" Content="Add Transaction" Background="#FF4643C3" BorderBrush="{x:Null}">
+                        <Button x:Name="AddTransaction" Visibility="Collapsed" Content="Add Transaction" Background="#FF4643C3" BorderBrush="{x:Null}" Click="AddTransaction_Click">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="7
@@ -92,7 +92,7 @@
                                 </Style>
                             </Button.Resources>
                         </Button>
-                        <Button x:Name="TransactionSummary" Visibility="Collapsed" Content="Transaction Summary" Background="#FF4643C3" BorderBrush="{x:Null}">
+                        <Button x:Name="TransactionSummary" Visibility="Collapsed" Content="Transaction Summary" Background="#FF4643C3" BorderBrush="{x:Null}" Click="TransactionSummary_Click">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="7
@@ -136,7 +136,7 @@
                                 </Style>
                             </Button.Resources>
                         </Button>
-                        <Button x:Name="ItemSummary" Visibility="Collapsed" Content="Summary of Items" Background="#FF4643C3" BorderBrush="{x:Null}">
+                        <Button x:Name="ItemSummary" Visibility="Collapsed" Content="Summary of Items" Background="#FF4643C3" BorderBrush="{x:Null}" Click="ItemSummary_Click">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="7
@@ -165,7 +165,7 @@
                             <Image Source="Icons/TaskICON.png" Stretch="Uniform" Grid.Column="0"/>
 
                         </Grid>
-                        <Button x:Name="AddTask" Visibility="Collapsed" Content="Add Task" Background="#FF4643C3" BorderBrush="{x:Null}">
+                        <Button x:Name="AddTask" Visibility="Collapsed" Content="Add Task" Background="#FF4643C3" BorderBrush="{x:Null}" Click="AddTask_Click">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="7
@@ -173,7 +173,7 @@
                                 </Style>
                             </Button.Resources>
                         </Button>
-                        <Button x:Name="ManageTask" Visibility="Collapsed" Content="Manage Tasks" Background="#FF4643C3" BorderBrush="{x:Null}">
+                        <Button x:Name="ManageTask" Visibility="Collapsed" Content="Manage Tasks" Background="#FF4643C3" BorderBrush="{x:Null}" Click="ManageTask_Click">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="7
@@ -181,7 +181,7 @@
                                 </Style>
                             </Button.Resources>
                         </Button>
-                        <Button x:Name="TaskSummary" Visibility="Collapsed" Content="Task Summary" Background="#FF4643C3" BorderBrush="{x:Null}">
+                        <Button x:Name="TaskSummary" Visibility="Collapsed" Content="Task Summary" Background="#FF4643C3" BorderBrush="{x:Null}" Click="TaskSummary_Click">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="7
@@ -232,7 +232,7 @@
 
         </GroupBox>
 
-        <GroupBox x:Name="CMSModules" Margin="200,0,0,0" BorderBrush="{x:Null}" Foreground="{x:Null}"/>
+        <GroupBox x:Name="CMSModules" Margin="200,0,0,0" Width="800" />
 
 
     </Grid>

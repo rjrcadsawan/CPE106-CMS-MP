@@ -90,12 +90,49 @@ namespace MPGuiVersion
         private void SettingsBtn_Click(object sender, RoutedEventArgs e)
         {
             Reset_Button_Pannel();
+            var SC = new User_Controls.SettingsControl();
+            CMSModules.Content = SC;         
         }
 
         private void PermissionsBtn_Click(object sender, RoutedEventArgs e)
         {
             Reset_Button_Pannel();
+            var PC = new User_Controls.PermissionsControl();
+            CMSModules.Content = PC;
         }
+
+        private void AddEmployees_Click(object sender, RoutedEventArgs e)
+        {
+            var AEC = new User_Controls.AddEmployeeControl();
+            CMSModules.Content = null;
+            CMSModules.Content = AEC;
+        }
+
+        private void ManageEmployees_Click(object sender, RoutedEventArgs e)
+        {
+            var MEC = new User_Controls.ManageEmployeesControl();
+            CMSModules.Content = null;
+            CMSModules.Content = MEC;
+        }
+
+        private void PayrollSheet_Click(object sender, RoutedEventArgs e)
+        {
+            var PSC = new User_Controls.PayrollSheetControl();
+            CMSModules.Content = PSC;
+        }
+
+        private void AddTransaction_Click(object sender, RoutedEventArgs e)
+        {
+            var ATC = new User_Controls.AddTransactionControl();
+            CMSModules.Content = ATC;
+        }
+
+        private void TransactionSummary_Click(object sender, RoutedEventArgs e)
+        {
+            var TSC = new User_Controls.TransactionSummaryControl();
+            CMSModules.Content = TSC;
+        }
+
 
         private void AddItems_Click(object sender, RoutedEventArgs e)
         {
@@ -110,6 +147,29 @@ namespace MPGuiVersion
 
         }
 
+        private void ItemSummary_Click(object sender, RoutedEventArgs e)
+        {
+            var ISC = new User_Controls.ItemSummaryControl();
+            CMSModules.Content = ISC;
+        }
+
+        private void AddTask_Click(object sender, RoutedEventArgs e)
+        {
+            var ATC = new User_Controls.AddTaskControl();
+            CMSModules.Content = ATC;
+        }
+
+        private void ManageTask_Click(object sender, RoutedEventArgs e)
+        {
+            var MTC = new User_Controls.ManageTaskControl();
+            CMSModules.Content = MTC;
+        }
+
+        private void TaskSummary_Click(object sender, RoutedEventArgs e)
+        {
+            var TSC = new User_Controls.TaskSummaryControl();
+            CMSModules.Content = TSC;
+        }
 
     }
 }

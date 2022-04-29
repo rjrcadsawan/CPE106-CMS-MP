@@ -24,7 +24,6 @@
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height="1*"/>
-                    <RowDefinition Height="1*"/>
 
 
                 </Grid.RowDefinitions>
@@ -219,23 +218,7 @@
                     </Grid>
                 </Button>
 
-                <Button x:Name="SettingsBtn"  HorizontalAlignment="Center" Width="180" Grid.Row="6" FontFamily="Bahnschrift Light" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="#FF625FD9" Height="50" Click="SettingsBtn_Click">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20
-                            "/>
-                        </Style>
-                    </Button.Resources>
-                    <Grid Width="150">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="4*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Foreground="Black" Content="SETTINGS"/>
-                        <Image Source="Icons/SettingsICON.png" Stretch="Uniform" Grid.Column="0"/>
-                    </Grid>
-                </Button>
-
+              
 
             </Grid>
 

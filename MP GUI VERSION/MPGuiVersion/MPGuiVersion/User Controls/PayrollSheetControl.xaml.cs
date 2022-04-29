@@ -14,6 +14,9 @@ using System.Windows.Shapes;
 using System.Data;
 using System.Data.SqlClient;
 
+using Microsoft.Win32;
+using System.IO;
+
 namespace MPGuiVersion.User_Controls
 {
     /// <summary>
@@ -40,6 +43,29 @@ namespace MPGuiVersion.User_Controls
             PayrollSheetList.ItemsSource = EmployeeData;
 
             DatabaseConnection.disconnectSQL(this.conn, out status);
+        }
+
+        private void Refresh_Click(object sender, RoutedEventArgs e)
+        {
+            getDataFromServer();
+        }
+
+        private void Print_Click(object sender, RoutedEventArgs e)
+        {
+            PayrollSheetList.SelectAllCells();
+            PayrollSheetList.ClipboardCopyMode = DataGridClipboardCopyMode.IncludeHeader;
+            ApplicationCommands.Copy.Execute(null, PayrollSheetList);
+            PayrollSheetList.UnselectAllCells();
+            SaveFileDialog exportDialog = new SaveFileDialog();
+            
+            exportDialog.Filter = "Text file (*.txt)|*.txt|CSV file (*.csv)|*.csv";
+            exportDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            exportDialog.ShowDialog();
+
+
+            string result = (string)Clipboard.GetData(DataFormats.CommaSeparatedValue);
+            File.AppendAllText(exportDialog.FileName, result, UnicodeEncoding.UTF8);
         }
     }
 }

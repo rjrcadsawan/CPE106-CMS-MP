@@ -87,13 +87,6 @@ namespace MPGuiVersion
 
         }
 
-        private void SettingsBtn_Click(object sender, RoutedEventArgs e)
-        {
-            Reset_Button_Pannel();
-            var SC = new User_Controls.SettingsControl();
-            CMSModules.Content = SC;         
-        }
-
         private void PermissionsBtn_Click(object sender, RoutedEventArgs e)
         {
             Reset_Button_Pannel();

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MPGuiVersion
 {
-    class Task
+    public class Task
     {
         private string taskName;
         private string dueDate;

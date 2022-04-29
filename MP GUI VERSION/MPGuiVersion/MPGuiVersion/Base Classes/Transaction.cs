@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MPGuiVersion
 {
-    class Transaction
+    public class Transaction
     {
         private string fullName;
         private string Description;

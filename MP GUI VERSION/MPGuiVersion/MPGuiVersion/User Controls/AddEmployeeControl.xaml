@@ -27,6 +27,7 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
         <Label Content="First Name" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
@@ -98,7 +99,16 @@
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <Button Content="Add Employee" HorizontalAlignment="Center" Grid.Row="10" Grid.Column="2" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="#FF6DFF74">
+        <Label Content="Employee ID" HorizontalAlignment="Center" Grid.Row="10" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20" />
+        <TextBox x:Name="employeeID" HorizontalAlignment="Center" Grid.Row="10" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="190" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        
+        <Button x:Name="AddEmployeeBtn" Content="Add Employee" HorizontalAlignment="Center" Grid.Row="11" Grid.Column="2" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="#FF6DFF74" Click="AddEmployeeBtn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15
@@ -106,7 +116,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Reset Fields" HorizontalAlignment="Center" Grid.Row="11" Grid.Column="2" VerticalAlignment="Center" Width="190"  FontFamily="Bahnschrift Light" FontSize="15" Height="30" Background="White">
+        <Button x:Name="RestFieldsBtn" Content="Reset Fields" HorizontalAlignment="Center" Grid.Row="12" Grid.Column="2" VerticalAlignment="Center" Width="190"  FontFamily="Bahnschrift Light" FontSize="15" Height="30" Background="White" Click="RestFieldsBtn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15
@@ -114,7 +124,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Add Employee Profile" HorizontalAlignment="Center" Grid.Row="10" Grid.Column="1" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15" Height="30" Background="#FFC348FF">
+        <Button x:Name="AddEmployeeProfileBtn" Content="Add Employee Profile" HorizontalAlignment="Center" Grid.Row="11" Grid.Column="1" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15" Height="30" Background="#FFC348FF" Click="AddEmployeeProfileBtn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15
@@ -122,7 +132,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Add Health Record" HorizontalAlignment="Center" Grid.Row="11" Grid.Column="1" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15" Height="30" Background="#FFFF9A61">
+        <Button x:Name="AddHealthRecordBtn" Content="Add Health Record" HorizontalAlignment="Center" Grid.Row="12" Grid.Column="1" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15" Height="30" Background="#FFFF9A61" Click="AddHealthRecordBtn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15

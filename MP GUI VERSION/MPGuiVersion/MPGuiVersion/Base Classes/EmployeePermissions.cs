@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MPGuiVersion
 {
-    class EmployeePermissions
+    public class EmployeePermissions
     {
         private int employeeID;
 

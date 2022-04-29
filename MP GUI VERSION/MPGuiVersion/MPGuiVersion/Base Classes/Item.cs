@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MPGuiVersion
 {
-    internal class Item
+    public class Item
     {
         public string itemName;
         public int Quantity;

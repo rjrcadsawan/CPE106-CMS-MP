@@ -31,13 +31,16 @@ namespace MPGuiVersion.User_Controls
 
         private void getDataFromServer()
         {
-            bool connected;
+            bool status;
             string output;
-            DatabaseConnection.connectToSQL(out this.conn, out connected, out output);
+
+            DatabaseConnection.connectToSQL(out this.conn, out status, out output);
 
             DataView EmployeeData = DatabaseConnection.getEmployees(this.conn);
             EmployeeList.ItemsSource = null;
             EmployeeList.ItemsSource = EmployeeData;
+
+            DatabaseConnection.disconnectSQL(this.conn, out status);
         }
 
         private void ManageEmailsBtn_Click(object sender, RoutedEventArgs e)
@@ -47,7 +50,7 @@ namespace MPGuiVersion.User_Controls
 
         private void DeleteEmployeeBtn_Click(object sender, RoutedEventArgs e)
         {
-
+   
         }
 
         private void GeneratePayslipBtn_Click(object sender, RoutedEventArgs e)

@@ -11,6 +11,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using System.Data;
+using System.Data.SqlClient;
+
 namespace MPGuiVersion.User_Controls
 {
     /// <summary>
@@ -21,6 +24,45 @@ namespace MPGuiVersion.User_Controls
         public AddEmployeeControl()
         {
             InitializeComponent();
+        }
+
+        private void AddEmployeeProfileBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddEmployeeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Employee ret = new Employee
+            {
+                FirstName = firstName.Text,
+                MiddleName = middleName.Text,
+                LastName = lastName.Text,
+                Suffix = suffix.Text,
+                Sex = sex.Text,
+                Department = department.Text,
+                Position = position.Text,
+                EmailAddress = emailAddress.Text,
+                Salary = Convert.ToDouble(salary.Text),
+                EmployeeID = Convert.ToInt32(employeeID.Text)
+            };
+
+            SqlConnection conn;
+            string message;
+            bool state;
+            DatabaseConnection.connectToSQL(out conn, out state, out message);
+            DatabaseConnection.addEmployees(conn, ret);
+            DatabaseConnection.disconnectSQL(conn, out state);
+        }
+
+        private void AddHealthRecordBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RestFieldsBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

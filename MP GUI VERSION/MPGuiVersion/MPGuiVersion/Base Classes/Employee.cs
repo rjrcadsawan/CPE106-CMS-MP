@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MPGuiVersion
 {
-    class Employee
+    public class Employee
     {
         private string firstName;
         private string middleName;

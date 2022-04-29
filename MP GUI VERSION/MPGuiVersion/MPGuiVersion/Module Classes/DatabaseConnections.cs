@@ -38,6 +38,19 @@ namespace MPGuiVersion
 
         }
 
+        public static void disconnectSQL(SqlConnection sql_conn, out bool closed)
+        {
+            try
+            {
+                sql_conn.Close();
+                closed = true;
+            }                
+            catch 
+            {
+                closed = false;
+            }
+        }
+
         public static DataView getEmployees(SqlConnection conn)
         {
             SqlCommand SP_getemployees = new SqlCommand("getAllEmployees", conn);
@@ -49,6 +62,34 @@ namespace MPGuiVersion
 
         }
 
+        public static void addEmployees(SqlConnection conn, Employee E)
+        {
+            //EXECUTE [createEmployee] 1, 'Rence Joseph', 'Romero', 'Cadsawan', '', 1, 'Software', 'Senior Dev', 'rjrcadsawan@mymail.mapua.edu.ph', '200000'
+            //@EmployeeID @FirstName @MiddleName @LastName @Suffix @Sex @Department @Position @EmailAddress @Salary
+
+            /*
+            SqlCommand SP_addemployees = new SqlCommand("createEmployee", conn);            
+            SP_addemployees.Parameters.AddWithValue("@EmployeeID", E.EmployeeID);
+            SP_addemployees.Parameters.AddWithValue("@FirstName", E.FirstName);
+            SP_addemployees.Parameters.AddWithValue("@MiddleName", E.MiddleName);
+            SP_addemployees.Parameters.AddWithValue("@LastName", E.LastName);
+            SP_addemployees.Parameters.AddWithValue("@Suffix", E.Suffix);
+            SP_addemployees.Parameters.AddWithValue("@Sex", E.Sex);
+            SP_addemployees.Parameters.AddWithValue("@Department", E.Department);
+            SP_addemployees.Parameters.AddWithValue("@Position", E.Position);
+            SP_addemployees.Parameters.AddWithValue("@EmailAddress", E.EmailAddress);
+            SP_addemployees.Parameters.AddWithValue("@Salary", E.Salary);
+            */
+
+            string comm= $"createEmployee {E.EmployeeID} {E.FirstName} {E.MiddleName} {E.LastName} {E.Suffix} {E.Sex} {E.Department} {E.Position} {E.EmailAddress} {E.Salary}";
+            SqlCommand SP_addemployees = new SqlCommand(comm, conn);
+
+
+
+
+            SP_addemployees.ExecuteNonQuery();
+
+        }
 
         static void getData(bool connected, string table, string column, string new_data, string condition, string value, out SqlDataReader results, SqlConnection sql_conn)
         {

@@ -5,12 +5,28 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MPGuiVersion.User_Controls"
              xmlns:SqlClient="clr-namespace:System.Data.SqlClient;assembly=System.Data.SqlClient" x:Class="MPGuiVersion.User_Controls.ManageEmployeesControl"
-             mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="800">
+             mc:Ignorable="d" d:DesignWidth="800" Height="578">
     <Grid Background="White">
-        <Label Content="Employee ID" HorizontalAlignment="Left" Margin="10,141,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="EID_TextBox" HorizontalAlignment="Left" Margin="113,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
-        <DataGrid x:Name="EmployeeList" Margin="10,183,10,56" AutoGenerateColumns="False"  CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0.1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        
+        <Label Content="Employee ID" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center"/>
+        <TextBox x:Name="EID_TextBox" HorizontalAlignment="Left" Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="250"/>
+        <Button x:Name="SearchEmployeeBtn" Content="Search Employee" HorizontalAlignment="Left" Grid.Column="3" Grid.Row="1" VerticalAlignment="Center" Width="120" Click="SearchEmployeeBtn_Click"/>
+
+        <DataGrid x:Name="EmployeeList" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" AutoGenerateColumns="False"  CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Width="20" Binding="{Binding employeeID}"/>
                 <DataGridTextColumn Header="First Name" Width="100" Binding="{Binding firstName}"/>
@@ -25,9 +41,9 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        <Button x:Name="SearchEmployeeBtn" Content="Search Employee" HorizontalAlignment="Left" Margin="378,148,0,0" VerticalAlignment="Top" Width="120" Click="SearchEmployeeBtn_Click"/>
-        <Button x:Name="DeleteEmployeeBtn" Content="Delete Employee" HorizontalAlignment="Left" Margin="670,760,0,0" VerticalAlignment="Top" Width="120" Click="DeleteEmployeeBtn_Click"/>
-        <Button x:Name="GeneratePayslipBtn" Content="Generate Payslip" HorizontalAlignment="Left" Margin="494,760,0,0" VerticalAlignment="Top" Width="120" Click="GeneratePayslipBtn_Click"/>
-        <Button x:Name="ManageEmailsBtn" Content="Manage Emails" HorizontalAlignment="Left" Margin="330,760,0,0" VerticalAlignment="Top" Width="120" Click="ManageEmailsBtn_Click"/>
+        
+        <Button x:Name="DeleteEmployeeBtn" Content="Delete Employee" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Width="120" Click="DeleteEmployeeBtn_Click"/>
+        <Button x:Name="GeneratePayslipBtn" Content="Generate Payslip" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" Width="120" Click="GeneratePayslipBtn_Click"/>
+        <Button x:Name="ManageEmailsBtn" Content="Manage Emails" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="3" VerticalAlignment="Center" Width="120" Click="ManageEmailsBtn_Click"/>
     </Grid>
 </UserControl>

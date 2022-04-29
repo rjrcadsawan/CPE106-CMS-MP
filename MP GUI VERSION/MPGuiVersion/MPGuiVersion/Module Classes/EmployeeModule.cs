@@ -2,49 +2,42 @@
 using System.Collections.Generic;
 using System.Text;
 
+using System.Data;
+using System.Data.SqlClient;
+
 namespace MPGuiVersion
 {
-    static class EmployeeModule
+    public static class EmployeeModule
     {
-        static void addHealthRecord()
+        public static void addHealthRecord()
         {
             MedicalRecordWindow MRW = new MedicalRecordWindow();
             MRW.Show();
         }
 
-        static void addEmployeeProfile()
+        public static void addEmployeeProfile()
         {
             EmployeeProfileWindow EPW = new EmployeeProfileWindow();
             EPW.Show();
         }
 
-        static void resetFields()
+        public static void addEmployee(Employee ret)
         {
-            //clears the textbox
-
+            SqlConnection conn;
+            string message;
+            bool state;
+            DatabaseConnection.connectToSQL(out conn, out state, out message);
+            DatabaseConnection.addEmployees(conn, ret);
+            DatabaseConnection.disconnectSQL(conn, out state);
         }
 
-        static void addEmployee(string firstName, string middleName, string lastName, string suffix, string sex, string department, string position, string emailAddress, double salary)
-        {
-            Employee A = new Employee();
-            A.FirstName = firstName;
-            A.MiddleName = middleName;
-            A.LastName = lastName;
-            A.Suffix = suffix;
-            A.Sex = sex;
-            A.Department = department;
-            A.Position = position;
-            A.EmailAddress = emailAddress;
-            A.Salary = salary;
-        }
-
-        static void manageEmails()
+        public static void manageEmails()
         {
             EmailWindow EM = new EmailWindow();
             EM.Show();
         }
 
-        static void generatePayslip()
+        public static void generatePayslip()
         {
             Employee A = new Employee();
             double basicPay, overtimePay, grossPay;
@@ -55,41 +48,22 @@ namespace MPGuiVersion
             basicPay = A.Salary;
             grossPay = basicPay + overtimePay;
             payslip = grossPay * (sssContrib + phContrib);
-            //need pa i-output(?) or new window?
         }
 
-        static void deleteEmployee()
+        public static void deleteEmployee(int target_id)
         {
-            /*
-            using (SqlConnection con = new SqlConnection(Global.connectionString))
-            {
-                con.Open();
-                using (SqlCommand command = new SqlCommand("DELETE FROM " + table + " WHERE " + columnName + " = '" + IDNumber + "'", con))
-                {
-                    command.ExecuteNonQuery();
-                }
-                con.Close();
-            }
-            */
-            //eedit pa
-        }
+            SqlConnection conn;
+            bool status;
+            string output;
 
-        static void searchEmployee()
-        {
+            DatabaseConnection.connectToSQL(out conn, out status, out output);
+            DatabaseConnection.deleteEmployee(conn, target_id);
+            DatabaseConnection.disconnectSQL(conn, out status);
 
         }
 
-        static void printSheet()
-        {
-            //IsReadOnly = "True";
+        
 
-        }
-
-        static void refreshDetails()
-        {
-            //payrollSheet.Rows.Clear();
-            //payrollSheet.Refresh();
-        }
 
     }
 }

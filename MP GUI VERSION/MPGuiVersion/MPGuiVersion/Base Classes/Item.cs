@@ -6,17 +6,18 @@ namespace MPGuiVersion
 {
     public class Item
     {
-        public string itemName;
-        public int Quantity;
-        public float UnitPrice;
-        public string Description;
+        private int itemID;
+        private string itemName;
+        private int quantity;
+        private float unitPrice;
+        private float totalPrice;
+        private string description;
 
-        public string Product { get => itemName; set => itemName = value; }
-
-        public int Ammount { get => Quantity; set => Quantity = value; }
-
-        public float Price { get => UnitPrice; set => UnitPrice = value; }
-
-        public string Summary { get => Description; set => Description = value; }
+        public int ItemID { get => itemID; set => itemID = value; }
+        public string ItemName { get => itemName; set => itemName = value; }
+        public int Quantity { get => quantity; set => quantity = value; }
+        public float UnitPrice { get => unitPrice; set => unitPrice = value; }
+        public float TotalPrice { get => (unitPrice * quantity); set => totalPrice = value; }
+        public string Description { get => description; set => description = value; }
     }
 }

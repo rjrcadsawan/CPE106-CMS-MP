@@ -8,6 +8,7 @@ namespace MPGuiVersion
     {
         private string taskName;
         private string dueDate;
+        private bool isDone;
         private double budget;
         private int employeesNeeded;
         private string description;
@@ -19,6 +20,6 @@ namespace MPGuiVersion
         public int EmployeesNeeded { get => employeesNeeded; set => employeesNeeded = value; }
         public string Description { get => description; set => description = value; }
         public string MaterialsNeeded { get => materialsNeeded; set => materialsNeeded = value; }
-
+        public bool IsDone { get => isDone; set => isDone = value; }
     }
 }

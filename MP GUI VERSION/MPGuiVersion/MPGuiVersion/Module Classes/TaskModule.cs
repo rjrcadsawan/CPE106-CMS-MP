@@ -4,72 +4,33 @@ using System.Text;
 
 namespace MPGuiVersion
 {
-    static class TaskModule
+    public static class TaskModule
     {
-        static void addTask(string taskName, string duedate, float unitPrice, int EN, string desc, string MN)
-        {
-            Task C = new Task();
-            C.TaskName = taskName;
-            C.DueDate = duedate;
-            C.Budget = unitPrice;
-            C.EmployeesNeeded = EN;
-            C.Description = desc;
-            C.MaterialsNeeded = MN;
-        }
-
-        static void removeDuplicates()
-        {
-           
-        }
-
-        static void searchTask()
-        {   
-            //Need Sql Database Here
-            Task taskName = new Task();
-            if (taskName != null)
-                Console.Write(taskName);
-            else
-                Console.Write("Task not found");
-            //Hindi suree 
-        }
-
-        static void modifyItem()
+        public static void addTask(Task T)
         {
 
         }
 
-        static void searchEmployee()
+        public static void deleteTask()
         {
-            //Need SQL database
-            var EmployeeName = new List<string> { "firstname", "middleName", "lastName" };
-            if (EmployeeName != null)
-                Console.Write(EmployeeName);
-            else
-                Console.Write("Employee not Found");
-            //Di suree
-        }
 
-        static void deallocateEmployee()
+        }
+        public static void modifyItem()
         {
 
         }
 
-        static void assignEmployeeToTask()
+        public static void updateTask()
         {
 
         }
 
-        static void taskHistory()
+        public static void assignTask()
         {
 
         }
 
-        static void summaryOfTask()
-        {
-            var sumtask = new List<string>();
-            sumtask.Add("");
-            Console.WriteLine(string.Join(", ", sumtask));
-            //Hindi suree 
-        }
+
+
     }
 }

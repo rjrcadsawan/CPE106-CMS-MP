@@ -118,88 +118,37 @@ namespace MPGuiVersion
             SP_addemployees.Parameters.AddWithValue("@Position", E.Position);
             SP_addemployees.Parameters.AddWithValue("@EmailAddress", E.EmailAddress);
             SP_addemployees.Parameters.AddWithValue("@Salary", E.Salary);
-
-
-
-
             SP_addemployees.ExecuteNonQuery();
 
         }
 
-        static void getData(bool connected, string table, string column, string new_data, string condition, string value, out SqlDataReader results, SqlConnection sql_conn)
+        public static void addItem(SqlConnection conn, Item I)
         {
-            string sql_string_command = $"SELECT {column} FROM {table} WHERE {condition} = '{value}'";
-            SqlCommand sql_command = new SqlCommand(sql_string_command, sql_conn);
+            SqlCommand SP_addemployees = new SqlCommand("createItems", conn);
+            SP_addemployees.CommandType = CommandType.StoredProcedure;
 
-            results = sql_command.ExecuteReader();
+            SP_addemployees.Parameters.AddWithValue("@itemID", I.ItemID);
+            SP_addemployees.Parameters.AddWithValue("@itemName", I.ItemName);
+            SP_addemployees.Parameters.AddWithValue("@quantity", I.Quantity);
+            SP_addemployees.Parameters.AddWithValue("@unitPrice", I.UnitPrice);
+            SP_addemployees.Parameters.AddWithValue("@totalPrice", I.TotalPrice);
+            SP_addemployees.Parameters.AddWithValue("@description", I.Description);
 
-            if (connected)
-            {
-                results = null;
-                return;
-            }
+            SP_addemployees.ExecuteNonQuery();
+        }
+
+        public static void addTransaction(SqlConnection conn, Transaction T)
+        {
 
         }
 
-        static void removeData(bool connected, string table, string column, string new_data, out string exception, SqlConnection sql_conn)
+        public static void addTask(SqlConnection conn, Task T)
         {
-            try
-            {
-                exception = "";
-            } catch (Exception ex) {
-                exception = ex.Message;
 
-            }
-                
         }
 
-        static void insertData(bool connected, string table, string column, string new_data, out string exception, SqlConnection sql_conn)
-        {
-            try
-            {
-                string search_comm = $"INSERT INTO {table} VALUES ({new_data})";
-                exception = "";
-            }
-            catch (Exception ex)
-            {
-                exception = ex.Message;
+        
 
-            }
-        }
-        static void updateData(bool connected, string table, string column, string new_data, out string exception, SqlConnection sql_conn)
-        {
-            try
-            {
-                exception = "";
-            }
-            catch (Exception ex)
-            {
-                exception = ex.Message;
-            }
-        }
-
-        static void tableInspection(string[] tables, SqlConnection sql_conn)
-        {
-            try
-            {
-
-            }
-            catch 
-            {
-
-            }
-        }
-
-        static void checkIfTableExists(string table, SqlConnection sql_conn)
-        {
-            try
-            {
-
-            }
-            catch 
-            {
-
-            }
-        }
+       
     }
 }

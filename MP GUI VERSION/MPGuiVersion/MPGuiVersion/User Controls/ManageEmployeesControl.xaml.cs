@@ -54,14 +54,7 @@ namespace MPGuiVersion.User_Controls
             DataRowView selected = (DataRowView) EmployeeList.SelectedItem;
             int target_id = Convert.ToInt32(selected["employeeID"].ToString());
 
-            bool status;
-            string output;
-            
-            DatabaseConnection.connectToSQL(out this.conn, out status, out output);
-
-            DatabaseConnection.deleteEmployee(this.conn, target_id);
-
-            DatabaseConnection.disconnectSQL(this.conn, out status);
+            EmployeeModule.deleteEmployee(target_id);
 
             getDataFromServer();
             //MessageBox.Show($"{target_id}");

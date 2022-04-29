@@ -1,39 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Data;
+using System.Data.SqlClient;
+
 
 namespace MPGuiVersion
 {
-    static class InventoryModule
+    public static class InventoryModule
     {
 
-        static void addItem(string itemName, int quantity, float unitPrice, string desc)
+        public static void addItem(Item ret)
         {
-            Item  B = new Item();
-            B.itemName = itemName;
-            B.Quantity = quantity;
-            B.UnitPrice= unitPrice;
-            B.Description = desc;
-           
+            SqlConnection conn;
+            string message;
+            bool state;
+            DatabaseConnection.connectToSQL(out conn, out state, out message);
+            DatabaseConnection.addItem(conn, ret);
+            DatabaseConnection.disconnectSQL(conn, out state);
+
         }
-        static void deleteItem()
+        public static void deleteItem()
         {
             
 
         }
-        static void modifyItem()
+        public static void modifyItem()
         {
            
 
         }
-
-        static void summaryofItem()
-        {
-            var sumitems = new List<string>();
-            sumitems.Add("");
-            Console.WriteLine(string.Join(", ", sumitems));
-            //Hindi suree 
-        }
-
     }
 }

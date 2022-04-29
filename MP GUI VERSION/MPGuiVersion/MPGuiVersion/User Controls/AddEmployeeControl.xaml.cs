@@ -11,8 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using System.Data;
-using System.Data.SqlClient;
+
 
 namespace MPGuiVersion.User_Controls
 {
@@ -42,8 +41,7 @@ namespace MPGuiVersion.User_Controls
 
         private void AddEmployeeProfileBtn_Click(object sender, RoutedEventArgs e)
         {
-            EmployeeProfileWindow EPW = new EmployeeProfileWindow();
-            EPW.Show();
+            EmployeeModule.addEmployeeProfile();
         }
 
         private void AddEmployeeBtn_Click(object sender, RoutedEventArgs e)
@@ -62,12 +60,7 @@ namespace MPGuiVersion.User_Controls
                 EmployeeID = Convert.ToInt32(employeeID.Text)
             };
 
-            SqlConnection conn;
-            string message;
-            bool state;
-            DatabaseConnection.connectToSQL(out conn, out state, out message);
-            DatabaseConnection.addEmployees(conn, ret);
-            DatabaseConnection.disconnectSQL(conn, out state);
+            EmployeeModule.addEmployee(ret);           
 
             ClearAllEntries();
         }

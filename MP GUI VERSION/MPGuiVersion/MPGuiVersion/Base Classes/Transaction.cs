@@ -6,6 +6,7 @@ namespace MPGuiVersion
 {
     public class Transaction
     {
+        private string transactionID;
         private string fullName;
         private string Description;
         private bool isCredit = true;
@@ -18,5 +19,6 @@ namespace MPGuiVersion
         public bool TransactionC { get => isCredit; set => isCredit = value; }
         public bool TransactionD { get => isDebit; set => isDebit = value; }
         public float Amount { get => amount; set => amount = value; }
+        public string TransactionID { get => transactionID; set => transactionID = value; }
     }
 }

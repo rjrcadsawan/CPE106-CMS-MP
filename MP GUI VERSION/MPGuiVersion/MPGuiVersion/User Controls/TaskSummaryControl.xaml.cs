@@ -11,6 +11,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using System.Data;
+using System.Data.SqlClient;
+
+
 namespace MPGuiVersion.User_Controls
 {
     /// <summary>
@@ -18,9 +22,26 @@ namespace MPGuiVersion.User_Controls
     /// </summary>
     public partial class TaskSummaryControl : UserControl
     {
+        SqlConnection conn;
         public TaskSummaryControl()
         {
             InitializeComponent();
+            getDataFromServer();
         }
+
+        private void getDataFromServer()
+        {
+            bool status;
+            string output;
+
+            DatabaseConnection.connectToSQL(out this.conn, out status, out output);
+
+            DataView TaskData = DatabaseConnection.getDatas(this.conn, "Tasks");
+            TaskList.ItemsSource = null;
+            TaskList.ItemsSource = TaskData;
+
+            DatabaseConnection.disconnectSQL(this.conn, out status);
+        }
+
     }
 }

@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="800">
     <Grid Background="White">
-        <DataGrid Margin="45,118,26,371"/>
+        <DataGrid x:Name="ItemList" Margin="45,118,26,371"/>
         <Button Content="Search Item" HorizontalAlignment="Left" Margin="624,66,0,0" VerticalAlignment="Top" Width="150"/>
         <Button Content="Delete Item" HorizontalAlignment="Left" Margin="104,446,0,0" VerticalAlignment="Top" Width="150"/>
         <Label Content="Item Name" HorizontalAlignment="Left" Margin="45,35,0,0" VerticalAlignment="Top"/>

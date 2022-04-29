@@ -8,12 +8,12 @@
              d:DesignHeight="800" d:DesignWidth="800">
     <Grid Background="White">
         <Label Content="Task Name" HorizontalAlignment="Left" Margin="29,20,0,0" VerticalAlignment="Top"/>
-        <DataGrid Margin="10,49,10,638"/>
+        <DataGrid x:Name="TaskList" Margin="10,49,10,638"/>
         <TextBox HorizontalAlignment="Left" Margin="101,24,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Due Date" HorizontalAlignment="Left" Margin="259,20,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="324,24,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="Search Task" HorizontalAlignment="Left" Margin="520,24,0,0" VerticalAlignment="Top" Width="150"/>
-        <DataGrid Margin="10,501,10,165"/>
+        <DataGrid x:Name="FinishedTaskList" Margin="10,501,10,165"/>
         <Label Content="Employee ID" HorizontalAlignment="Left" Margin="24,455,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="119,459,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="Assign Employee to Task" HorizontalAlignment="Left" Margin="625,645,0,0" VerticalAlignment="Top" Width="150"/>

@@ -36,7 +36,7 @@ namespace MPGuiVersion.User_Controls
 
             DatabaseConnection.connectToSQL(out this.conn, out status, out output);
 
-            DataView EmployeeData = DatabaseConnection.getEmployees(this.conn);
+            DataView EmployeeData = DatabaseConnection.getDatas(this.conn, "Employees");
             EmployeeList.ItemsSource = null;
             EmployeeList.ItemsSource = EmployeeData;
 
@@ -45,11 +45,27 @@ namespace MPGuiVersion.User_Controls
 
         private void ManageEmailsBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            EmailWindow EW = new EmailWindow();
+            EW.Show();
         }
 
         private void DeleteEmployeeBtn_Click(object sender, RoutedEventArgs e)
         {
+            DataRowView selected = (DataRowView) EmployeeList.SelectedItem;
+            int target_id = Convert.ToInt32(selected["employeeID"].ToString());
+
+            bool status;
+            string output;
+            
+            DatabaseConnection.connectToSQL(out this.conn, out status, out output);
+
+            DatabaseConnection.deleteEmployee(this.conn, target_id);
+
+            DatabaseConnection.disconnectSQL(this.conn, out status);
+
+            getDataFromServer();
+            //MessageBox.Show($"{target_id}");
+
    
         }
 
@@ -61,16 +77,23 @@ namespace MPGuiVersion.User_Controls
         private void SearchEmployeeBtn_Click(object sender, RoutedEventArgs e)
         {
             int EID = Convert.ToInt32(EID_TextBox.Text);
+            bool found = false;
+
             foreach (DataRowView row in EmployeeList.ItemsSource)
             {
                 var str = row["employeeID"].ToString();
-                MessageBox.Show(str);
                 bool check = (EID == Convert.ToInt32(str));
                 if (check)
                 {
                     EmployeeList.SelectedItem = row;
+                    found = true;
                     break;
                 }
+            }
+
+            if (!found)
+            {
+                MessageBox.Show("Employee ID Not Found");
             }
         }
     }

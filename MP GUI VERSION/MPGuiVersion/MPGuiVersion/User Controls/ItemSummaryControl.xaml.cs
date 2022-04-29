@@ -11,6 +11,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using System.Data;
+using System.Data.SqlClient;
+
 namespace MPGuiVersion.User_Controls
 {
     /// <summary>
@@ -18,9 +21,26 @@ namespace MPGuiVersion.User_Controls
     /// </summary>
     public partial class ItemSummaryControl : UserControl
     {
+        SqlConnection conn;
         public ItemSummaryControl()
         {
             InitializeComponent();
+            getDataFromServer();
         }
+
+        private void getDataFromServer()
+        {
+            bool status;
+            string output;
+
+            DatabaseConnection.connectToSQL(out this.conn, out status, out output);
+
+            DataView InventoryData = DatabaseConnection.getDatas(this.conn, "Items");
+            ItemList.ItemsSource = null;
+            ItemList.ItemsSource = InventoryData;
+
+            DatabaseConnection.disconnectSQL(this.conn, out status);
+        }
+
     }
 }

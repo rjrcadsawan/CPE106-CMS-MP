@@ -51,38 +51,73 @@ namespace MPGuiVersion
             }
         }
 
-        public static DataView getEmployees(SqlConnection conn)
+        public static DataView getDatas(SqlConnection conn, string type)
         {
-            SqlCommand SP_getemployees = new SqlCommand("getAllEmployees", conn);
-            SP_getemployees.CommandType = System.Data.CommandType.StoredProcedure;
-            SqlDataAdapter SDA = new SqlDataAdapter(SP_getemployees);
-            DataTable DT = new DataTable("Employees");
+            SqlCommand SP_getCommand = null;
+
+            switch(type){
+                case "Employees":
+                    SP_getCommand = new SqlCommand("getAllEmployees", conn);
+                    break;
+                case "Items":
+                    SP_getCommand = new SqlCommand("getAllItems", conn);
+                    break;
+                case "Tasks":
+                    SP_getCommand = new SqlCommand("getAllTasks", conn);
+                    break;
+                case "Transactions":
+                    SP_getCommand = new SqlCommand("getAllTransactions", conn);
+                    break;
+                default:
+                    break;
+            }
+
+            SP_getCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            SqlDataAdapter SDA = new SqlDataAdapter(SP_getCommand);
+            DataTable DT = new DataTable();
             SDA.Fill(DT);
             return DT.DefaultView;
 
         }
 
+
+        public static void deleteEmployee(SqlConnection conn, int EID)
+        {
+            SqlCommand SP_deleteEmployee = new SqlCommand("deleteEmployee", conn);
+            SP_deleteEmployee.CommandType = CommandType.StoredProcedure;
+
+            SP_deleteEmployee.Parameters.AddWithValue("@EmployeeID", EID);
+            SP_deleteEmployee.ExecuteNonQuery();
+        }
         public static void addEmployees(SqlConnection conn, Employee E)
         {
             //EXECUTE [createEmployee] 1, 'Rence Joseph', 'Romero', 'Cadsawan', '', 1, 'Software', 'Senior Dev', 'rjrcadsawan@mymail.mapua.edu.ph', '200000'
             //@EmployeeID @FirstName @MiddleName @LastName @Suffix @Sex @Department @Position @EmailAddress @Salary
 
-            /*
-            SqlCommand SP_addemployees = new SqlCommand("createEmployee", conn);            
-            SP_addemployees.Parameters.AddWithValue("@EmployeeID", E.EmployeeID);
+ 
+            SqlCommand SP_addemployees = new SqlCommand("createEmployee", conn);
+            SP_addemployees.CommandType = CommandType.StoredProcedure;
+
+            SP_addemployees.Parameters.AddWithValue("@employeeID", E.EmployeeID);
             SP_addemployees.Parameters.AddWithValue("@FirstName", E.FirstName);
             SP_addemployees.Parameters.AddWithValue("@MiddleName", E.MiddleName);
             SP_addemployees.Parameters.AddWithValue("@LastName", E.LastName);
             SP_addemployees.Parameters.AddWithValue("@Suffix", E.Suffix);
-            SP_addemployees.Parameters.AddWithValue("@Sex", E.Sex);
+
+            int gender = 0;
+
+            if (E.Sex == "Male"){
+                gender = 1;
+            } else if (E.Sex == "Female")
+            {
+                gender = 2;
+            }
+
+            SP_addemployees.Parameters.AddWithValue("@Sex", gender);
             SP_addemployees.Parameters.AddWithValue("@Department", E.Department);
             SP_addemployees.Parameters.AddWithValue("@Position", E.Position);
             SP_addemployees.Parameters.AddWithValue("@EmailAddress", E.EmailAddress);
             SP_addemployees.Parameters.AddWithValue("@Salary", E.Salary);
-            */
-
-            string comm= $"createEmployee {E.EmployeeID} {E.FirstName} {E.MiddleName} {E.LastName} {E.Suffix} {E.Sex} {E.Department} {E.Position} {E.EmailAddress} {E.Salary}";
-            SqlCommand SP_addemployees = new SqlCommand(comm, conn);
 
 
 
@@ -149,7 +184,7 @@ namespace MPGuiVersion
             {
 
             }
-            catch (Exception ex)
+            catch 
             {
 
             }
@@ -161,7 +196,7 @@ namespace MPGuiVersion
             {
 
             }
-            catch (Exception ex)
+            catch 
             {
 
             }

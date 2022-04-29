@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="800">
     <Grid Background="White">
-        <DataGrid Margin="10,10,10,387"/>
-        <DataGrid Margin="10,435,10,10"/>
+        <DataGrid x:Name="TaskList" Margin="10,10,10,387"/>
+        <DataGrid x:Name="FinishedTaskList" Margin="10,435,10,10"/>
     </Grid>
 </UserControl>

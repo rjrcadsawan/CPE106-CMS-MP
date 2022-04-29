@@ -26,9 +26,24 @@ namespace MPGuiVersion.User_Controls
             InitializeComponent();
         }
 
+        private void ClearAllEntries()
+        {
+            firstName.Text = "";
+            middleName.Text = "";
+            lastName.Text = "";
+            suffix.Text = "";
+            sex.Text = "";
+            department.Text = "";
+            position.Text = "";
+            emailAddress.Text = "";
+            salary.Text = "";
+            employeeID.Text = "";
+        }
+
         private void AddEmployeeProfileBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            EmployeeProfileWindow EPW = new EmployeeProfileWindow();
+            EPW.Show();
         }
 
         private void AddEmployeeBtn_Click(object sender, RoutedEventArgs e)
@@ -53,16 +68,19 @@ namespace MPGuiVersion.User_Controls
             DatabaseConnection.connectToSQL(out conn, out state, out message);
             DatabaseConnection.addEmployees(conn, ret);
             DatabaseConnection.disconnectSQL(conn, out state);
+
+            ClearAllEntries();
         }
 
         private void AddHealthRecordBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MedicalRecordWindow MRW = new MedicalRecordWindow();
+            MRW.Show();
         }
 
-        private void RestFieldsBtn_Click(object sender, RoutedEventArgs e)
+        private void ResetFieldsBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            ClearAllEntries();
         }
     }
 }

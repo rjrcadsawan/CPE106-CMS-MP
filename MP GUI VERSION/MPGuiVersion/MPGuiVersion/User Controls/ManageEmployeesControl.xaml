@@ -21,10 +21,24 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
-        
-        <Label Content="Employee ID" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center"/>
-        <TextBox x:Name="EID_TextBox" HorizontalAlignment="Left" Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="250"/>
-        <Button x:Name="SearchEmployeeBtn" Content="Search Employee" HorizontalAlignment="Left" Grid.Column="3" Grid.Row="1" VerticalAlignment="Center" Width="120" Click="SearchEmployeeBtn_Click"/>
+
+        <Label Content="Employee ID" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <TextBox x:Name="EID_TextBox" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <Button x:Name="SearchEmployeeBtn" Content="Search Employee" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="1" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="SearchEmployeeBtn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15
+                            "/>
+                </Style>
+            </Button.Resources>
+        </Button>
 
         <DataGrid x:Name="EmployeeList" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" AutoGenerateColumns="False"  CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False">
             <DataGrid.Columns>
@@ -41,9 +55,27 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        
-        <Button x:Name="DeleteEmployeeBtn" Content="Delete Employee" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Width="120" Click="DeleteEmployeeBtn_Click"/>
-        <Button x:Name="GeneratePayslipBtn" Content="Generate Payslip" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" Width="120" Click="GeneratePayslipBtn_Click"/>
-        <Button x:Name="ManageEmailsBtn" Content="Manage Emails" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="3" VerticalAlignment="Center" Width="120" Click="ManageEmailsBtn_Click"/>
+
+        <Button x:Name="DeleteEmployeeBtn" Content="Delete Employee" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="DeleteEmployeeBtn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="GeneratePayslipBtn" Content="Generate Payslip" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="GeneratePayslipBtn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="ManageEmailsBtn" Content="Manage Emails" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="3" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="ManageEmailsBtn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </UserControl>

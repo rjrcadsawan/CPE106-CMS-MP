@@ -66,7 +66,7 @@ namespace MPGuiVersion
             // SQL Command Setup
             string email_text = EmailBox.Text;
             string pass_text = PassBox.Password;
-            string search_comm = $"SELECT * FROM LogInDetails WHERE EmailAddress = '{email_text}'";
+            string search_comm = $"SELECT * FROM LogInDetails WHERE EmailAddress = '{email_text}' AND PasswordText = '{pass_text}'";
 
             // Email Finding Setup
             bool email_found = false;

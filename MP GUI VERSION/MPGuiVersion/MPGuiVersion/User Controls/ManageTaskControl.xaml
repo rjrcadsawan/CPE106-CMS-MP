@@ -7,44 +7,74 @@
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="800">
     <Grid Background="White">
-        <Label Content="Task Name" HorizontalAlignment="Left" Margin="29,20,0,0" VerticalAlignment="Top"/>
-        <DataGrid x:Name="TaskList" Margin="10,49,10,638"/>
-        <TextBox HorizontalAlignment="Left" Margin="101,24,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Due Date" HorizontalAlignment="Left" Margin="259,20,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="324,24,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Search Task" HorizontalAlignment="Left" Margin="520,24,0,0" VerticalAlignment="Top" Width="150"/>
-        <DataGrid x:Name="FinishedTaskList" Margin="10,501,10,165"/>
-        <Label Content="Employee ID" HorizontalAlignment="Left" Margin="24,455,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="119,459,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Assign Employee to Task" HorizontalAlignment="Left" Margin="625,645,0,0" VerticalAlignment="Top" Width="150"/>
-        <Button Content="Search Employee" HorizontalAlignment="Left" Margin="520,459,0,0" VerticalAlignment="Top" Width="150"/>
-        <Button Content="Deallocate Employee" HorizontalAlignment="Left" Margin="444,645,0,0" VerticalAlignment="Top" Width="150"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
 
-        <Label Content="Task Name" HorizontalAlignment="Left" Margin="45,203,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="119,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
 
-        <Label Content="Budget" HorizontalAlignment="Left" Margin="52,229,0,0" VerticalAlignment="Top"/>
-        <Label Content="Due Date" HorizontalAlignment="Left" Margin="45,255,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="119,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="119,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Search Task" HorizontalAlignment="Left" Margin="161,419,0,0" VerticalAlignment="Top" Width="150"/>
-        <Button Content="Reset Fields" HorizontalAlignment="Left" Margin="334,419,0,0" VerticalAlignment="Top" Width="150"/>
-        <Button Content="Modify Task" HorizontalAlignment="Left" Margin="502,419,0,0" VerticalAlignment="Top" Width="150"/>
-        <Label Content="Existing Task Data" HorizontalAlignment="Left" Margin="130,176,0,0" VerticalAlignment="Top"/>
 
-        <Label Content="New Task Data" HorizontalAlignment="Left" Margin="502,171,0,0" VerticalAlignment="Top"/>
-        <Label Content="Task Name" HorizontalAlignment="Left" Margin="413,207,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="487,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Budget" HorizontalAlignment="Left" Margin="420,232,0,0" VerticalAlignment="Top"/>
-        <Label Content="Due Date" HorizontalAlignment="Left" Margin="413,259,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="487,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="487,263,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="-- Copy Fields -->" HorizontalAlignment="Left" Margin="270,198,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Materials" HorizontalAlignment="Left" Margin="42,281,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="119,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="96"/>
-        <Label Content="Materials" HorizontalAlignment="Left" Margin="410,285,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="487,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="96"/>
-        <Button Content="Toggle Status" HorizontalAlignment="Left" Margin="270,332,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="270,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Task ID" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Task Name" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Budget" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Due" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Status" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Materials" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Employees" Grid.Row="8" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="EmployeeID" Grid.Row="9" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+
+        <TextBox x:Name="TaskID" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <TextBox x:Name="TaskName" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <TextBox x:Name="Budget" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <DatePicker x:Name="DueDate" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <TextBox x:Name="Status" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <TextBox x:Name="Maerials" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <TextBox x:Name="Employee" Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <TextBox x:Name="EmployeeID" Grid.Row="9" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
+
+
+        <DataGrid x:Name="EmployeeList" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4"/>
+        <DataGrid x:Name="TaskList" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="4"/>
+
+        <Button Content="Search Task" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White">
+        <Button.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="15"/>
+            </Style>
+        </Button.Resources>
+        </Button>
+        <Button Content="Search Employee" Grid.Row="9" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White">
+        <Button.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="15"/>
+            </Style>
+        </Button.Resources>
+        </Button>
+        <Button Content="Assign Employee" Grid.Row="9" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White">
+        <Button.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="15"/>
+            </Style>
+        </Button.Resources>
+        </Button>
+
     </Grid>
 </UserControl>

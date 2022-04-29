@@ -6,7 +6,16 @@
         mc:Ignorable="d"
         Title="MainMenuv2" Height="800" Width="1000">
     <Grid>
-        <GroupBox x:Name="CMSIcons" Margin="0,0,800,0" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="#FF7B79C3">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox x:Name="CMSIcons" Grid.Row="0" Grid.Column="0" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="#FF7B79C3">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
@@ -232,7 +241,7 @@
 
         </GroupBox>
 
-        <GroupBox x:Name="CMSModules" Margin="200,0,0,0" Width="800" />
+        <GroupBox x:Name="CMSModules" Grid.Row="0" Grid.Column="1"/>
 
 
     </Grid>

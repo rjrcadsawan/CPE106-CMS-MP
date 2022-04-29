@@ -7,20 +7,85 @@
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="800">
     <Grid Background="White">
-        <TextBox HorizontalAlignment="Left" Margin="189,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287"/>
-        <TextBox HorizontalAlignment="Left" Margin="189,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287"/>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="57,27,0,0" VerticalAlignment="Top"/>
-        <Label Content="Description" HorizontalAlignment="Left" Margin="57,70,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Credit" HorizontalAlignment="Left" Margin="212,121,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Debit" HorizontalAlignment="Center" Margin="0,121,0,0" VerticalAlignment="Top"/>
-        <Label Content="Type of Transaction" HorizontalAlignment="Left" Margin="57,115,0,0" VerticalAlignment="Top"/>
-        <Label Content="Amount" HorizontalAlignment="Left" Margin="61,163,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="189,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287"/>
-        <Button Content="Add Transaction" HorizontalAlignment="Left" Margin="316,334,0,0" VerticalAlignment="Top" Width="160"/>
-        <Button Content="Clear All Fields" HorizontalAlignment="Left" Margin="493,334,0,0" VerticalAlignment="Top" Width="160"/>
-        <Label Content="Total Credit" HorizontalAlignment="Left" Margin="61,200,0,0" VerticalAlignment="Top"/>
-        <Label Content="Total Debit" HorizontalAlignment="Left" Margin="61,246,0,0" VerticalAlignment="Top"/>
-        <Label Content="PHP VALUE HERE" HorizontalAlignment="Left" Margin="189,200,0,0" VerticalAlignment="Top"/>
-        <Label Content="PHP VALUE HERE" HorizontalAlignment="Left" Margin="189,246,0,0" VerticalAlignment="Top"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+
+
+        <Label Content="Transaction ID" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Transaction Name" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Description" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Type of Transaction" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Amount" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Total Credit" HorizontalAlignment="Center" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Total Debit" HorizontalAlignment="Center" Grid.Row="8" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label x:Name="TotalCreditLbl" Content="P 0" HorizontalAlignment="Center" Grid.Row="7" Grid.Column="2" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label x:Name="TotalDebitLbl" Content="P 0" HorizontalAlignment="Center" Grid.Row="8" Grid.Column="2" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+
+        <TextBox x:Name="TransactionID" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox x:Name="TransactionName" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox x:Name="Description" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <RadioButton x:Name="CreditOption" Content="Credit" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <RadioButton x:Name="DebitOption" Content="Debit" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="2" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <TextBox x:Name="Amount" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <Button Content="Add Transaction" HorizontalAlignment="Center" Grid.Row="9" Grid.Column="2" VerticalAlignment="Center" Width="250" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="#FF6DFF74">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15
+                            "/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Clear All Fields" HorizontalAlignment="Center" Grid.Row="9" Grid.Column="1" VerticalAlignment="Center" Width="250" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15
+                            "/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        
     </Grid>
 </UserControl>

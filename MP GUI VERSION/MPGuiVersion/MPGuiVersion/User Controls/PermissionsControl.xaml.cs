@@ -10,6 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace MPGuiVersion.User_Controls
 {
@@ -18,9 +20,25 @@ namespace MPGuiVersion.User_Controls
     /// </summary>
     public partial class PermissionsControl : UserControl
     {
+        SqlConnection conn;
         public PermissionsControl()
         {
             InitializeComponent();
         }
+
+        private void getDataFromServer()
+        {
+            bool status;
+            string output;
+
+            DatabaseConnection.connectToSQL(out this.conn, out status, out output);
+
+            DataView PermissionsData = DatabaseConnection.getPermissions(this.conn);
+            PermissionList.ItemsSource = null;
+            PermissionList.ItemsSource = PermissionsData;
+
+            DatabaseConnection.disconnectSQL(this.conn, out status);
+        }
+
     }
 }

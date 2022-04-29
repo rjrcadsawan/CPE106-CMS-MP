@@ -80,6 +80,15 @@ namespace MPGuiVersion
 
         }
 
+        public static DataView getPermissions(SqlConnection conn)
+        {
+            SqlCommand SP_getCommand = new SqlCommand("SELECT * FROM PRIVILEGE", conn);
+            SqlDataAdapter SDA = new SqlDataAdapter(SP_getCommand);
+            DataTable DT = new DataTable();
+            SDA.Fill(DT);
+            return DT.DefaultView;
+        }
+
 
         public static void deleteEmployee(SqlConnection conn, int EID)
         {

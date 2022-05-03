@@ -86,7 +86,7 @@
         </TextBox>
 
 
-        <Button Content="Reset Fields" HorizontalAlignment="Center" Grid.Row="8" Grid.Column="1" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="#FF6DFF74">
+        <Button x:Name="ResetFieldsBtn" Content="Reset Fields" HorizontalAlignment="Center" Grid.Row="8" Grid.Column="1" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="ResetFieldsBtn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15
@@ -94,7 +94,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Add Task" HorizontalAlignment="Center" Grid.Row="8" Grid.Column="2" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White">
+        <Button x:Name="AddTaskBtn" Content="Add Task" HorizontalAlignment="Center" Grid.Row="8" Grid.Column="2" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="#FF6DFF74" Click="AddTaskBtn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15

@@ -22,5 +22,38 @@ namespace MPGuiVersion.User_Controls
         {
             InitializeComponent();
         }
+
+        private void AddTaskBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Task T = new Task();
+            T.TaskID = Convert.ToInt32(TaskID.Text);
+            T.TaskName = TaskName.Text;
+            T.DueDate = DueDate.ToString();
+            T.Budget = Convert.ToDouble(Budget.Text);
+            T.IsDone = false;
+            T.MaterialsNeeded = MaterialsNeeded.Text;
+            T.Description = Description.Text;
+            T.EmployeesNeeded = Convert.ToInt32(EmployeesNeeded.Text);
+
+            TaskModule.addTask(T);
+            resetEntries();
+        }
+
+        private void resetEntries()
+        {
+            TaskID.Text = "";
+            TaskName.Text = "";
+            DueDate.SelectedDate = DateTime.MinValue;
+            Budget.Text = "";
+            MaterialsNeeded.Text = "";
+            Description.Text = "";
+            EmployeesNeeded.Text = "";          
+
+        }
+
+        private void ResetFieldsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            resetEntries();
+        }
     }
 }

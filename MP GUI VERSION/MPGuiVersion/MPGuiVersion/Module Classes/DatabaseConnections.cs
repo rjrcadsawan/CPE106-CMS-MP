@@ -198,20 +198,21 @@ namespace MPGuiVersion
 
         public static void addTask(SqlConnection conn, Task T)
         {
-            SqlCommand SP_addTask = new SqlCommand("createItems", conn);
+            SqlCommand SP_addTask = new SqlCommand("createTask", conn);
             SP_addTask.CommandType = CommandType.StoredProcedure;
 
+            SP_addTask.Parameters.AddWithValue("@taskID", T.TaskID);
             SP_addTask.Parameters.AddWithValue("@taskName", T.TaskName);
             SP_addTask.Parameters.AddWithValue("@dueDate", T.DueDate);
             SP_addTask.Parameters.AddWithValue("@isDone", T.IsDone);
             SP_addTask.Parameters.AddWithValue("@budget", T.Budget);
             SP_addTask.Parameters.AddWithValue("@employeesNeeded", T.EmployeesNeeded);
-            SP_addTask.Parameters.AddWithValue("@description", T.Description);
             SP_addTask.Parameters.AddWithValue("@materialsNeeded", T.MaterialsNeeded);
+            SP_addTask.Parameters.AddWithValue("@description", T.Description);
+            
 
             SP_addTask.ExecuteNonQuery();
         }
-
 
         public static void deleteItem(SqlConnection conn, int target_id)
         {
@@ -220,6 +221,34 @@ namespace MPGuiVersion
 
             SP_deleteItem.Parameters.AddWithValue("@ItemID", target_id);
             SP_deleteItem.ExecuteNonQuery();
+        }
+
+        public static void modifyTask(SqlConnection conn, Task T)
+        {
+            SqlCommand SP_addTask = new SqlCommand("modifyTask", conn);
+            SP_addTask.CommandType = CommandType.StoredProcedure;
+
+            SP_addTask.Parameters.AddWithValue("@taskID", T.TaskID);
+            SP_addTask.Parameters.AddWithValue("@taskName", T.TaskName);
+            SP_addTask.Parameters.AddWithValue("@dueDate", T.DueDate);
+            SP_addTask.Parameters.AddWithValue("@isDone", T.IsDone);
+            SP_addTask.Parameters.AddWithValue("@budget", T.Budget);
+            SP_addTask.Parameters.AddWithValue("@employeesNeeded", T.EmployeesNeeded);
+            SP_addTask.Parameters.AddWithValue("@materialsNeeded", T.MaterialsNeeded);
+            SP_addTask.Parameters.AddWithValue("@description", T.Description);
+            SP_addTask.Parameters.AddWithValue("@employeesAssigned", T.AssignedEmployees);
+
+            SP_addTask.ExecuteNonQuery();
+        }
+
+        public static void assignEmployees(SqlConnection conn, Task T)
+        {
+            SqlCommand SP_addTask = new SqlCommand("assignEmployeeOnTask", conn);
+            SP_addTask.CommandType = CommandType.StoredProcedure;
+
+            SP_addTask.Parameters.AddWithValue("@taskID", T.TaskID);
+            SP_addTask.Parameters.AddWithValue("@employeesAssigned", T.AssignedEmployees);
+            SP_addTask.ExecuteNonQuery();
         }
 
 

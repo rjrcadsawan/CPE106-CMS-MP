@@ -28,19 +28,26 @@ namespace MPGuiVersion
             DatabaseConnection.deleteTask(conn, target_id);
             DatabaseConnection.disconnectSQL(conn, out status);
         }
-        public static void modifyItem()
+        public static void modifyTask(Task T)
         {
+            SqlConnection conn;
+            bool status;
+            string output;
 
+            DatabaseConnection.connectToSQL(out conn, out status, out output);
+            DatabaseConnection.modifyTask(conn, T);
+            DatabaseConnection.disconnectSQL(conn, out status);
         }
 
-        public static void updateTask()
+        public static void assignEmployee(Task T)
         {
+            SqlConnection conn;
+            bool status;
+            string output;
 
-        }
-
-        public static void assignTask()
-        {
-
+            DatabaseConnection.connectToSQL(out conn, out status, out output);
+            DatabaseConnection.assignEmployees(conn, T);
+            DatabaseConnection.disconnectSQL(conn, out status);
         }
 
 

@@ -8,18 +8,20 @@
              d:DesignHeight="800" d:DesignWidth="800">
     <Grid Background="White">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.25*"/>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.25*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
@@ -39,42 +41,67 @@
         <Label Content="Status" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
         <Label Content="Materials" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
         <Label Content="Employees" Grid.Row="8" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
-        <Label Content="EmployeeID" Grid.Row="9" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="No. of Employees" Grid.Row="9" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Description" Grid.Row="10" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="EmployeeID" Grid.Row="11" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
 
         <TextBox x:Name="TaskID" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
         <TextBox x:Name="TaskName" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
         <TextBox x:Name="Budget" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
         <DatePicker x:Name="DueDate" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
-        <TextBox x:Name="Status" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
-        <TextBox x:Name="Maerials" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
-        <TextBox x:Name="Employee" Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
-        <TextBox x:Name="EmployeeID" Grid.Row="9" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <TextBox x:Name="Materials" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <TextBox x:Name="EmployeesAssigned" Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <TextBox x:Name="EmployeeNum" Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <TextBox x:Name="Description" Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <TextBox x:Name="EmployeeID" Grid.Row="11" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="25" FontFamily="Bahnschrift Light" FontSize="20"/>
 
+        <DataGrid x:Name="TaskList" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4"/>
+        <DataGrid x:Name="EmployeeList" Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="4"/>
 
-        <DataGrid x:Name="EmployeeList" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4"/>
-        <DataGrid x:Name="TaskList" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="4"/>
-
-        <Button Content="Search Task" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White">
-        <Button.Resources>
-            <Style TargetType="Border">
-                <Setter Property="CornerRadius" Value="15"/>
-            </Style>
-        </Button.Resources>
+        <Button x:Name="SearchTaskBtn" Content="Search Task" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="SearchTaskBtn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
         </Button>
-        <Button Content="Search Employee" Grid.Row="9" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White">
-        <Button.Resources>
-            <Style TargetType="Border">
-                <Setter Property="CornerRadius" Value="15"/>
-            </Style>
-        </Button.Resources>
+        <Button x:Name="ResetFieldsBtn" Content="Reset Fields" Grid.Row="8" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="ResetFieldsBtn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
         </Button>
-        <Button Content="Assign Employee" Grid.Row="9" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White">
-        <Button.Resources>
-            <Style TargetType="Border">
-                <Setter Property="CornerRadius" Value="15"/>
-            </Style>
-        </Button.Resources>
+        <Button x:Name="ModifyTaskBtn" Content="Modify Task" Grid.Row="9" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="ModifyTaskBtn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
         </Button>
+        <Button x:Name="DeleteTaskBtn" Content="Delete Task" Grid.Row="10" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="DeleteTaskBtn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="SearchEmployeeBtn" Content="Search Employee" Grid.Row="11" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="SearchEmployeeBtn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="AssignEmployeeBtn" Content="Assign Employee" Grid.Row="11" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="AssignEmployeeBtn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <CheckBox x:Name="isDone" Content="Completed" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="15"/>
+        <CheckBox x:Name="notDone" Content="Unfinished" Grid.Column="3" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="15"/>
 
     </Grid>
 </UserControl>

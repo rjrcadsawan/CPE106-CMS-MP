@@ -80,6 +80,7 @@ namespace MPGuiVersion
 
         }
 
+
         public static DataView getPermissions(SqlConnection conn)
         {
             SqlCommand SP_getCommand = new SqlCommand("SELECT * FROM PRIVILEGE", conn);
@@ -148,16 +149,66 @@ namespace MPGuiVersion
 
         public static void addTransaction(SqlConnection conn, Transaction T)
         {
+            SqlCommand SP_addTransaction = new SqlCommand("createTransaction", conn);
+            SP_addTransaction.CommandType = CommandType.StoredProcedure;
 
+            SP_addTransaction.Parameters.AddWithValue("@TransactionID", T.TransactionID);
+            SP_addTransaction.Parameters.AddWithValue("@fullName", T.Name);
+            SP_addTransaction.Parameters.AddWithValue("@isCredit", T.TransactionC);
+            SP_addTransaction.Parameters.AddWithValue("@isDebit", T.TransactionD);
+            SP_addTransaction.Parameters.AddWithValue("@amount", T.Amount);
+            SP_addTransaction.Parameters.AddWithValue("@Description", T.Summary);
+
+            SP_addTransaction.ExecuteNonQuery();
         }
+
+        public static void deleteTransaction(SqlConnection conn, int T)
+        {
+            SqlCommand SP_deleteTransaction = new SqlCommand("deleteTransaction", conn);
+            SP_deleteTransaction.CommandType = CommandType.StoredProcedure;
+
+            SP_deleteTransaction.Parameters.AddWithValue("@TransactionID", T);
+            SP_deleteTransaction.ExecuteNonQuery();
+        }
+
+        public static void deleteTask(SqlConnection conn, int TID)
+        {
+            SqlCommand SP_deleteTask = new SqlCommand("deleteTask", conn);
+            SP_deleteTask.CommandType = CommandType.StoredProcedure;
+
+            SP_deleteTask.Parameters.AddWithValue("@TaskID", TID);
+            SP_deleteTask.ExecuteNonQuery();
+        }
+
 
         public static void addTask(SqlConnection conn, Task T)
         {
+            SqlCommand SP_addTask = new SqlCommand("createItems", conn);
+            SP_addTask.CommandType = CommandType.StoredProcedure;
 
+            SP_addTask.Parameters.AddWithValue("@taskName", T.TaskName);
+            SP_addTask.Parameters.AddWithValue("@dueDate", T.DueDate);
+            SP_addTask.Parameters.AddWithValue("@isDone", T.IsDone);
+            SP_addTask.Parameters.AddWithValue("@budget", T.Budget);
+            SP_addTask.Parameters.AddWithValue("@employeesNeeded", T.EmployeesNeeded);
+            SP_addTask.Parameters.AddWithValue("@description", T.Description);
+            SP_addTask.Parameters.AddWithValue("@materialsNeeded", T.MaterialsNeeded);
+
+            SP_addTask.ExecuteNonQuery();
         }
 
-        
 
-       
+        public static void deleteItem(SqlConnection conn, int target_id)
+        {
+            SqlCommand SP_deleteItem = new SqlCommand("deleteItem", conn);
+            SP_deleteItem.CommandType = CommandType.StoredProcedure;
+
+            SP_deleteItem.Parameters.AddWithValue("@ItemID", target_id);
+            SP_deleteItem.ExecuteNonQuery();
+        }
+
+
+
+
     }
 }

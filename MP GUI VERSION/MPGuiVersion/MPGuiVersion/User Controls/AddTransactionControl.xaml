@@ -39,21 +39,21 @@
         <Label x:Name="TotalCreditLbl" Content="P 0" HorizontalAlignment="Center" Grid.Row="7" Grid.Column="2" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
         <Label x:Name="TotalDebitLbl" Content="P 0" HorizontalAlignment="Center" Grid.Row="8" Grid.Column="2" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
 
-        <TextBox x:Name="TransactionID" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
+        <TextBox x:Name="TransactionIDbox" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="3"/>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <TextBox x:Name="TransactionName" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
+        <TextBox x:Name="TransactionNamebox" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="3"/>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <TextBox x:Name="Description" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
+        <TextBox x:Name="Descriptionbox" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="3"/>
@@ -70,7 +70,7 @@
             </TextBox.Resources>
         </TextBox>
 
-        <Button Content="Add Transaction" HorizontalAlignment="Center" Grid.Row="9" Grid.Column="2" VerticalAlignment="Center" Width="250" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="#FF6DFF74">
+        <Button x:Name="AddTransactionBtn" Content="Add Transaction" HorizontalAlignment="Center" Grid.Row="9" Grid.Column="2" VerticalAlignment="Center" Width="250" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="#FF6DFF74" Click="AddTransactionBtn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15
@@ -78,7 +78,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Clear All Fields" HorizontalAlignment="Center" Grid.Row="9" Grid.Column="1" VerticalAlignment="Center" Width="250" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White">
+        <Button x:Name="ResetFieldsBtn" Content="Clear All Fields" HorizontalAlignment="Center" Grid.Row="9" Grid.Column="1" VerticalAlignment="Center" Width="250" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="ResetFieldsBtn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15

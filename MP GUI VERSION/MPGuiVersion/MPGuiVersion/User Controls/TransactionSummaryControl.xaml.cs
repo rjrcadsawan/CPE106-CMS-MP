@@ -43,5 +43,23 @@ namespace MPGuiVersion.User_Controls
             DatabaseConnection.disconnectSQL(this.conn, out status);
         }
 
+        public void getTotalStats(out double totalCredit, out double totalDebit)
+        {
+            getDataFromServer();
+
+            totalCredit = 0.00;
+            totalDebit = 0.00;
+
+            foreach (DataRowView row in TransactionList.ItemsSource)
+            {
+                if (row["isCredit"].ToString() == "True"){
+                    totalCredit += Convert.ToDouble(row["amount"].ToString());
+                } else if (row["isDebit"].ToString() == "True")
+                {
+                    totalDebit += Convert.ToDouble(row["amount"].ToString());
+                }
+            }
+        }
+
     }
 }

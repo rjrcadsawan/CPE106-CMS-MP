@@ -18,9 +18,51 @@ namespace MPGuiVersion.User_Controls
     /// </summary>
     public partial class AddTransactionControl : UserControl
     {
+        BookkeepingModule BM;
         public AddTransactionControl()
         {
             InitializeComponent();
+            this.BM = new BookkeepingModule();
+            updateData();
+
+        }
+
+        public void updateData()
+        {
+            double totalCred;
+            double totalDeb;
+
+            this.BM.calculateTotal();
+            this.BM.TotalValues(out totalCred, out totalDeb);
+
+            TotalCreditLbl.Content = $"P {totalCred}";
+            TotalDebitLbl.Content = $"P {totalDeb}";
+        }
+
+        private void AddTransactionBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Transaction ret = new Transaction();
+            ret.TransactionID = Convert.ToInt32(TransactionIDbox.Text);
+            ret.Name = TransactionNamebox.Text;
+            ret.TransactionD = (bool)DebitOption.IsChecked;
+            ret.TransactionC = (bool)CreditOption.IsChecked;
+            ret.Amount = Convert.ToDouble(Amount.Text);
+            ret.Summary = Descriptionbox.Text;
+
+            this.BM.addTransaction(ret);
+            updateData();
+
+
+        }
+
+        private void ResetFieldsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            TransactionIDbox.Text = "";
+            TransactionNamebox.Text = "";
+            DebitOption.IsChecked = false;
+            CreditOption.IsChecked = false;
+            Amount.Text = "";
+            Descriptionbox.Text = "";
         }
     }
 }

@@ -6,19 +6,19 @@ namespace MPGuiVersion
 {
     public class Transaction
     {
-        private string transactionID;
+        private int transactionID;
         private string fullName;
-        private string Description;
+        private string description;
         private bool isCredit = true;
         private bool isDebit = false;
-        private float amount;
+        private double amount;
 
 
         public string Name { get => fullName; set => fullName = value; }
-        public string Summary { get => Description; set => Description = value; }
+        public string Summary { get => description; set => description = value; }
         public bool TransactionC { get => isCredit; set => isCredit = value; }
         public bool TransactionD { get => isDebit; set => isDebit = value; }
-        public float Amount { get => amount; set => amount = value; }
-        public string TransactionID { get => transactionID; set => transactionID = value; }
+        public double Amount { get => amount; set => amount = value; }
+        public int TransactionID { get => transactionID; set => transactionID = value; }
     }
 }

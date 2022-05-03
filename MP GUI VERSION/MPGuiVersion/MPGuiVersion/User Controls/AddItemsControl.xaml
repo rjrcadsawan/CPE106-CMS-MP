@@ -70,14 +70,14 @@
 
 
 
-        <Button Content="Add Item" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="2" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="#FF6DFF74">
+        <Button x:Name="AddItemBtn" Content="Add Item" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="2" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="#FF6DFF74" Click="AddItemBtn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Reset Fields" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White">
+        <Button x:Name="ResetFieldsBtn" Content="Reset Fields" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="ResetFieldsBtn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"/>

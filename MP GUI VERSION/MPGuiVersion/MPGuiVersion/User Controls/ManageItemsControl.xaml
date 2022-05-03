@@ -24,6 +24,7 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
             <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
 
@@ -35,6 +36,7 @@
         <Label Content="Item Name" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
         <Label Content="Quantity" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
         <Label Content="Unit Price" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Description" HorizontalAlignment="Center" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
 
 
         <TextBox x:Name="ItemID" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="150" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
@@ -65,29 +67,38 @@
                 </Style>
             </TextBox.Resources>
         </TextBox>
+        <TextBox x:Name="Description" HorizontalAlignment="Center" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="300" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        
+        
 
-        <Button Content="Search Item" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="#FF6DFF74">
+        <Button x:Name="SearchItemBtn" Content="Search Item" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="#FF6DFF74" Click="SearchItemBtn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Delete Item" HorizontalAlignment="Center" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="Black" Foreground="White">
+        <Button x:Name="DeleteItemBtn" Content="Delete Item" HorizontalAlignment="Center" Grid.Row="8" Grid.Column="1" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="Black" Foreground="White" Click="DeleteItemBtn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Reset Fields" HorizontalAlignment="Center" Grid.Row="7" Grid.Column="2" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White">
+        <Button x:Name="ResetFieldsBtn" Content="Reset Fields" HorizontalAlignment="Center" Grid.Row="8" Grid.Column="2" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="ResetFieldsBtn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Modify Item" HorizontalAlignment="Center" Grid.Row="7" Grid.Column="3" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="#FF87A2FF">
+        <Button x:Name="ModifyItemBtn" Content="Modify Item" HorizontalAlignment="Center" Grid.Row="8" Grid.Column="3" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="#FF87A2FF" Click="ModifyItemBtn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"/>

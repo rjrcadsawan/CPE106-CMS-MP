@@ -42,5 +42,61 @@ namespace MPGuiVersion.User_Controls
 
             DatabaseConnection.disconnectSQL(this.conn, out status);
         }
+
+        private void SearchItemBtn_Click(object sender, RoutedEventArgs e)
+        {
+            int IID = Convert.ToInt32(ItemID.Text);
+            bool found = false;
+
+            foreach (DataRowView row in ItemList.ItemsSource)
+            {
+                var str = row["itemID"].ToString();
+                bool check = IID == Convert.ToInt32(str);
+                if (check)
+                {
+                    ItemList.SelectedItem = row;
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found)
+            {
+                MessageBox.Show("Item ID Not Found");
+            }
+        }
+
+        private void ResetFieldsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ItemID.Text = "";
+            ItemName.Text = "";
+            Quantity.Text = "";
+            UnitPrice.Text = "";
+            Description.Text = "";
+        }
+
+        private void DeleteItemBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DataRowView selected = (DataRowView)ItemList.SelectedItem;
+            int target_id = Convert.ToInt32(selected["itemID"].ToString());
+
+            InventoryModule.deleteItem(target_id);
+            MessageBox.Show($"{target_id}");
+            getDataFromServer();
+        }
+
+        private void ModifyItemBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Item I = new Item();
+            I.ItemID = Convert.ToInt32(ItemID.Text);
+            I.ItemName = ItemName.Text;
+            I.Quantity = Convert.ToInt32(Quantity.Text);
+            I.UnitPrice = Convert.ToDouble(UnitPrice.Text);
+            I.Description = Description.Text;
+
+            InventoryModule.modifyItem(I);
+
+            getDataFromServer();
+        }
     }
 }

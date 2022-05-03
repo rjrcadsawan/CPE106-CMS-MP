@@ -22,5 +22,34 @@ namespace MPGuiVersion.User_Controls
         {
             InitializeComponent();
         }
+
+        private void AddItemBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Item I = new Item();
+            I.ItemID = Convert.ToInt32(ItemID.Text);
+            I.ItemName = ItemName.Text;
+            I.Quantity = Convert.ToInt32(Quantity.Text);
+            I.UnitPrice = Convert.ToDouble(UnitPrice.Text);
+            I.Description = Description.Text;
+
+            InventoryModule.addItem(I);
+
+            resetEntries();
+
+        }
+
+        private void resetEntries()
+        {
+            ItemID.Text = "";
+            ItemName.Text = "";
+            Quantity.Text = "";
+            UnitPrice.Text = "";
+            Description.Text = "";
+        }
+
+        private void ResetFieldsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            resetEntries();
+        }
     }
 }

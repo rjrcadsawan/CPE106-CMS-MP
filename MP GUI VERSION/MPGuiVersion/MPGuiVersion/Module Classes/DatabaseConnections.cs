@@ -142,6 +142,21 @@ namespace MPGuiVersion
             SP_addemployees.Parameters.AddWithValue("@quantity", I.Quantity);
             SP_addemployees.Parameters.AddWithValue("@unitPrice", I.UnitPrice);
             SP_addemployees.Parameters.AddWithValue("@totalPrice", I.TotalPrice);
+            SP_addemployees.Parameters.AddWithValue("@Description", I.Description);
+
+            SP_addemployees.ExecuteNonQuery();
+        }
+
+        public static void modifyItem(SqlConnection conn, Item I)
+        {
+            SqlCommand SP_addemployees = new SqlCommand("modifyItems", conn);
+            SP_addemployees.CommandType = CommandType.StoredProcedure;
+
+            SP_addemployees.Parameters.AddWithValue("@itemID", I.ItemID);
+            SP_addemployees.Parameters.AddWithValue("@itemName", I.ItemName);
+            SP_addemployees.Parameters.AddWithValue("@quantity", I.Quantity);
+            SP_addemployees.Parameters.AddWithValue("@unitPrice", I.UnitPrice);
+            SP_addemployees.Parameters.AddWithValue("@totalPrice", I.TotalPrice);
             SP_addemployees.Parameters.AddWithValue("@description", I.Description);
 
             SP_addemployees.ExecuteNonQuery();

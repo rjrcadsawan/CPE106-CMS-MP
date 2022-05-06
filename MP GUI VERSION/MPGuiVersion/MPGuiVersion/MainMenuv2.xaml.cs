@@ -36,7 +36,7 @@ namespace MPGuiVersion
             Reset_Button_Pannel();
             BookkeepingModuleBtn.Height = 100;
             AddTransaction.Visibility = Visibility.Visible;
-            TransactionSummary.Visibility = Visibility.Visible;
+            ManageTransaction.Visibility = Visibility.Visible;
         }
 
         private void InventoryModuleBtn_Click(object sender, RoutedEventArgs e)
@@ -68,7 +68,7 @@ namespace MPGuiVersion
 
             // Bookkeeping Module
             AddTransaction.Visibility = Visibility.Collapsed;
-            TransactionSummary.Visibility = Visibility.Collapsed;
+            ManageTransaction.Visibility = Visibility.Collapsed;
 
             // Inventory Module
             AddItems.Visibility = Visibility.Collapsed;
@@ -120,10 +120,10 @@ namespace MPGuiVersion
             CMSModules.Content = ATC;
         }
 
-        private void TransactionSummary_Click(object sender, RoutedEventArgs e)
+        private void ManageTransaction_Click(object sender, RoutedEventArgs e)
         {
-            var TSC = new User_Controls.TransactionSummaryControl();
-            CMSModules.Content = TSC;
+            var MTC = new User_Controls.ManageTransactionsControl();
+            CMSModules.Content = MTC;
         }
 
 

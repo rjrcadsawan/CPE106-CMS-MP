@@ -6,9 +6,10 @@ namespace MPGuiVersion
 {
     public class EmployeeHealthRecord
     {
+        private int employeeID;
         private string firstName;
         private string lastName;
-        private string gender;
+        private int gender;
         private string frequencyAlcoholConsumption;
         private bool hasAsthma;
         private bool hasCancer;
@@ -20,7 +21,7 @@ namespace MPGuiVersion
         private bool hasChestPain7;
         private bool hasRespiratory7;
         private bool hasCardiacDisease7;
-        private bool hasCardiovacular7;
+        private bool hasCardiovascular7;
         private bool hasHematological7;
         private bool hasLymphatic7;
         private bool hasWeightGain7;
@@ -31,7 +32,7 @@ namespace MPGuiVersion
         private bool usedIllegalDrugs;
         public string FirstName { get => firstName; set => firstName = value; }
         public string LastName { get => lastName; set => lastName = value; }
-        public string Gender { get => gender; set => gender = value; }
+        public int Gender { get => gender; set => gender = value; }
         public string FrequencyAlcoholConsumption { get => frequencyAlcoholConsumption; set => frequencyAlcoholConsumption = value; }
         public bool HasAsthma { get => hasAsthma; set => hasAsthma = value; }
         public bool HasCancer { get => hasCancer; set => hasCancer = value; }
@@ -43,7 +44,7 @@ namespace MPGuiVersion
         public bool HasChestPain7 { get => hasChestPain7; set => hasChestPain7 = value; }
         public bool HasRespiratory7 { get => hasRespiratory7; set => hasRespiratory7 = value; }
         public bool HasCardiacDisease7 { get => hasCardiacDisease7; set => hasCardiacDisease7 = value; }
-        public bool HasCardiovacular7 { get => hasCardiovacular7; set => hasCardiovacular7 = value; }
+        public bool HasCardiovascular7 { get => hasCardiovascular7; set => hasCardiovascular7 = value; }
         public bool HasHematological7 { get => hasHematological7; set => hasHematological7 = value; }
         public bool HasLymphatic7 { get => hasLymphatic7; set => hasLymphatic7 = value; }
         public bool HasWeightGain7 { get => hasWeightGain7; set => hasWeightGain7 = value; }
@@ -52,5 +53,6 @@ namespace MPGuiVersion
         public bool HasMedicationAllergies { get => hasMedicationAllergies; set => hasMedicationAllergies = value; }
         public bool UsedTabacco { get => usedTabacco; set => usedTabacco = value; }
         public bool UsedIllegalDrugs { get => usedIllegalDrugs; set => usedIllegalDrugs = value; }
+        public int EmployeeID { get => employeeID; set => employeeID = value; }
     }
 }

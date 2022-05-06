@@ -63,14 +63,28 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="GeneratePayslipBtn" Content="Generate Payslip" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="GeneratePayslipBtn_Click">
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="15"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Button x:Name="ManageEmailsBtn" Content="Manage Emails" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="3" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="ManageEmailsBtn_Click">
+        <Grid Grid.Row="3" Grid.Column="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="ManageProfilesBtn" Content="Manage Profiles" HorizontalAlignment="Center"  Grid.Row="0" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="ManageProfilesBtn_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="ManageHealthRecordsBtn" Content="Manage Health Records" HorizontalAlignment="Center"  Grid.Row="1"  VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="ManageHealthRecordsBtn_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+        
+        <Button x:Name="ManageEmailsBtn" Content="Manage Emails" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="ManageEmailsBtn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"/>

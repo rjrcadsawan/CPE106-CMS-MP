@@ -13,6 +13,12 @@
     <Compile Update="MainMenuv2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ManageEmployeeHealthRecordsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ManageEmployeeProfilesWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="SignupForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -49,9 +55,6 @@
     <Compile Update="User Controls\TaskSummaryControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="User Controls\TransactionSummaryControl.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainMenu.xaml">
@@ -61,6 +64,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ManageEmployeeHealthRecordsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ManageEmployeeProfilesWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SignupForm.xaml">
@@ -81,6 +90,9 @@
     <Page Update="User Controls\ItemSummaryControl.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="User Controls\ManageTransactionsControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="User Controls\ManageEmployeesControl.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -97,9 +109,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="User Controls\TaskSummaryControl.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="User Controls\TransactionSummaryControl.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

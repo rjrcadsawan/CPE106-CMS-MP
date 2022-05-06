@@ -24,9 +24,15 @@ namespace MPGuiVersion
 
         }
 
-        public void deleteTransaction()
+        public void deleteTransaction(int target_id)
         {
+            SqlConnection conn;
+            bool status;
+            string output;
 
+            DatabaseConnection.connectToSQL(out conn, out status, out output);
+            DatabaseConnection.deleteTransaction(conn, target_id);
+            DatabaseConnection.disconnectSQL(conn, out status);
         }
 
         public void modifyTransaction()
@@ -36,7 +42,7 @@ namespace MPGuiVersion
 
         public void calculateTotal()
         {
-            var TSC = new User_Controls.TransactionSummaryControl();
+            var TSC = new User_Controls.ManageTransactionsControl();
             TSC.getTotalStats(out this.totalCredit, out this.totalDebit);
         }
 

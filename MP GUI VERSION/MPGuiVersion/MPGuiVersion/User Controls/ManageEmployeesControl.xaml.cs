@@ -62,9 +62,16 @@ namespace MPGuiVersion.User_Controls
    
         }
 
-        private void GeneratePayslipBtn_Click(object sender, RoutedEventArgs e)
+        private void ManageHealthRecordsBtn_Click(object sender, RoutedEventArgs e)
         {
+            ManageEmployeeHealthRecordsWindow MEHRW = new ManageEmployeeHealthRecordsWindow();
+            MEHRW.Show();
+        }
 
+        private void ManageProfilesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ManageEmployeeProfilesWindow MEPW = new ManageEmployeeProfilesWindow();
+            MEPW.Show();
         }
 
         private void SearchEmployeeBtn_Click(object sender, RoutedEventArgs e)

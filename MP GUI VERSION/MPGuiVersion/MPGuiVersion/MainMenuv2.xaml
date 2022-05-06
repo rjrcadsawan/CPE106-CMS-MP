@@ -100,7 +100,7 @@
                                 </Style>
                             </Button.Resources>
                         </Button>
-                        <Button x:Name="TransactionSummary" Visibility="Collapsed" Content="Transaction Summary" Background="#FF4643C3" BorderBrush="{x:Null}" Click="TransactionSummary_Click">
+                        <Button x:Name="ManageTransaction" Visibility="Collapsed" Content="Manage Transaction" Background="#FF4643C3" BorderBrush="{x:Null}" Click="ManageTransaction_Click">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="7

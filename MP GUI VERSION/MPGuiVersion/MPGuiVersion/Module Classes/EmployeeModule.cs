@@ -21,6 +21,16 @@ namespace MPGuiVersion
             EPW.Show();
         }
 
+        public static void addNewEmployeeProfile(EmployeeProfile EP)
+        {
+            SqlConnection conn;
+            string message;
+            bool state;
+            DatabaseConnection.connectToSQL(out conn, out state, out message);
+            DatabaseConnection.addEmployeeProfile(conn, EP);
+            DatabaseConnection.disconnectSQL(conn, out state);
+        }
+
         public static void addEmployee(Employee ret)
         {
             SqlConnection conn;
@@ -62,7 +72,71 @@ namespace MPGuiVersion
 
         }
 
-        
+        public static void addNewEmployeeHealthRecord(EmployeeHealthRecord EHR)
+        {
+            SqlConnection conn;
+            bool status;
+            string output;
+
+            DatabaseConnection.connectToSQL(out conn, out status, out output);
+            //DatabaseConnection.addEmployeeHealthRecord(conn, EHR);
+            DatabaseConnection.disconnectSQL(conn, out status);
+        }
+        public static void deleteEmployeeHealthRecord(int target_id)
+        {
+            SqlConnection conn;
+            bool status;
+            string output;
+
+            DatabaseConnection.connectToSQL(out conn, out status, out output);
+            DatabaseConnection.deleteEmployeeHealthRecord(conn, target_id);
+            DatabaseConnection.disconnectSQL(conn, out status);
+        }
+
+        public static void deleteEmployeeProfile(int target_id)
+        {
+            SqlConnection conn;
+            bool status;
+            string output;
+
+            DatabaseConnection.connectToSQL(out conn, out status, out output);
+            DatabaseConnection.deleteEmployeeProfile(conn, target_id);
+            DatabaseConnection.disconnectSQL(conn, out status);
+        }
+
+        public static void modifyEmployeeProfile(EmployeeProfile MEP)
+        {
+            SqlConnection conn;
+            bool status;
+            string output;
+
+            DatabaseConnection.connectToSQL(out conn, out status, out output);
+            DatabaseConnection.modifyEmployeeProfile(conn, MEP);
+            DatabaseConnection.disconnectSQL(conn, out status);
+        }
+
+        public static void modifyEmployeeHealthRecord(EmployeeHealthRecord EHR)
+        {
+            SqlConnection conn;
+            bool status;
+            string output;
+
+            DatabaseConnection.connectToSQL(out conn, out status, out output);
+            DatabaseConnection.modifyEmployeeHealthRecord(conn, EHR);
+            DatabaseConnection.disconnectSQL(conn, out status);
+        }
+
+        public static void modifyPermissions(EmployeePermissions EPerm)
+        {
+            SqlConnection conn;
+            bool status;
+            string output;
+
+            DatabaseConnection.connectToSQL(out conn, out status, out output);
+            DatabaseConnection.modifyEmployeePermissions(conn, EPerm);
+            DatabaseConnection.disconnectSQL(conn, out status);
+        }
+
 
 
     }

@@ -31,14 +31,7 @@
         <Label Content="Password" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="15"/>
         <Label Content="Permissions" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="15"/>
 
-        <TextBox HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="150">
-            <TextBox.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="3"/>
-                </Style>
-            </TextBox.Resources>
-        </TextBox>
-        <TextBox HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="150">
+        <TextBox x:Name="EmailAddress" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="150">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="3"/>
@@ -46,14 +39,33 @@
             </TextBox.Resources>
         </TextBox>
 
-        <Button Content="Refresh Details" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="2" VerticalAlignment="Center" Width="150"/>
-        <Button Content="Update Info" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" VerticalAlignment="Center" Width="150"/>
+        <Button x:Name="GetDetailsBtn" Content="Get Details" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="2" VerticalAlignment="Center" Height="25" Width="150" Click="GetDetailsBtn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="UpdateInfoBtn" Content="Update Info" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" VerticalAlignment="Center" Height="25" Width="150" Click="UpdateInfoBtn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
 
-        <CheckBox Content="Employee&#xD;&#xA;Module" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="15"/>
-        <CheckBox Content="Bookkeeping&#xD;&#xA;Module" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="3" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="15"/>
-        <CheckBox Content="Inventory&#xD;&#xA;Module" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="4" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="15"/>
-        <CheckBox Content="Task&#xD;&#xA;Module" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="5" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="15"/>
-        <CheckBox Content="Permissions" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="6" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="15"/>
+        <CheckBox x:Name="EmployeeModuleCB" Content="Employee&#xD;&#xA;Module" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="15"/>
+        <CheckBox x:Name="BookkeepingModule" Content="Bookkeeping&#xD;&#xA;Module" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="3" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="15"/>
+        <CheckBox x:Name="InventoryModule" Content="Inventory&#xD;&#xA;Module" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="4" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="15"/>
+        <CheckBox x:Name="TaskModule" Content="Task&#xD;&#xA;Module" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="5" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="15"/>
+        <CheckBox x:Name="Permissions" Content="Permissions" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="6" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="15"/>
+        <PasswordBox x:Name="Password" Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Width="150">
+            <PasswordBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </PasswordBox.Resources>
+        </PasswordBox>
 
     </Grid>
 </UserControl>

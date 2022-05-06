@@ -14,6 +14,7 @@
     <None Remove="photo_2021-10-09_23-36-43.jpg" />
     <None Remove="SettingsICON.png" />
     <None Remove="TaskICON.png" />
+    <None Remove="User Controls\CMS Icon.png" />
   </ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
@@ -26,6 +27,18 @@
 	  <Resource Include="Icons\PermissionICON.png" />
 	  <Resource Include="Icons\SettingsICON.png" />
 	  <Resource Include="Icons\TaskICON.png" />
+	  <Resource Include="User Controls\CMS Icon.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="User Controls\ManageTransactionsControl.xaml.cs">
+	    <SubType>Code</SubType>
+	  </Compile>
+	</ItemGroup>
+	<ItemGroup>
+	  <Page Update="User Controls\ManageTransactionsControl.xaml">
+	    <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+	    <SubType>Designer</SubType>
+	  </Page>
 	</ItemGroup>
 
 </Project>

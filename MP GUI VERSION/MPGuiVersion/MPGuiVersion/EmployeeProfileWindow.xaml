@@ -5,80 +5,179 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MPGuiVersion"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="800" Width="800">
     <Grid>
         <Grid >
-            <!--Name-->
-            <TextBlock HorizontalAlignment="Center" Text="Personal Information" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" Margin="0,10,0,0"/>
-            <TextBlock HorizontalAlignment="Left" Margin="197,36,0,0" Text="Middle Name:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="399,37,0,0" Text="Last Name:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="10,35,0,0" Text="First Name:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Left" Margin="72,35,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBox HorizontalAlignment="Left" Margin="274,36,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBox HorizontalAlignment="Left" Margin="460,36,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBlock HorizontalAlignment="Left" Margin="585,37,0,0" Text="Date of Birth:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Left" Margin="657,36,0,0" Text="MM/DD/YY" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        </Grid>
-        <Grid>
-            <!--Adress-->
-            <Label Content="Address:" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="83,65,0,0" Text="Building Number/Street Number" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10"/>
-            <TextBox HorizontalAlignment="Left" Margin="232,65,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="10"/>
-            <TextBlock HorizontalAlignment="Left" Margin="83,85,0,0" Text="City/State" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10"/>
-            <TextBox HorizontalAlignment="Left" Margin="232,85,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="10"/>
-            <TextBlock HorizontalAlignment="Left" Margin="83,105,0,0" Text="Pin Code" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10"/>
-            <TextBox HorizontalAlignment="Left" Margin="232,105,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="10"/>
-        </Grid>
-        <Grid>
-            <!--Contact-->
-            <TextBlock HorizontalAlignment="Left" Margin="10,147,0,0" Text="Contact Number:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10"/>
-            <TextBox HorizontalAlignment="Left" Margin="127,147,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="10"/>
-            <TextBlock HorizontalAlignment="Left" Margin="172,129,0,0" Text="Mobile" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10"/>
-            <TextBox HorizontalAlignment="Left" Margin="266,147,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="10"/>
-            <TextBlock HorizontalAlignment="Left" Margin="305,129,0,0" Text="Land Line" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10"/>
-            <TextBlock HorizontalAlignment="Left" Margin="10,166,0,0" Text="Email Address:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10"/>
-            <TextBox HorizontalAlignment="Left" Margin="127,165,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="10"/>
-            <TextBlock HorizontalAlignment="Left" Margin="400,148,0,0" Text="Mother/Father Number:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10"/>
-            <TextBox HorizontalAlignment="Left" Margin="517,146,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="10"/>
-        </Grid>
-        <Grid Margin="0,8,0,-8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.1*"/>
+            </Grid.RowDefinitions>
 
-            <Grid RenderTransformOrigin="0.489,0.541" Margin="49,217,665,169">
-                <TextBlock HorizontalAlignment="Left" Margin="6,9,0,0" Text="Sex" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10"/>
-                <RadioButton Content="Male" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" FontSize="10"/>
-                <RadioButton Content="Female" HorizontalAlignment="Left" Margin="26,29,0,0" VerticalAlignment="Top" FontSize="10"/>
+
+            <TextBlock HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" Text="EMPLOYEE PROFILE" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Bahnschrift" FontSize="36" FontWeight="Bold"/>
+
+            <TextBlock HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Text="Personal Information" TextWrapping="Wrap" VerticalAlignment="Bottom" FontWeight="Bold" />
+
+            <TextBlock HorizontalAlignment="Center" Grid.Row="2" Grid.Column="4" Text="Employee ID" TextWrapping="Wrap" VerticalAlignment="Center"/>
+
+            <!--Name-->
+            <TextBlock HorizontalAlignment="Center" Grid.Row="4" Grid.Column="1" Text="First Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Center" Grid.Row="4" Grid.Column="2" Text="Middle Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Center" Grid.Row="4" Grid.Column="3" Text="Last Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Center" Grid.Row="4" Grid.Column="4" Text="Suffix" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Center" Grid.Row="4" Grid.Column="5" Text="Date of Birth:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+            <!--Contact-->
+            <TextBlock HorizontalAlignment="Center" Grid.Row="6" Grid.Column="1" Text="Email Address" TextWrapping="Wrap" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Center" Grid.Row="6" Grid.Column="2" Text="Mobile Number" TextWrapping="Wrap" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Center" Grid.Row="6" Grid.Column="3" Text="Landline" TextWrapping="Wrap" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Center" Grid.Row="6" Grid.Column="4" Text="Mother's Number" TextWrapping="Wrap" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Center" Grid.Row="6" Grid.Column="5" Text="Father's Number" TextWrapping="Wrap" VerticalAlignment="Top" />
+
+            <!--Adress-->
+            <TextBlock HorizontalAlignment="Center" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Text="Address" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Center" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" Text="Building Number/Street Number" TextWrapping="Wrap" VerticalAlignment="Center" />
+            <TextBlock HorizontalAlignment="Center" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2" Text="City/State" TextWrapping="Wrap" VerticalAlignment="Center" />
+            <TextBlock HorizontalAlignment="Center" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" Text="Country/ZipCode" TextWrapping="Wrap" VerticalAlignment="Center" />
+
+            <TextBlock HorizontalAlignment="Center" Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="2" Text="Biographic Information" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold"/>
+
+            <!--Biographic Info-->
+            <TextBlock HorizontalAlignment="Center" Grid.Row="12" Grid.Column="1" Text="Sex" TextWrapping="Wrap" VerticalAlignment="Center" />
+            <TextBlock HorizontalAlignment="Center" Grid.Row="12" Grid.Column="3" Text="Marital Status" TextWrapping="Wrap" VerticalAlignment="Center" />
+            <TextBlock HorizontalAlignment="Center" Grid.Row="13" Grid.Column="1" Text="Nationality" TextWrapping="Wrap" VerticalAlignment="Center"/>
+
+            <TextBlock HorizontalAlignment="Center" Grid.Row="14" Grid.Column="1" Grid.ColumnSpan="2" Text="Emergency Contact" TextWrapping="Wrap" VerticalAlignment="Center" FontWeight="Bold"/>
+
+            <!--Emergency Contact-->
+
+            <TextBlock HorizontalAlignment="Center" Grid.Row="15" Grid.Column="2" Text="First Name" TextWrapping="Wrap" VerticalAlignment="Center" />
+            <TextBlock HorizontalAlignment="Center" Grid.Row="15" Grid.Column="3" Text="Middle Name" TextWrapping="Wrap" VerticalAlignment="Center" />
+            <TextBlock HorizontalAlignment="Center" Grid.Row="15" Grid.Column="4" Text="Last Name" TextWrapping="Wrap" VerticalAlignment="Center" />
+            <TextBlock HorizontalAlignment="Center" Grid.Row="15" Grid.Column="5" Text="Contact Number" TextWrapping="Wrap" VerticalAlignment="Center" />
+
+            <TextBlock HorizontalAlignment="Center" Grid.Row="16" Grid.Column="1" Text="Contact #1" TextWrapping="Wrap" VerticalAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Center" Grid.Row="17" Grid.Column="1" Text="Contact #2" TextWrapping="Wrap" VerticalAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Center" Grid.Row="18" Grid.Column="1" Text="Contact #3" TextWrapping="Wrap" VerticalAlignment="Center"/>
+
+            <!--Inputs -->
+            <TextBox x:Name="EmployeeID" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="5" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" />
+            <TextBox x:Name="FirstName" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" Text="" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120" />
+            <TextBox x:Name="MiddleName" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2" Text="" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120" />
+            <TextBox x:Name="LastName" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="3" Text="" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120" />
+            <TextBox x:Name="Suffix" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="4" Text="" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120" />
+            <DatePicker x:Name="DateofBirth" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="5" VerticalAlignment="Bottom" Width="120" />
+
+            <TextBox x:Name="EmailAddress" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="1" Text="" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120" />
+            <TextBox x:Name="MobileNum" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="2" Text="" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120" />
+            <TextBox x:Name="Landline" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="3" Text="" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120" />
+            <TextBox x:Name="MotherNumber" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="4" Text="" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120" />
+            <TextBox x:Name="FatherNumber" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="5" Text="" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120" />
+
+            <TextBox x:Name="BuildingStreet" HorizontalAlignment="Center" Grid.Row="8" Grid.Column="3" Grid.ColumnSpan="2" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="300"/>
+            <TextBox x:Name="CityState" HorizontalAlignment="Center" Grid.Row="9" Grid.Column="3" Grid.ColumnSpan="2" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="300" />
+            <TextBox x:Name="CountryZipCode" HorizontalAlignment="Center" Grid.Row="10" Grid.Column="3" Grid.ColumnSpan="2" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="300" />
+
+            <!--Sex Options-->
+            <Grid Grid.Row="12" Grid.Column="2" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <RadioButton x:Name="RBMale" Content="Male" HorizontalAlignment="Left"  Grid.Row="0" VerticalAlignment="Center" />
+                <RadioButton x:Name="RBFemale" Content="Female" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" />
             </Grid>
-            <Grid Margin="175,217,411,171">
-                <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Marital Status" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10"/>
-                <RadioButton Content="Single" HorizontalAlignment="Left" Margin="75,9,0,0" VerticalAlignment="Top" FontSize="10"/>
-                <RadioButton Content="Married" HorizontalAlignment="Left" Margin="75,26,0,0" VerticalAlignment="Top" FontSize="10" Checked="RadioButton_Checked"/>
-                <RadioButton Content="Divorced" HorizontalAlignment="Left" Margin="134,9,0,0" VerticalAlignment="Top" FontSize="10" Checked="RadioButton_Checked"/>
-                <RadioButton Content="Widowed" HorizontalAlignment="Left" Margin="134,26,0,0" VerticalAlignment="Top" FontSize="10" Checked="RadioButton_Checked"/>
+
+            <!--Marital Status Options-->
+            <Grid Grid.Row="12" Grid.Column="4" Grid.ColumnSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <RadioButton x:Name="RBSingle" Content="Single" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" />
+                <RadioButton x:Name="RBMarried" Content="Married" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+                <RadioButton x:Name="RBDivorced" Content="Divorced" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"/>
+                <RadioButton x:Name="RBWidow" Content="Widow/er" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" />
             </Grid>
-            <Grid Margin="400,225,204,177">
-                <TextBlock HorizontalAlignment="Left" Margin="13,11,0,0" Text="Nationality" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                <TextBox HorizontalAlignment="Left" Margin="76,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            </Grid>
-            <TextBlock HorizontalAlignment="Center" Margin="0,196,0,0" Text="Biographic Information" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold"/>
-        </Grid>
-        <Grid Margin="10,265,10,10">
-            <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" Text="Emergency Contact" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold"/>
-            <TextBlock HorizontalAlignment="Left" Margin="10,54,0,0" Text="Contact Name:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10"/>
-            <TextBlock HorizontalAlignment="Left" Margin="132,30,0,0" Text="First Name" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10"/>
-            <TextBox HorizontalAlignment="Left" Margin="96,54,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="10"/>
-            <TextBlock HorizontalAlignment="Left" Margin="286,30,0,0" Text="Middle Name" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10"/>
-            <TextBox HorizontalAlignment="Left" Margin="256,54,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="10"/>
-            <TextBlock HorizontalAlignment="Left" Margin="455,30,0,0" Text="Last Name" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10"/>
-            <TextBox HorizontalAlignment="Left" Margin="418,54,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="10"/>
-            <TextBlock HorizontalAlignment="Left" Margin="81,52,0,0" Text="1)" TextWrapping="Wrap" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Left" Margin="96,82,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="10"/>
-            <TextBox HorizontalAlignment="Left" Margin="256,82,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="10"/>
-            <TextBox HorizontalAlignment="Left" Margin="418,82,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="10"/>
-            <TextBlock HorizontalAlignment="Left" Margin="81,80,0,0" Text="2)" TextWrapping="Wrap" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Left" Margin="96,113,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="10"/>
-            <TextBox HorizontalAlignment="Left" Margin="256,113,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="10"/>
-            <TextBox HorizontalAlignment="Left" Margin="418,113,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="10"/>
-            <TextBlock HorizontalAlignment="Left" Margin="81,111,0,0" Text="3)" TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+            <TextBox x:Name="Nationality" HorizontalAlignment="Center" Grid.Row="13" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+
+            <!--Emergency Contacts-->
+            <TextBox x:Name="ec1FirstName" HorizontalAlignment="Center" Grid.Row="16" Grid.Column="2" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" />
+            <TextBox x:Name="ec1MiddleName" HorizontalAlignment="Center" Grid.Row="16" Grid.Column="3" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" />
+            <TextBox x:Name="ec1LastName" HorizontalAlignment="Center" Grid.Row="16" Grid.Column="4" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" />
+            <TextBox x:Name="ec1ContactNumber" HorizontalAlignment="Center" Grid.Row="16" Grid.Column="5" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" />
+
+            <TextBox x:Name="ec2FirstName" HorizontalAlignment="Center" Grid.Row="17" Grid.Column="2" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" />
+            <TextBox x:Name="ec2MiddleName" HorizontalAlignment="Center" Grid.Row="17" Grid.Column="3" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" />
+            <TextBox x:Name="ec2LastName" HorizontalAlignment="Center" Grid.Row="17" Grid.Column="4" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" />
+            <TextBox x:Name="ec2ContactNumber" HorizontalAlignment="Center" Grid.Row="17" Grid.Column="5" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" />
+
+            <TextBox x:Name="ec3FirstName" HorizontalAlignment="Center" Grid.Row="18" Grid.Column="2" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" />
+            <TextBox x:Name="ec3MiddleName" HorizontalAlignment="Center" Grid.Row="18" Grid.Column="3" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" />
+            <TextBox x:Name="ec3LastName" HorizontalAlignment="Center" Grid.Row="18" Grid.Column="4" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" />
+            <TextBox x:Name="ec3ContactNumber" HorizontalAlignment="Center" Grid.Row="18" Grid.Column="5" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" />
+
+            <Button x:Name="AddProfileBtn" Content="Add Profile" Grid.Row="19" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Height="25"  Background="#FF4AFF80" Click="AddProfileBtn_Click" Visibility="Visible">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="ModifyProfileBtn" Content="Modify Profile" Grid.Row="19" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Height="25" Background="#FF4AD5FF" Click="ModifyProfileBtn_Click" Visibility="Collapsed">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="ResetFieldsBtn" Content="Reset Fields" Grid.Row="19" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Height="25" Background="White" Click="ResetFieldsBtn_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+
+
+
+
+
+
 
         </Grid>
 

@@ -16,9 +16,6 @@ namespace MPGuiVersion
         private string emailAddress;
         private double salary;
         private int employeeID;
-        private EmployeeHealthRecord employeeHR;
-        private EmployeePermissions employeePerms;
-        private EmployeeProfile employeeProf;
 
         public string FirstName { get => firstName; set => firstName = value; }
         public string MiddleName { get => middleName; set => middleName = value; }
@@ -30,8 +27,6 @@ namespace MPGuiVersion
         public string EmailAddress { get => emailAddress; set => emailAddress = value; }
         public double Salary { get => salary; set => salary = value; }
         public int EmployeeID { get => employeeID; set => employeeID = value; }
-        public EmployeeHealthRecord EmployeeHR { get => employeeHR; set => employeeHR = value; }
-        public EmployeePermissions EmployeePerms { get => employeePerms; set => employeePerms = value; }
-        public EmployeeProfile EmployeeProf { get => employeeProf; set => employeeProf = value; }
+
     }
 }

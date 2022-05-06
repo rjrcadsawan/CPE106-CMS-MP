@@ -6,75 +6,25 @@ namespace MPGuiVersion
 {
     public class EmployeeProfile
     {
+        private int employeeID;
         private Name employeeName = new Name();
         private Address address = new Address();
+        private string dateOfBirth;
         private int mobileNum;
         private int landline;
         private int fatherNum;
         private int motherNum;
         private string emailAddress;
+        private string nationality;
+        private int sex;
+        private int maritalStatus;
+
+
 
         private BioInfo biographicInfo = new BioInfo();
 
-        private EmergencyContact[] contacts = new EmergencyContact[3];
+        private ECList employeeContacts = new ECList();
 
-        public string[] FullName
-        {
-            get
-            {
-                string[] result = { employeeName.firstName, employeeName.middleName, employeeName.lastName };
-                return result;
-            }
-            set
-            {
-                employeeName.firstName = value[0];
-                employeeName.middleName = value[1];
-                employeeName.lastName = value[2];
-            }
-        }
-        public string[] Address
-        {
-            get
-            {
-                string[] result = { address.BuildingNumber, address.City, address.ZIP };
-                return result;
-            }
-            set
-            {
-                address.BuildingNumber = value[0];
-                address.City = value[1];
-                address.ZIP = value[2];
-            }
-        }
-        public string[] BiographicalInformation
-        {
-            get
-            {
-                string[] result = { biographicInfo.sex, biographicInfo.maritalStatus, biographicInfo.Nationality };
-                return result;
-            }
-            set
-            {
-                biographicInfo.sex = value[0];
-                biographicInfo.maritalStatus = value[1];
-                biographicInfo.Nationality = value[2];
-            }
-        }
-        public string[,] ContactforEmergency
-        {
-            get
-            {
-                string[,] result = new string[3,3];
-
-                for (int i = 0; i < 3; i++)
-                {
-                    result[i, 0] = contacts[i].firstName;
-                    result[i, 1] = contacts[i].middleName;
-                    result[i, 2] = contacts[i].lastName;
-                }
-                return result;
-            }
-        }
         public string EmailAddress
         {
             get { return emailAddress; }
@@ -100,7 +50,23 @@ namespace MPGuiVersion
             get { return fatherNum; }
             set { fatherNum = value; }
         }
-     
+
+        public int EmployeeID { get => employeeID; set => employeeID = value; }
+        public string DateOfBirth { get => dateOfBirth; set => dateOfBirth = value; }
+        public int Sex { get => sex; set => sex = value; }
+        public int MaritalStatus { get => maritalStatus; set => maritalStatus = value; }
+        public string Nationality { get => nationality; set => nationality = value; }
+        internal Name EmployeeName { get => employeeName; set => employeeName = value; }
+        internal Address Address { get => address; set => address = value; }
+        internal BioInfo BiographicInfo { get => biographicInfo; set => biographicInfo = value; }
+        internal ECList EmployeeContacts { get => employeeContacts; set => employeeContacts = value; }
+    }
+
+    struct ECList
+    {
+        public EmergencyContact EC1;
+        public EmergencyContact EC2;
+        public EmergencyContact EC3;
     }
 
     struct EmergencyContact
@@ -108,6 +74,7 @@ namespace MPGuiVersion
         public string firstName;
         public string middleName;
         public string lastName;
+        public int contactnumber;
     }
     struct BioInfo
     {
@@ -121,11 +88,12 @@ namespace MPGuiVersion
         public string firstName;
         public string middleName;
         public string lastName;
+        public string suffix;
     }
     struct Address
     {
         public string BuildingNumber;
-        public string City;
-        public string ZIP;
+        public string CityState;
+        public string CountryZIP;
     }
 }

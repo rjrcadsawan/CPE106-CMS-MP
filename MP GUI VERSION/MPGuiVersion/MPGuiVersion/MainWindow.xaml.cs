@@ -28,40 +28,33 @@ namespace MPGuiVersion
         bool connected = false;
 
         public MainWindow()
-        {
-            
-
+        {          
             InitializeComponent();
-        }
-
-        private void InitializeConnections()
-        {
-            // Try - Except Block, just in case SQL Connection Fails
-            try
-            {
-                // Connection String based on Server Connector by Visual Studio
-                this.connection_string = "Data Source=ASUS-ACE;Initial Catalog=CMSData;Integrated Security=True";
-
-                // Creates new Connection Object based on connection string
-                this.sql_conn = new SqlConnection(connection_string);
-
-                // Opens the Connection
-                this.sql_conn.Open();
-
-                //MessageBox.Show("Connection with the CMSData was succesfully established");
-                this.connected = true; // Used for testing purposes
-            }
-            catch (Exception ex)
-            {
-                // Connection Failed
-                MessageBox.Show($"An Exception has occurred: \n{ex.Message}");
-            }
-            
         }
         
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            InitializeConnections();
+            string output;
+            DatabaseConnection.connectToSQL(out this.sql_conn, out this.connected, out output);
+            string email_text = EmailBox.Text;
+            string pass_text = PassBox.Password;
+            int result = DatabaseConnection.logIn(this.sql_conn, email_text, pass_text);
+
+            if (result == 2)
+            {
+                this.showMainMenu();
+            } else
+            {
+                MessageBox.Show($"An Error has Occurred, please double check your login details\nResult:{result}");
+            }
+
+            // SQL Command Setup
+            
+        }
+        private void Login_Click2(object sender, RoutedEventArgs e)
+        {
+            string output;
+            DatabaseConnection.connectToSQL(out this.sql_conn, out this.connected, out output);
 
             // SQL Command Setup
             string email_text = EmailBox.Text;

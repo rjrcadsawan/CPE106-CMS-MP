@@ -20,16 +20,19 @@ namespace MPGuiVersion
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginWindow : Window
     {
+
         string connection_string;
         SqlConnection sql_conn;
         SqlCommand sql_comm;
         bool connected = false;
 
-        public MainWindow()
+        public LoginWindow()
         {          
             InitializeComponent();
+            
+            
         }
         
         private void Login_Click(object sender, RoutedEventArgs e)
@@ -125,8 +128,7 @@ namespace MPGuiVersion
         {
             this.Hide(); // Hide This login window
             this.sql_conn.Close(); // Closes SQL Connection
-            // MainMenu MM = new MainMenu(); // Old Main Menu
-            MainMenuv2 MM = new MainMenuv2();
+            MainMenu MM = new MainMenu();
             MM.Show(); // Shows Main Menu
             this.Close(); // Closes Upon Close of Main Menu
         }

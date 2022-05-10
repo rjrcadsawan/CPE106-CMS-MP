@@ -17,13 +17,15 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
             <RowDefinition Height="5*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
 
-        <Label Content="TransactionID" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
-        <TextBox x:Name="TransactionID" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
+        <Label Content="MANAGE TRANSACTIONS" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" VerticalAlignment="Center" FontFamily="Bahnschrift" FontSize="48" FontWeight="Bold"/>
+        <Label Content="TransactionID" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <TextBox x:Name="TransactionID" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="3"/>
@@ -31,7 +33,7 @@
             </TextBox.Resources>
         </TextBox>
 
-        <Button x:Name="SearchTransactionBtn" Content="Search Transaction" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="1" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="SearchTransaction_Click">
+        <Button x:Name="SearchTransactionBtn" Content="Search Transaction" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="2" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="SearchTransaction_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15
@@ -40,16 +42,16 @@
             </Button.Resources>
         </Button>
 
-        <DataGrid x:Name="TransactionList" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False"/>
+        <DataGrid x:Name="TransactionList" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False"/>
 
-        <Button x:Name="DeleteTransaction" Content="Delete Transaction" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="DeleteTransaction_Click">
+        <Button x:Name="DeleteTransaction" Content="Delete Transaction" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="DeleteTransaction_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="PrintTransactions" Content="Print Summary" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="3" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="PrintTransactions_Click">
+        <Button x:Name="PrintTransactions" Content="Print Summary" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="3" VerticalAlignment="Center" Width="190" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="PrintTransactions_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"/>

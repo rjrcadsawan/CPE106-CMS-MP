@@ -80,27 +80,25 @@ namespace MPGuiVersion.User_Controls
             string pass = Password.Password;
             bool found = false;
 
-            
-            
-
-            foreach (DataRowView row in PermissionList.ItemsSource)
-            {
-                var email_str = row["Email"].ToString();
-                var pass_str = row["Password"].ToString();
-
-                bool check = email == email_str && pass == pass_str;
-                if (check)
+            if (PermissionList.SelectedItems.Count ==  0) {
+                foreach (DataRowView row in PermissionList.ItemsSource)
                 {
-                    PermissionList.SelectedItem = row;
-                    found = true;
-                    break;
-                }
-            }
+                    var email_str = row["Email"].ToString();
+                    var pass_str = row["Password"].ToString();
 
-            if (!found)
-            {
-                MessageBox.Show("Employee ID Not Found");
-            }
+                    bool check = email == email_str && pass == pass_str;
+                    if (check)
+                    {
+                        PermissionList.SelectedItem = row;
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (!found)
+                {
+                    MessageBox.Show("Email and Password Details Not Found");              }
+            }                       
 
             DataRowView selected = (DataRowView)PermissionList.SelectedItem;
 

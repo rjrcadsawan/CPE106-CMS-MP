@@ -22,44 +22,46 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
             <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
 
-        <Label Content="Item ID" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
-        <Label Content="Item Name" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
-        <Label Content="Quantity" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
-        <Label Content="Unit Price" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
-        <Label Content="Description" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="ADD ITEM" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" FontFamily="Bahnschrift" FontSize="72" FontWeight="Bold"/>
+        <Label Content="Item ID" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Item Name" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Quantity" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Unit Price" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Description" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
 
-        <TextBox x:Name="ItemID" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
+        <TextBox x:Name="ItemID" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="3"/>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <TextBox x:Name="ItemName" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
+        <TextBox x:Name="ItemName" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="3"/>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <TextBox x:Name="Quantity" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
+        <TextBox x:Name="Quantity" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="3"/>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <TextBox x:Name="UnitPrice" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
+        <TextBox x:Name="UnitPrice" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="3"/>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <TextBox x:Name="Description" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="75" FontFamily="Bahnschrift Light" FontSize="20">
+        <TextBox x:Name="Description" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="75" FontFamily="Bahnschrift Light" FontSize="20">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="3"/>

@@ -9,54 +9,206 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace MPGuiVersion
 {
-    /// <summary>
-    /// Interaction logic for MainMenu.xaml
-    /// </summary>
+
     public partial class MainMenu : Window
     {
+        SqlConnection conn;
+        bool connected;
+        string connection_message;
         public MainMenu()
         {
             InitializeComponent();
+            DatabaseConnection.connectToSQL(out this.conn, out this.connected, out this.connection_message);
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void EmployeeModuleBtn_Click(object sender, RoutedEventArgs e)
         {
 
+            bool HasPermission = DatabaseConnection.checkPrivilege(this.conn, "EmployeeModule");
+            if (!HasPermission)
+            {
+                return;
+            }
+
+            Reset_Button_Pannel();
+
+            EmployeeModuleBtn.Height = 100;
+            AddEmployees.Visibility = Visibility.Visible;
+            ManageEmployees.Visibility = Visibility.Visible;
+            PayrollSheet.Visibility = Visibility.Visible;
         }
 
-        private void Open_Email_Manager(object sender, RoutedEventArgs e)
+        private void BookkeepingModuleBtn_Click(object sender, RoutedEventArgs e)
         {
-            EmailWindow EM = new EmailWindow();
-            EM.Show();
+            bool HasPermission = DatabaseConnection.checkPrivilege(this.conn, "BookkeepingModule");
+            if (!HasPermission)
+            {
+                return;
+            }
+
+            Reset_Button_Pannel();
+
+            BookkeepingModuleBtn.Height = 100;
+            AddTransaction.Visibility = Visibility.Visible;
+            ManageTransaction.Visibility = Visibility.Visible;
         }
 
-        private void Add_Employee_Profile (object sender, RoutedEventArgs e)
+        private void InventoryModuleBtn_Click(object sender, RoutedEventArgs e)
         {
-            EmployeeProfileWindow EPW = new EmployeeProfileWindow();
-            EPW.Show();
-             
+            bool HasPermission = DatabaseConnection.checkPrivilege(this.conn, "InventoryModule");
+            if (!HasPermission)
+            {
+                return;
+            }
+
+            Reset_Button_Pannel();
+
+            InventoryModuleBtn.Height = 100;
+            AddItems.Visibility = Visibility.Visible;
+            ManageItems.Visibility = Visibility.Visible;
+            ItemSummary.Visibility = Visibility.Visible;
         }
 
-        private void Add_Health_Record(object sender, RoutedEventArgs e)
+        private void TaskModuleBtn_Click(object sender, RoutedEventArgs e)
         {
-            MedicalRecordWindow MRW = new MedicalRecordWindow();
-            MRW.Show();
+            bool HasPermission = DatabaseConnection.checkPrivilege(this.conn, "TaskModule");
+            if (!HasPermission)
+            {
+                return;
+            }
+            Reset_Button_Pannel();
+
+            TaskModuleBtn.Height = 100;
+            AddTask.Visibility = Visibility.Visible;
+            ManageTask.Visibility = Visibility.Visible;
+            TaskSummary.Visibility = Visibility.Visible;
         }
 
-        private void Reset_Click(object sender, RoutedEventArgs e)
+        private void LogoutBtn_Click(object sender, RoutedEventArgs e)
         {
-            firstName.Text = "";
-            middleName.Text = "";
-            lastName.Text = "";
-            suffix.Text = "";
-            sex.Items.Clear();
-            department.Text = "";
-            position.Text = "";
-            emailAddress.Text = "";
-            salary.Text = "";
+            Reset_Button_Pannel();
+            this.Hide();
+            LoginWindow LW = new LoginWindow();
+            this.Close();
+            LW.Show();           
+
         }
+
+        private void PermissionsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            bool HasPermission = DatabaseConnection.checkPrivilege(this.conn, "Permissions");
+            if (!HasPermission)
+            {
+                MessageBox.Show("You do not have permission to check the permissions tab");
+                return;
+            }
+
+            Reset_Button_Pannel();
+            var PC = new User_Controls.PermissionsControl();
+            CMSModules.Content = PC;
+        }
+
+        private void Reset_Button_Pannel()
+        {
+            int ButtonDefaultHeight = 60;
+
+            // Employee Module
+            AddEmployees.Visibility = Visibility.Collapsed;
+            ManageEmployees.Visibility = Visibility.Collapsed;
+            PayrollSheet.Visibility = Visibility.Collapsed;
+
+            // Bookkeeping Module
+            AddTransaction.Visibility = Visibility.Collapsed;
+            ManageTransaction.Visibility = Visibility.Collapsed;
+
+            // Inventory Module
+            AddItems.Visibility = Visibility.Collapsed;
+            ManageItems.Visibility = Visibility.Collapsed;
+            ItemSummary.Visibility = Visibility.Collapsed;
+
+            // Task Module
+            AddTask.Visibility = Visibility.Collapsed;
+            ManageTask.Visibility = Visibility.Collapsed;
+            TaskSummary.Visibility = Visibility.Collapsed;
+
+            EmployeeModuleBtn.Height = ButtonDefaultHeight;
+            BookkeepingModuleBtn.Height = ButtonDefaultHeight;
+            InventoryModuleBtn.Height = ButtonDefaultHeight;
+            TaskModuleBtn.Height = ButtonDefaultHeight;
+        }
+
+        private void AddEmployees_Click(object sender, RoutedEventArgs e)
+        {
+            var AEC = new User_Controls.AddEmployeeControl();
+            CMSModules.Content = null;
+            CMSModules.Content = AEC;
+        }
+
+        private void ManageEmployees_Click(object sender, RoutedEventArgs e)
+        {
+            var MEC = new User_Controls.ManageEmployeesControl();
+            CMSModules.Content = null;
+            CMSModules.Content = MEC;
+        }
+
+        private void PayrollSheet_Click(object sender, RoutedEventArgs e)
+        {
+            var PSC = new User_Controls.PayrollSheetControl();
+            CMSModules.Content = PSC;
+        }
+
+        private void AddTransaction_Click(object sender, RoutedEventArgs e)
+        {
+            var ATC = new User_Controls.AddTransactionControl();
+            CMSModules.Content = ATC;
+        }
+
+        private void ManageTransaction_Click(object sender, RoutedEventArgs e)
+        {
+            var MTC = new User_Controls.ManageTransactionsControl();
+            CMSModules.Content = MTC;
+        }
+
+        private void AddItems_Click(object sender, RoutedEventArgs e)
+        {
+            var AIC = new User_Controls.AddItemsControl();
+            CMSModules.Content = AIC;
+        }
+
+        private void ManageItems_Click(object sender, RoutedEventArgs e)
+        {
+            var MIC = new User_Controls.ManageItemsControl();
+            CMSModules.Content = MIC;
+        }
+
+        private void ItemSummary_Click(object sender, RoutedEventArgs e)
+        {
+            var ISC = new User_Controls.ItemSummaryControl();
+            CMSModules.Content = ISC;
+        }
+
+        private void AddTask_Click(object sender, RoutedEventArgs e)
+        {
+            var ATC = new User_Controls.AddTaskControl();
+            CMSModules.Content = ATC;
+        }
+
+        private void ManageTask_Click(object sender, RoutedEventArgs e)
+        {
+            var MTC = new User_Controls.ManageTaskControl();
+            CMSModules.Content = MTC;
+        }
+
+        private void TaskSummary_Click(object sender, RoutedEventArgs e)
+        {
+            var TSC = new User_Controls.TaskSummaryControl();
+            CMSModules.Content = TSC;
+        }
+
     }
 }

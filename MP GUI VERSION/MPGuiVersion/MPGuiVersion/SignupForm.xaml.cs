@@ -49,6 +49,8 @@ namespace MPGuiVersion
                 return;
             }
 
+            DatabaseConnection.connectToSQL(out this.sql_conn, out this.connected, out output);
+
             if (!connected)
             {
                 MessageBox.Show("Cannot Connect to SQL Server");
@@ -56,7 +58,7 @@ namespace MPGuiVersion
                 return;
             }
 
-            DatabaseConnection.connectToSQL(out this.sql_conn, out this.connected, out output);
+            
             DatabaseConnection.SignInUser(this.sql_conn, email_address, password_text, first_name, middle_name, last_name);
 
             MessageBox.Show($"Congratulations {first_name} you have registered your account");

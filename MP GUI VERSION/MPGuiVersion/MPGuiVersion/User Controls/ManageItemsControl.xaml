@@ -30,7 +30,7 @@
 
         <DataGrid x:Name="ItemList" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"/>
 
-        <Label Content="Modify Item Data" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="MANAGE ITEMS" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" VerticalAlignment="Center" FontFamily="Bahnschrift" FontSize="40" FontWeight="Bold"/>
 
         <Label Content="Item ID" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
         <Label Content="Item Name" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>

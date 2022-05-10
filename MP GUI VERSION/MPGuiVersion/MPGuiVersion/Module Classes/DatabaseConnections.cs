@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows;
 
 using System.Data;
 using System.Data.SqlClient;
@@ -9,13 +10,18 @@ namespace MPGuiVersion
 {
     public static class DatabaseConnection
     {
+        public static string ComputerName = "";
+        public static string DatabaseName = "";
         public static void connectToSQL(out SqlConnection sql_conn, out bool connected, out string message)
         {
             // Try - Except Block, just in case SQL Connection Fails
             try
             {
+                //ComputerName = "ASUS-ACE";
+                //DatabaseName = "CMSData";
+
                 // Connection String based on Server Connector by Visual Studio
-                string connection_string = "Data Source=ASUS-ACE;Initial Catalog=CMSData;Integrated Security=True";
+                string connection_string = $"Data Source={ComputerName};Initial Catalog={DatabaseName};Integrated Security=True";
 
                 // Creates new Connection Object based on connection string
                 sql_conn = new SqlConnection(connection_string);
@@ -482,16 +488,29 @@ namespace MPGuiVersion
 
         }
 
-        public static int checkPrivilege(SqlConnection conn, string email, string pass, string module)
+        public static bool checkPrivilege(SqlConnection conn, string module)
         {
             SqlCommand SP_Privilege_Check = new SqlCommand("checkIfUserHasPrivilege", conn);
             SP_Privilege_Check.CommandType = CommandType.StoredProcedure;
 
             SP_Privilege_Check.Parameters.AddWithValue("@Module", module);
-            SP_Privilege_Check.Parameters.AddWithValue("@Email", email);
-            SP_Privilege_Check.Parameters.AddWithValue("@Password", pass);
+            try
+            {
+                bool result = (bool)SP_Privilege_Check.ExecuteScalar();
 
-            return SP_Privilege_Check.ExecuteNonQuery();
+                //MessageBox.Show($"{result}");
+                return result;
+            } catch
+            {
+                //MessageBox.Show("False");
+                return false;
+            }
+           
+
+            
+
+
+
         }
     }
 }

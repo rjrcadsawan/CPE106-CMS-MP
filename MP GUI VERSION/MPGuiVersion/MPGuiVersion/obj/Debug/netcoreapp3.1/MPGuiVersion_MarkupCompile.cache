@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\App.xaml
-21-533653741
+212125246286
 
-351653048458
+35-1740653161
 200-1867972538
-EmailWindow.xaml;EmployeeProfileWindow.xaml;MainMenu.xaml;MainMenuv2.xaml;MainWindow.xaml;ManageEmployeeHealthRecordsWindow.xaml;ManageEmployeeProfilesWindow.xaml;MedicalRecordWindow.xaml;SignupForm.xaml;User Controls\AddEmployeeControl.xaml;User Controls\AddItemsControl.xaml;User Controls\AddTaskControl.xaml;User Controls\AddTransactionControl.xaml;User Controls\ItemSummaryControl.xaml;User Controls\ManageEmployeesControl.xaml;User Controls\ManageItemsControl.xaml;User Controls\ManageTaskControl.xaml;User Controls\ManageTransactionsControl.xaml;User Controls\PayrollSheetControl.xaml;User Controls\PermissionsControl.xaml;User Controls\TaskSummaryControl.xaml;
+DatabaseDetails.xaml;EmailWindow.xaml;EmployeeProfileWindow.xaml;LoginWindow.xaml;MainMenu.xaml;ManageEmployeeHealthRecordsWindow.xaml;ManageEmployeeProfilesWindow.xaml;MedicalRecordWindow.xaml;SignupForm.xaml;User Controls\AddEmployeeControl.xaml;User Controls\AddItemsControl.xaml;User Controls\AddTaskControl.xaml;User Controls\AddTransactionControl.xaml;User Controls\ItemSummaryControl.xaml;User Controls\ManageEmployeesControl.xaml;User Controls\ManageItemsControl.xaml;User Controls\ManageTaskControl.xaml;User Controls\ManageTransactionsControl.xaml;User Controls\PayrollSheetControl.xaml;User Controls\PermissionsControl.xaml;User Controls\TaskSummaryControl.xaml;
 
 False
 

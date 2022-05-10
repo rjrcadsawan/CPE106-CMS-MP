@@ -102,7 +102,7 @@ namespace MPGuiVersion {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MPGuiVersion;component/signupform.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MPGuiVersion;V1.0.0.0;component/signupform.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\SignupForm.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

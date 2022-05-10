@@ -51,7 +51,7 @@ namespace MPGuiVersion
             try
             {
                 SmtpClient clientDetails = new SmtpClient();
-                clientDetails.Port = 578;
+                clientDetails.Port = 587;
                 clientDetails.Host = "smtp.gmail.com";
                 clientDetails.DeliveryMethod = SmtpDeliveryMethod.Network;
                 clientDetails.EnableSsl = true;

@@ -157,7 +157,7 @@ namespace MPGuiVersion {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MPGuiVersion;component/emailwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MPGuiVersion;V1.0.0.0;component/emailwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\EmailWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

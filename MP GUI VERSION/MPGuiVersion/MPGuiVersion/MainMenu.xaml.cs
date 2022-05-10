@@ -32,6 +32,7 @@ namespace MPGuiVersion
             bool HasPermission = DatabaseConnection.checkPrivilege(this.conn, "EmployeeModule");
             if (!HasPermission)
             {
+                MessageBox.Show("You do not have permission to View the Employee Module");
                 return;
             }
 
@@ -48,6 +49,7 @@ namespace MPGuiVersion
             bool HasPermission = DatabaseConnection.checkPrivilege(this.conn, "BookkeepingModule");
             if (!HasPermission)
             {
+                MessageBox.Show("You do not have permission to View the Bookkeeping Module");
                 return;
             }
 
@@ -63,6 +65,7 @@ namespace MPGuiVersion
             bool HasPermission = DatabaseConnection.checkPrivilege(this.conn, "InventoryModule");
             if (!HasPermission)
             {
+                MessageBox.Show("You do not have permission to View the Inventory Module");
                 return;
             }
 
@@ -79,6 +82,7 @@ namespace MPGuiVersion
             bool HasPermission = DatabaseConnection.checkPrivilege(this.conn, "TaskModule");
             if (!HasPermission)
             {
+                MessageBox.Show("You do not have permission to View the Task Module");
                 return;
             }
             Reset_Button_Pannel();

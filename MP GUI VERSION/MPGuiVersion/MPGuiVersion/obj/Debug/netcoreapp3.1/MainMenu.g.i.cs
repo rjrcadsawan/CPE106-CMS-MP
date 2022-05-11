@@ -205,7 +205,7 @@ namespace MPGuiVersion {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MPGuiVersion;V1.0.0.0;component/mainmenu.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MPGuiVersion;component/mainmenu.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\MainMenu.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

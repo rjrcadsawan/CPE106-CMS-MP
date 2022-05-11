@@ -110,10 +110,16 @@ namespace MPGuiVersion.User_Controls
 
         private void DeleteTaskBtn_Click(object sender, RoutedEventArgs e)
         {
-            DataRowView selected = (DataRowView)TaskList.SelectedItem;
-            int target_id = Convert.ToInt32(selected["taskID"].ToString());
-
-            TaskModule.deleteTask(target_id);
+            try
+            {
+                DataRowView selected = (DataRowView)TaskList.SelectedItem;
+                int target_id = Convert.ToInt32(selected["taskID"].ToString());
+                TaskModule.deleteTask(target_id);
+            }
+            catch
+            {
+                MessageBox.Show("An Error has occurred, please check if you have selected a task");
+            }
             getDataFromServer();
         }
 
@@ -124,29 +130,45 @@ namespace MPGuiVersion.User_Controls
 
         private void ModifyTaskBtn_Click(object sender, RoutedEventArgs e)
         {
-            Task T = new Task();
-            T.TaskID = Convert.ToInt32(TaskID.Text);
-            T.TaskName = TaskName.Text;
-            T.Budget = Convert.ToDouble(Budget.Text);
-            T.DueDate = DueDate.ToString();
-            T.IsDone = (bool)isDone.IsChecked;
-            T.MaterialsNeeded = Materials.Text;
-            T.EmployeesNeeded = Convert.ToInt32(EmployeeNum.Text);
-            T.Description = Description.Text;
-            T.AssignedEmployees = EmployeesAssigned.Text;
+            try
+            {
+                Task T = new Task();
+                T.TaskID = Convert.ToInt32(TaskID.Text);
+                T.TaskName = TaskName.Text;
+                T.Budget = Convert.ToDouble(Budget.Text);
+                T.DueDate = DueDate.ToString();
+                T.IsDone = (bool)isDone.IsChecked;
+                T.MaterialsNeeded = Materials.Text;
+                T.EmployeesNeeded = Convert.ToInt32(EmployeeNum.Text);
+                T.Description = Description.Text;
+                T.AssignedEmployees = EmployeesAssigned.Text;
+                TaskModule.modifyTask(T);
+            }
+            catch
+            {
+                MessageBox.Show("An Error has occurred, please check the entered values");
+            }
 
-            TaskModule.modifyTask(T);
+
+            
             resetEntries();
             getDataFromServer();
         }
 
         private void AssignEmployeeBtn_Click(object sender, RoutedEventArgs e)
         {
-            Task T = new Task();
-            T.TaskID = Convert.ToInt32(TaskID.Text);
-            T.AssignedEmployees = EmployeesAssigned.Text;
-
-            TaskModule.assignEmployee(T);
+            try
+            {
+                Task T = new Task();
+                T.TaskID = Convert.ToInt32(TaskID.Text);
+                T.AssignedEmployees = EmployeesAssigned.Text;
+                TaskModule.assignEmployee(T);
+            }
+            catch
+            {
+                MessageBox.Show("An Error has occurred, please check the entered values");
+            }
+            
             resetEntries();
             getDataFromServer();
         }

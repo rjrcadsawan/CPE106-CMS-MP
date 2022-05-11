@@ -46,29 +46,35 @@ namespace MPGuiVersion.User_Controls
 
         private void AddEmployeeBtn_Click(object sender, RoutedEventArgs e)
         {
-            Employee ret = new Employee
+            try
             {
-                FirstName = firstName.Text,
-                MiddleName = middleName.Text,
-                LastName = lastName.Text,
-                Suffix = suffix.Text,
-                Sex = sex.Text,
-                Department = department.Text,
-                Position = position.Text,
-                EmailAddress = emailAddress.Text,
-                Salary = Convert.ToDouble(salary.Text),
-                EmployeeID = Convert.ToInt32(employeeID.Text)
-            };
+                Employee ret = new Employee
+                {
+                    FirstName = firstName.Text,
+                    MiddleName = middleName.Text,
+                    LastName = lastName.Text,
+                    Suffix = suffix.Text,
+                    Sex = sex.Text,
+                    Department = department.Text,
+                    Position = position.Text,
+                    EmailAddress = emailAddress.Text,
+                    Salary = Convert.ToDouble(salary.Text),
+                    EmployeeID = Convert.ToInt32(employeeID.Text)
+                };
+                EmployeeModule.addEmployee(ret);
+            } catch
+            {
+                MessageBox.Show("An Error has occured, please check the values entered");
+            }
 
-            EmployeeModule.addEmployee(ret);           
+                     
 
             ClearAllEntries();
         }
 
         private void AddHealthRecordBtn_Click(object sender, RoutedEventArgs e)
         {
-            MedicalRecordWindow MRW = new MedicalRecordWindow();
-            MRW.Show();
+            EmployeeModule.addHealthRecord();
         }
 
         private void ResetFieldsBtn_Click(object sender, RoutedEventArgs e)

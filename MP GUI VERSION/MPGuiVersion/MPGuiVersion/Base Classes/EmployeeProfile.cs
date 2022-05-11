@@ -10,10 +10,10 @@ namespace MPGuiVersion
         private Name employeeName = new Name();
         private Address address = new Address();
         private string dateOfBirth;
-        private int mobileNum;
-        private int landline;
-        private int fatherNum;
-        private int motherNum;
+        private long mobileNum;
+        private long landline;
+        private long fatherNum;
+        private long motherNum;
         private string emailAddress;
         private string nationality;
         private int sex;
@@ -30,22 +30,22 @@ namespace MPGuiVersion
             get { return emailAddress; }
             set { emailAddress = value; }
         }
-        public int MobileNum
+        public long MobileNum
         {
             get { return mobileNum; }
             set { mobileNum = value; }
         }
-        public int Landline
+        public long Landline
         {
             get { return landline; }
             set { landline = value; }
         }
-        public int MotherNum
+        public long MotherNum
         {
             get { return motherNum; }
             set { motherNum = value; }
         }
-        public int FatherNum
+        public long FatherNum
         {
             get { return fatherNum; }
             set { fatherNum = value; }
@@ -74,7 +74,7 @@ namespace MPGuiVersion
         public string firstName;
         public string middleName;
         public string lastName;
-        public int contactnumber;
+        public long contactnumber;
     }
     struct BioInfo
     {

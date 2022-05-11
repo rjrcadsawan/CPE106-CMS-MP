@@ -43,11 +43,18 @@ namespace MPGuiVersion
 
         private void DeleteEmployeePBtn_Click(object sender, RoutedEventArgs e)
         {
-            DataRowView selected = (DataRowView)EmployeePList.SelectedItem;
-            int target_id = Convert.ToInt32(selected["employeeprofID"].ToString());
-
-            EmployeeModule.deleteEmployeeProfile(target_id);
-
+           
+                       
+            try
+            {
+                DataRowView selected = (DataRowView)EmployeePList.SelectedItem;
+                int target_id = Convert.ToInt32(selected["employeeprofID"].ToString());
+                EmployeeModule.deleteEmployeeProfile(target_id);
+            }
+            catch
+            {
+                MessageBox.Show("An Error has occurred, please check if you have selected a profile");
+            }
             getDataFromServer();
         }
 

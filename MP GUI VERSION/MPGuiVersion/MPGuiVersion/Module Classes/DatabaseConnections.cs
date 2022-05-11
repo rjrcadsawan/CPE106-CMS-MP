@@ -314,7 +314,7 @@ namespace MPGuiVersion
             SP_addEmployeeProfile.Parameters.AddWithValue("@MotherNum", EP.MotherNum);
             SP_addEmployeeProfile.Parameters.AddWithValue("@EmailAddress", EP.EmailAddress);
             SP_addEmployeeProfile.Parameters.AddWithValue("@Sex", EP.Sex);
-            SP_addEmployeeProfile.Parameters.AddWithValue("@MartialStatus", EP.MaritalStatus);
+            SP_addEmployeeProfile.Parameters.AddWithValue("@MaritalStatus", EP.MaritalStatus);
             SP_addEmployeeProfile.Parameters.AddWithValue("@Nationality", EP.Nationality);
 
             ECList EmergencyContacts = EP.EmployeeContacts;

@@ -25,15 +25,20 @@ namespace MPGuiVersion.User_Controls
 
         private void AddItemBtn_Click(object sender, RoutedEventArgs e)
         {
-            Item I = new Item();
-            I.ItemID = Convert.ToInt32(ItemID.Text);
-            I.ItemName = ItemName.Text;
-            I.Quantity = Convert.ToInt32(Quantity.Text);
-            I.UnitPrice = Convert.ToDouble(UnitPrice.Text);
-            I.Description = Description.Text;
-
-            InventoryModule.addItem(I);
-
+            try
+            {
+                Item I = new Item();
+                I.ItemID = Convert.ToInt32(ItemID.Text);
+                I.ItemName = ItemName.Text;
+                I.Quantity = Convert.ToInt32(Quantity.Text);
+                I.UnitPrice = Convert.ToDouble(UnitPrice.Text);
+                I.Description = Description.Text;
+                InventoryModule.addItem(I);
+            }
+            catch
+            {
+                MessageBox.Show("An Error has occured, please check the values entered");
+            }
             resetEntries();
 
         }

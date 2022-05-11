@@ -68,11 +68,20 @@ namespace MPGuiVersion.User_Controls
 
         private void DeleteTransaction_Click(object sender, RoutedEventArgs e)
         {
-            DataRowView selected = (DataRowView) TransactionList.SelectedItem;
-            int target_id = Convert.ToInt32(selected["transactionID"].ToString());
+            
+            try
+            {
+                DataRowView selected = (DataRowView)TransactionList.SelectedItem;
+                int target_id = Convert.ToInt32(selected["transactionID"].ToString());
 
-            BookkeepingModule BM = new BookkeepingModule();
-            BM.deleteTransaction(target_id);
+                BookkeepingModule BM = new BookkeepingModule();
+                BM.deleteTransaction(target_id);
+            }
+            catch
+            {
+                MessageBox.Show("An Error has occurred, please check if you have selected a transaction");
+            }
+            
 
             getDataFromServer();
             //MessageBox.Show($"{target_id}");
@@ -105,19 +114,26 @@ namespace MPGuiVersion.User_Controls
 
         private void PrintTransactions_Click(object sender, RoutedEventArgs e)
         {
-            TransactionList.SelectAllCells();
-            TransactionList.ClipboardCopyMode = DataGridClipboardCopyMode.IncludeHeader;
-            ApplicationCommands.Copy.Execute(null, TransactionList);
-            TransactionList.UnselectAllCells();
-            SaveFileDialog exportDialog = new SaveFileDialog();
+            try
+            {
+                TransactionList.SelectAllCells();
+                TransactionList.ClipboardCopyMode = DataGridClipboardCopyMode.IncludeHeader;
+                ApplicationCommands.Copy.Execute(null, TransactionList);
+                TransactionList.UnselectAllCells();
+                SaveFileDialog exportDialog = new SaveFileDialog();
 
-            exportDialog.Filter = "Text file (*.txt)|*.txt|CSV file (*.csv)|*.csv";
-            exportDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                exportDialog.Filter = "Text file (*.txt)|*.txt|CSV file (*.csv)|*.csv";
+                exportDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-            exportDialog.ShowDialog();
+                exportDialog.ShowDialog();
 
-            string result = (string)Clipboard.GetData(DataFormats.CommaSeparatedValue);
-            File.AppendAllText(exportDialog.FileName, result, UnicodeEncoding.UTF8);
+                string result = (string)Clipboard.GetData(DataFormats.CommaSeparatedValue);
+                File.AppendAllText(exportDialog.FileName, result, UnicodeEncoding.UTF8);
+            } catch
+            {
+                MessageBox.Show("An Error has occurred, please try again");
+            }
+            
         }
     }
 

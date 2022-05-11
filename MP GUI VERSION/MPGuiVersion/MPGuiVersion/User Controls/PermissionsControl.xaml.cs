@@ -56,17 +56,24 @@ namespace MPGuiVersion.User_Controls
         {
             getDataFromServer();
 
-            EmployeePermissions EPerm = new EmployeePermissions();
-            EPerm.email = EmailAddress.Text;
-            EPerm.password = Password.Password;
-            EPerm.accessBookkeeping = (bool) BookkeepingModule.IsChecked;
-            EPerm.accessEmployees = (bool) EmployeeModuleCB.IsChecked;
-            EPerm.accessTasks = (bool) TaskModule.IsChecked;
-            EPerm.accessInventory = (bool)InventoryModule.IsChecked;
-            EPerm.accessPermissions = (bool)Permissions.IsChecked;
+            
 
-            EmployeeModule.modifyPermissions(EPerm);
-
+            try
+            {
+                EmployeePermissions EPerm = new EmployeePermissions();
+                EPerm.email = EmailAddress.Text;
+                EPerm.password = Password.Password;
+                EPerm.accessBookkeeping = (bool)BookkeepingModule.IsChecked;
+                EPerm.accessEmployees = (bool)EmployeeModuleCB.IsChecked;
+                EPerm.accessTasks = (bool)TaskModule.IsChecked;
+                EPerm.accessInventory = (bool)InventoryModule.IsChecked;
+                EPerm.accessPermissions = (bool)Permissions.IsChecked;
+                EmployeeModule.modifyPermissions(EPerm);
+            }
+            catch
+            {
+                MessageBox.Show("An Error has occurred, please check the entered values");
+            }
             getDataFromServer();
 
             resetEntries();

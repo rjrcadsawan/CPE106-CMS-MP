@@ -350,7 +350,7 @@ namespace MPGuiVersion {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MPGuiVersion;V1.0.0.0;component/medicalrecordwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MPGuiVersion;component/medicalrecordwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\MedicalRecordWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

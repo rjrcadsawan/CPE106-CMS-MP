@@ -51,10 +51,17 @@ namespace MPGuiVersion.User_Controls
 
         private void DeleteEmployeeBtn_Click(object sender, RoutedEventArgs e)
         {
-            DataRowView selected = (DataRowView) EmployeeList.SelectedItem;
-            int target_id = Convert.ToInt32(selected["employeeID"].ToString());
-
-            EmployeeModule.deleteEmployee(target_id);
+            try
+            {
+                DataRowView selected = (DataRowView)EmployeeList.SelectedItem;
+                int target_id = Convert.ToInt32(selected["employeeID"].ToString());
+                EmployeeModule.deleteEmployee(target_id);
+            }
+            catch
+            {
+                MessageBox.Show("An Error has occurred, please check if you have selected an employee");
+            }
+            
 
             getDataFromServer();
             //MessageBox.Show($"{target_id}");

@@ -77,24 +77,37 @@ namespace MPGuiVersion.User_Controls
 
         private void DeleteItemBtn_Click(object sender, RoutedEventArgs e)
         {
-            DataRowView selected = (DataRowView)ItemList.SelectedItem;
-            int target_id = Convert.ToInt32(selected["itemID"].ToString());
+            try
+            {
+                DataRowView selected = (DataRowView)ItemList.SelectedItem;
+                int target_id = Convert.ToInt32(selected["itemID"].ToString());
+                InventoryModule.deleteItem(target_id);
+            }
+            catch
+            {
+                MessageBox.Show("An Error has occurred, please check if you have selected an item");
+            }
 
-            InventoryModule.deleteItem(target_id);
-            MessageBox.Show($"{target_id}");
             getDataFromServer();
         }
 
         private void ModifyItemBtn_Click(object sender, RoutedEventArgs e)
         {
-            Item I = new Item();
-            I.ItemID = Convert.ToInt32(ItemID.Text);
-            I.ItemName = ItemName.Text;
-            I.Quantity = Convert.ToInt32(Quantity.Text);
-            I.UnitPrice = Convert.ToDouble(UnitPrice.Text);
-            I.Description = Description.Text;
-
-            InventoryModule.modifyItem(I);
+            try
+            {
+                Item I = new Item();
+                I.ItemID = Convert.ToInt32(ItemID.Text);
+                I.ItemName = ItemName.Text;
+                I.Quantity = Convert.ToInt32(Quantity.Text);
+                I.UnitPrice = Convert.ToDouble(UnitPrice.Text);
+                I.Description = Description.Text;
+                InventoryModule.modifyItem(I);
+            }
+            catch
+            {
+                MessageBox.Show("An Error has occurred, please check the entered values");
+            }
+            
 
             getDataFromServer();
         }

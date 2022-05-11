@@ -25,17 +25,24 @@ namespace MPGuiVersion.User_Controls
 
         private void AddTaskBtn_Click(object sender, RoutedEventArgs e)
         {
-            Task T = new Task();
-            T.TaskID = Convert.ToInt32(TaskID.Text);
-            T.TaskName = TaskName.Text;
-            T.DueDate = DueDate.ToString();
-            T.Budget = Convert.ToDouble(Budget.Text);
-            T.IsDone = false;
-            T.MaterialsNeeded = MaterialsNeeded.Text;
-            T.Description = Description.Text;
-            T.EmployeesNeeded = Convert.ToInt32(EmployeesNeeded.Text);
-
-            TaskModule.addTask(T);
+            try
+            {
+                Task T = new Task();
+                T.TaskID = Convert.ToInt32(TaskID.Text);
+                T.TaskName = TaskName.Text;
+                T.DueDate = DueDate.ToString();
+                T.Budget = Convert.ToDouble(Budget.Text);
+                T.IsDone = false;
+                T.MaterialsNeeded = MaterialsNeeded.Text;
+                T.Description = Description.Text;
+                T.EmployeesNeeded = Convert.ToInt32(EmployeesNeeded.Text);
+                TaskModule.addTask(T);
+            }
+            catch
+            {
+                MessageBox.Show("An Error has occured, please check the values entered");
+            }
+            
             resetEntries();
         }
 

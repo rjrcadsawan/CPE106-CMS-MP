@@ -43,10 +43,18 @@ namespace MPGuiVersion
 
         private void DeleteEmployeeHRBtn_Click(object sender, RoutedEventArgs e)
         {
-            DataRowView selected = (DataRowView)EmployeeHRList.SelectedItem;
-            int target_id = Convert.ToInt32(selected["employeerecordID"].ToString());
-
-            EmployeeModule.deleteEmployee(target_id);
+            
+            try
+            {
+                DataRowView selected = (DataRowView)EmployeeHRList.SelectedItem;
+                int target_id = Convert.ToInt32(selected["employeerecordID"].ToString());
+                EmployeeModule.deleteEmployee(target_id);
+            }
+            catch
+            {
+                MessageBox.Show("An Error has occurred, please check if you have selected a health record");
+            }
+           
 
             getDataFromServer();
         }
@@ -123,7 +131,6 @@ namespace MPGuiVersion
 
             MRW.Show();
 
-            getDataFromServer();
             getDataFromServer();
 
         }

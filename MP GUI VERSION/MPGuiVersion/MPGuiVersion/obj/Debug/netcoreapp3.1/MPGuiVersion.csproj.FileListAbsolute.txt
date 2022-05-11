@@ -64,3 +64,4 @@ C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\M
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\DatabaseDetails.baml
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\LoginWindow.g.cs
 C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\LoginWindow.baml
+C:\Users\Alaric\source\repos\3rd Term 2Y\CPE106 Machine Problem\MP GUI VERSION\MPGuiVersion\MPGuiVersion\obj\Debug\netcoreapp3.1\MPGuiVersion.csproj.AssemblyReference.cache

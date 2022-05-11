@@ -52,20 +52,28 @@ namespace MPGuiVersion.User_Controls
 
         private void Print_Click(object sender, RoutedEventArgs e)
         {
-            PayrollSheetList.SelectAllCells();
-            PayrollSheetList.ClipboardCopyMode = DataGridClipboardCopyMode.IncludeHeader;
-            ApplicationCommands.Copy.Execute(null, PayrollSheetList);
-            PayrollSheetList.UnselectAllCells();
-            SaveFileDialog exportDialog = new SaveFileDialog();
             
-            exportDialog.Filter = "Text file (*.txt)|*.txt|CSV file (*.csv)|*.csv";
-            exportDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            try
+            {
+                PayrollSheetList.SelectAllCells();
+                PayrollSheetList.ClipboardCopyMode = DataGridClipboardCopyMode.IncludeHeader;
+                ApplicationCommands.Copy.Execute(null, PayrollSheetList);
+                PayrollSheetList.UnselectAllCells();
+                SaveFileDialog exportDialog = new SaveFileDialog();
 
-            exportDialog.ShowDialog();
+                exportDialog.Filter = "Text file (*.txt)|*.txt|CSV file (*.csv)|*.csv";
+                exportDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+                exportDialog.ShowDialog();
 
 
-            string result = (string)Clipboard.GetData(DataFormats.CommaSeparatedValue);
-            File.AppendAllText(exportDialog.FileName, result, UnicodeEncoding.UTF8);
+                string result = (string)Clipboard.GetData(DataFormats.CommaSeparatedValue);
+                File.AppendAllText(exportDialog.FileName, result, UnicodeEncoding.UTF8);
+            }
+            catch
+            {
+                MessageBox.Show("An Error has occurred, please try again");
+            }
         }
     }
 }

@@ -342,7 +342,7 @@ namespace MPGuiVersion {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MPGuiVersion;V1.0.0.0;component/employeeprofilewindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MPGuiVersion;component/employeeprofilewindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\EmployeeProfileWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

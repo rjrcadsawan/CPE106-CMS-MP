@@ -41,15 +41,22 @@ namespace MPGuiVersion.User_Controls
 
         private void AddTransactionBtn_Click(object sender, RoutedEventArgs e)
         {
-            Transaction ret = new Transaction();
-            ret.TransactionID = Convert.ToInt32(TransactionIDbox.Text);
-            ret.Name = TransactionNamebox.Text;
-            ret.TransactionD = (bool)DebitOption.IsChecked;
-            ret.TransactionC = (bool)CreditOption.IsChecked;
-            ret.Amount = Convert.ToDouble(Amount.Text);
-            ret.Summary = Descriptionbox.Text;
-
-            this.BM.addTransaction(ret);
+            try
+            {
+                Transaction ret = new Transaction();
+                ret.TransactionID = Convert.ToInt32(TransactionIDbox.Text);
+                ret.Name = TransactionNamebox.Text;
+                ret.TransactionD = (bool)DebitOption.IsChecked;
+                ret.TransactionC = (bool)CreditOption.IsChecked;
+                ret.Amount = Convert.ToDouble(Amount.Text);
+                ret.Summary = Descriptionbox.Text;
+                this.BM.addTransaction(ret);
+            }
+            catch
+            {
+                MessageBox.Show("An Error has occured, please check the values entered");
+            }
+            
             updateData();
 
 
